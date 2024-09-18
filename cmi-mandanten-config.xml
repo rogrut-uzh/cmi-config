@@ -1,0 +1,452 @@
+<xml version="1.0" encoding="UTF-8"?>
+<!-- 
+noch zu prüfen:
+  nummerierung
+  ob alle db's tatsächlich vorhanden sind 
+  longName und shortName 
+-->
+
+<mandanten>
+
+  <mandant>
+    <number>1</number>
+    <longName>Biomedizin</longName>
+    <shortName>BM</shortName>
+	<prod>
+		<dbName>axioma_bm</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_bm_TEST</dbNameTest>
+		<muegi></muegi>
+		<remotingUrl>ZIAXIOMATAP02:10115</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10117/</ueberweisung>
+		<webconsole>10116</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>2</number>
+    <longName>Direktion</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+	<prod>
+		<dbName>axioma_dfpdib</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_dfpdib_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10145</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10147/</ueberweisung>
+		<webconsole>10146</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>3</number>
+    <longName>Generalsekretariat</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+	<prod>
+		<dbName>axioma_generalsek</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_generalsek_TEST</dbNameTest>
+		<muegi></muegi>
+		<remotingUrl>ZIAXIOMATAP02:10245</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10247/</ueberweisung>
+		<webconsole>10246</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>4</number>
+    <longName>Informatik</longName>
+    <shortName>ZI</shortName>
+	<prod>
+		<dbName>axioma_informatik</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_informatik_TEST</dbNameTest>
+		<muegi></muegi>
+		<remotingUrl>ZIAXIOMATAP02:10235</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10237/</ueberweisung>
+		<webconsole>10236</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>5</number>
+    <longName>Interne Revision</longName>
+    <shortName>Intrev</shortName>
+	<prod>
+		<dbName>axioma_intrev</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_intrev_TEST</dbNameTest>
+		<muegi></muegi>
+		<remotingUrl>ZIAXIOMATAP02:10085</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10087/</ueberweisung>
+		<webconsole>10086</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>7</number>
+    <longName>Medizinische Fakultät</longName>
+    <shortName>MF</shortName>
+	<prod>
+		<dbName>axioma_medizinfak</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_medizinfak_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10075</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10077/</ueberweisung>
+		<webconsole>10076</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>8</number>
+    <longName>Mathematisch-Naturwissenschaftliche Fakultät</longName>
+    <shortName>MNF</shortName>
+	<prod>
+		<dbName>axioma_mnf</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_mnf_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10055</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10057/</ueberweisung>
+		<webconsole>10056</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>9</number>
+    <longName>Philosophische Fakultät</longName>
+    <shortName>PF</shortName>
+	<prod>
+		<dbName>axioma_philosophfak</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_philosophfak_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10095</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10097/</ueberweisung>
+		<webconsole>10096</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>10</number>
+    <longName>Professuren</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+	<prod>
+		<dbName>axioma_professuren</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_professuren_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10155</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10157/</ueberweisung>
+		<webconsole>10156</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>11</number>
+    <longName>Rechtsdienst</longName>
+    <shortName>RD</shortName>
+	<prod>
+		<dbName>axioma_rechtsdienst</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_rechtsdienst_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10225</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10227/</ueberweisung>
+		<webconsole>1010226</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>12</number>
+    <longName>Rechtswissenschaftliche Fakultät</longName>
+    <shortName>RWF</shortName>
+	<prod>
+		<dbName>axioma_rwf</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_rwf_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10005</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10007/</ueberweisung>
+		<webconsole>10006</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>13</number>
+    <longName>Theologische und Religionswissenschaftliche Fakultät</longName>
+    <shortName>TRF</shortName>
+	<prod>
+		<dbName>axioma_trf</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_trf_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10215</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10217/</ueberweisung>
+		<webconsole>10216</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>15</number>
+    <longName>VP Edu</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+	<prod>
+		<dbName>axioma_vpedu</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_vpedu_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10105</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10107/</ueberweisung>
+		<webconsole>10106</webconsole>
+	</test>
+  </mandant>
+  
+  
+
+  
+  <mandant>
+    <number>18</number>
+    <longName>Vetsuisse-Fakultät</longName>
+    <shortName>VSF</shortName>
+	<prod>
+		<dbName>axioma_vsf</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_vsf_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10195</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10197/</ueberweisung>
+		<webconsole>10196</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>19</number>
+    <longName>Wirtschaftswissenschaftliche Fakultät</longName>
+    <shortName>WWF</shortName>
+	<prod>
+		<dbName>axioma_wwf</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_wwf_TEST</dbNameTest>
+		<muegi>10247</muegi>
+		<remotingUrl>ZIAXIOMATAP02:10265</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10267/</ueberweisung>
+		<webconsole>10266</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>20</number>
+    <longName>Zentrum für Zahnmedizin</longName>
+    <shortName>ZZM</shortName>
+	<prod>
+		<dbName>axioma_zzm</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_zzm_TEST</dbNameTest>
+		<muegi></muegi>
+		<remotingUrl>ZIAXIOMATAP02:10275</remotingUrl>
+		<ueberweisung>http://ziaxiomatap02:10277/</ueberweisung>
+		<webconsole>10276</webconsole>
+	</test>
+  </mandant>
+  
+  
+  
+  
+  <mandant>
+    <number>21</number>
+    <longName>Hallengreen</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+    <dbNameProd>Hallengreen</dbNameProd>
+    <dbNameTest>Hallengreen_TEST</dbNameTest>
+  </mandant>
+  
+  <mandant>
+    <number>22</number>
+    <longName>AIS AFM</longName>
+    <shortName>AIS AFM</shortName>
+    <dbNameProd>star_afm</dbNameProd>
+    <dbNameTest>star_afm_TEST</dbNameTest>
+  </mandant>
+  
+  <mandant>
+    <number>23</number>
+    <longName>AIS UAZ</longName>
+    <shortName>AIS UAZ</shortName>
+    <dbNameProd>star_uaz</dbNameProd>
+    <dbNameTest>star_uaz_TEST</dbNameTest>
+  </mandant>
+  
+  <mandant>
+    <number>24</number>
+    <longName>AIS Benutzung</longName>
+    <shortName>AIS Benutzung</shortName>
+    <dbNameProd>star_uaz_benutzung</dbNameProd>
+    <dbNameTest>star_uaz_benutzung_TEST</dbNameTest>
+  </mandant>
+  
+  
+  
+  
+  <mandant>
+    <number>16</number>
+    <longName>VP FSI</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+	<prod>
+		<dbName>axioma_vpfsi</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_vpfsi_TEST</dbNameTest>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>17</number>
+    <longName>VP Medres</longName>
+    <shortName>xxxxxxxxxxxxxxxxxxxxxxxxxxxxx</shortName>
+	<prod>
+		<dbName>axioma_vpmedres</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_vpmedres_TEST</dbNameTest>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>14</number>
+    <longName>Vertragsverwaltung</longName>
+    <shortName>Vertragsverwaltung</shortName>
+	<prod>
+		<dbName>axioma_vertragsvw</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_vertragsvw_TEST</dbNameTest>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</test>
+  </mandant>
+  
+  <mandant>
+    <number>6</number>
+    <longName>Lizenzserver</longName>
+    <shortName>Lizenzserver</shortName>
+	<prod>
+		<dbName>axioma_lizenzserver</dbName>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</prod>
+	<test>
+        <dbNameTest>axioma_lizenzserver_TEST</dbNameTest>
+		<muegi>TODO</muegi>
+		<remotingUrl>TODO</remotingUrl>
+		<ueberweisung>TODO</ueberweisung>
+		<webconsole>TODO</webconsole>
+	</test>
+  </mandant>
+  
+</mandanten>
