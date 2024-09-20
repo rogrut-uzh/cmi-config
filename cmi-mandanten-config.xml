@@ -5,1020 +5,1020 @@
 
 -->
 <mandanten>
-	<mandant id="1">
-		<longName>Bedarfmanagement</longName>
-		<shortName>BM</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_bm</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10110</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10112/">
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi/>
-			<webconsole>10111</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_bm_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10115</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10117/">
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi/>
-			<webconsole>10116</webconsole>
-		</test>
-	</mandant>
-	<mandant id="2">
-		<longName>Direktion DFP-DIP</longName>
-		<shortName>DFP-DIB</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_dfpdib</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10140</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10142/">
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10141</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_dfpdib_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10145</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10147/">
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10146</webconsole>
-		</test>
-	</mandant>
-	<mandant id="3">
-		<longName>Generalsekretariat</longName>
-		<shortName>GS</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_generalsek</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10240</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10242/">
-				<server toId="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="15" name="UZH-FSI">http://ziaxiomapap03:10122/UeberweisungsService</server>
-				<server toId="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-			</muegi>
-			<webconsole>10241</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_generalsek_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10245</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10247/">
-				<server toId="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi/>
-			<webconsole>10246</webconsole>
-		</test>
-	</mandant>
-	<mandant id="4">
-		<longName>Informatik</longName>
-		<shortName>Informatik</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_informatik</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10230</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10232/"/>
-			<muegi/>
-			<webconsole>10231</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_informatik_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10235</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10237/"/>
-			<muegi/>
-			<webconsole>10236</webconsole>
-		</test>
-	</mandant>
-	<mandant id="5">
-		<longName>Interne Revision</longName>
-		<shortName>Intrev</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_intrev</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10080</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10082/"/>
-			<muegi/>
-			<webconsole>10081</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_intrev_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10085</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10087/"/>
-			<muegi/>
-			<webconsole>10086</webconsole>
-		</test>
-	</mandant>
-	<mandant id="6">
-		<longName>Medizinische Fakultät</longName>
-		<shortName>MF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_medizinfak</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10070</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10072/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10071</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_medizinfak_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10075</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10077/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10076</webconsole>
-		</test>
-	</mandant>
-	<mandant id="7">
-		<longName>Mathematisch-Naturwissenschaftliche Fakultät</longName>
-		<shortName>MNF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_mnf</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10050</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10052/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10051</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_mnf_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10055</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10057/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10056</webconsole>
-		</test>
-	</mandant>
-	<mandant id="8">
-		<longName>Philosophische Fakultät</longName>
-		<shortName>PhF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_philosophfak</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10090</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10092">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10091</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_philosophfak_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10095</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10097/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10096</webconsole>
-		</test>
-	</mandant>
-	<mandant id="9">
-		<longName>Professuren</longName>
-		<shortName>Prof</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_professuren</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10150</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10152/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10151</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_professuren_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10155</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10157/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10156</webconsole>
-		</test>
-	</mandant>
-	<mandant id="10">
-		<longName>Rechtsdienst</longName>
-		<shortName>Rechtsdienst</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_rechtsdienst</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10220</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10222/">
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10221</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_rechtsdienst_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10225</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10227/">
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10226</webconsole>
-		</test>
-	</mandant>
-	<mandant id="11">
-		<longName>Rechtswissenschaftliche Fakultät</longName>
-		<shortName>RWF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_rwf</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10000</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10002/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10001</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_rwf_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10005</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10007/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10006</webconsole>
-		</test>
-	</mandant>
-	<mandant id="12">
-		<longName>Theologische und Religionswissenschaftliche Fakultät</longName>
-		<shortName>TRF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_trf</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10210</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10212/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10211</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_trf_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10215</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10217/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10216</webconsole>
-		</test>
-	</mandant>
-	<mandant id="13">
-		<longName>Vertragsverwaltung</longName>
-		<shortName>VW</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_vertragsvw</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10060</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10062/"/>
-			<muegi/>
-			<webconsole>10061</webconsole>
-		</prod>
-		<test/>
-	</mandant>
-	<mandant id="14">
-		<longName>VP EDU</longName>
-		<shortName>EDU</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_vpedu</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10100</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10102/">
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10101</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_vpedu_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10105</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10107/">
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10106</webconsole>
-		</test>
-	</mandant>
-	<mandant id="15">
-		<longName>VP FSI</longName>
-		<shortName>VP FSI</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_vpfsi</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10120</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10122/">
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10121</webconsole>
-		</prod>
-		<test/>
-	</mandant>
-	<mandant id="16">
-		<longName>Direktion Universitäre Medizin / Prorektorat Forschung</longName>
-		<shortName>VPMedRes</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_vpmedres</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10040</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10042/">
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10041</webconsole>
-		</prod>
-		<test/>
-	</mandant>
-	<mandant id="17">
-		<longName>Vetsuisse-Fakultät</longName>
-		<shortName>VSF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_vsf</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10190</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10192/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10191</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_vsf_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10195</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10197/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10196</webconsole>
-		</test>
-	</mandant>
-	<mandant id="18">
-		<longName>Wirtschaftswissenschaftliche Fakultät</longName>
-		<shortName>WWF</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_wwf</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10260</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10262/">
-				<server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
-				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			</muegi>
-			<webconsole>10261</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_wwf_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10265</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10267/">
-				<server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-			</ueberweisung>
-			<muegi>
-				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
-			</muegi>
-			<webconsole>10266</webconsole>
-		</test>
-	</mandant>
-	<mandant id="19">
-		<longName>Zentrum für Zahnmedizin</longName>
-		<shortName>ZZM</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_zzm</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10270</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10272/"/>
-			<muegi/>
-			<webconsole>10271</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_zzm_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10275</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10277/"/>
-			<muegi/>
-			<webconsole>10276</webconsole>
-		</test>
-	</mandant>
-	<mandant id="50">
-		<longName>AIS Benutzungsverwaltung</longName>
-		<shortName>AIS Benutzung</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>star_uaz_benutzung</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap04:10020</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap04:10022/"/>
-			<muegi/>
-			<webconsole>10021</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>star_uaz_benutzung_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10025</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10027/"/>
-			<muegi/>
-			<webconsole>10026</webconsole>
-		</test>
-	</mandant>
-	<mandant id="60">
-		<longName>Lizenzserver</longName>
-		<shortName>Lizenzserver</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>axioma_lizenzserver</name>
-			</db>
-			<app>
-				<server>ziaxiomapap03.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomapap03:10320</remotingUrl>
-			<ueberweisung url="http://ziaxiomapap03:10322/"/>
-			<muegi/>
-			<webconsole>10321</webconsole>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>axioma_lizenzserver_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-			</app>
-			<remotingUrl>ziaxiomatap02:10325</remotingUrl>
-			<ueberweisung url="http://ziaxiomatap02:10327/"/>
-			<muegi/>
-			<webconsole>10326</webconsole>
-		</test>
-	</mandant>
-	<mandant id="70">
-		<longName>AIS UAZ</longName>
-		<shortName>AIS UAZ</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>star_uaz</name>
-			</db>
-			<app>
-				<server>ziaxiomapap04.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
-			</app>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>star_uaz_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
-			</app>
-		</test>
-	</mandant>
-	<mandant id="71">
-		<longName>AIS AFM</longName>
-		<shortName>AIS AFM</shortName>
-		<prod>
-			<db>
-				<server>ziaxiomapsql02.d.uzh.ch</server>
-				<name>star_afm</name>
-			</db>
-			<app>
-				<server>ziaxiomapap04.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
-			</app>
-		</prod>
-		<test>
-			<db>
-				<server>ziaxiomatsql02.d.uzh.ch</server>
-				<name>star_afm_TEST</name>
-			</db>
-			<app>
-				<server>ziaxiomatap02.d.uzh.ch</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
-			</app>
-		</test>
-	</mandant>
+  <mandant id="1">
+    <longName>Bedarfmanagement</longName>
+    <shortName>BM</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_bm</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10110</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10112/">
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi/>
+      <webconsole>10111</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_bm_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10115</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10117/">
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi/>
+      <webconsole>10116</webconsole>
+    </test>
+  </mandant>
+  <mandant id="2">
+    <longName>Direktion DFP-DIP</longName>
+    <shortName>DFP-DIB</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_dfpdib</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10140</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10142/">
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10141</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_dfpdib_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10145</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10147/">
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10146</webconsole>
+    </test>
+  </mandant>
+  <mandant id="3">
+    <longName>Generalsekretariat</longName>
+    <shortName>GS</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_generalsek</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10240</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10242/">
+        <server toId="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="15" name="UZH-FSI">http://ziaxiomapap03:10122/UeberweisungsService</server>
+        <server toId="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+      </muegi>
+      <webconsole>10241</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_generalsek_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10245</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10247/">
+        <server toId="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi/>
+      <webconsole>10246</webconsole>
+    </test>
+  </mandant>
+  <mandant id="4">
+    <longName>Informatik</longName>
+    <shortName>Informatik</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_informatik</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10230</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10232/"/>
+      <muegi/>
+      <webconsole>10231</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_informatik_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10235</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10237/"/>
+      <muegi/>
+      <webconsole>10236</webconsole>
+    </test>
+  </mandant>
+  <mandant id="5">
+    <longName>Interne Revision</longName>
+    <shortName>Intrev</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_intrev</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10080</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10082/"/>
+      <muegi/>
+      <webconsole>10081</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_intrev_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10085</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10087/"/>
+      <muegi/>
+      <webconsole>10086</webconsole>
+    </test>
+  </mandant>
+  <mandant id="6">
+    <longName>Medizinische Fakultät</longName>
+    <shortName>MF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_medizinfak</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10070</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10072/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10071</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_medizinfak_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10075</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10077/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10076</webconsole>
+    </test>
+  </mandant>
+  <mandant id="7">
+    <longName>Mathematisch-Naturwissenschaftliche Fakultät</longName>
+    <shortName>MNF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_mnf</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10050</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10052/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10051</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_mnf_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10055</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10057/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10056</webconsole>
+    </test>
+  </mandant>
+  <mandant id="8">
+    <longName>Philosophische Fakultät</longName>
+    <shortName>PhF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_philosophfak</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10090</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10092">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10091</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_philosophfak_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10095</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10097/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10096</webconsole>
+    </test>
+  </mandant>
+  <mandant id="9">
+    <longName>Professuren</longName>
+    <shortName>Prof</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_professuren</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10150</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10152/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10151</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_professuren_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10155</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10157/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10156</webconsole>
+    </test>
+  </mandant>
+  <mandant id="10">
+    <longName>Rechtsdienst</longName>
+    <shortName>Rechtsdienst</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_rechtsdienst</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10220</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10222/">
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10221</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_rechtsdienst_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10225</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10227/">
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10226</webconsole>
+    </test>
+  </mandant>
+  <mandant id="11">
+    <longName>Rechtswissenschaftliche Fakultät</longName>
+    <shortName>RWF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_rwf</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10000</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10002/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10001</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_rwf_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10005</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10007/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10006</webconsole>
+    </test>
+  </mandant>
+  <mandant id="12">
+    <longName>Theologische und Religionswissenschaftliche Fakultät</longName>
+    <shortName>TRF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_trf</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10210</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10212/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10211</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_trf_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10215</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10217/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10216</webconsole>
+    </test>
+  </mandant>
+  <mandant id="13">
+    <longName>Vertragsverwaltung</longName>
+    <shortName>VW</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_vertragsvw</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10060</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10062/"/>
+      <muegi/>
+      <webconsole>10061</webconsole>
+    </prod>
+    <test/>
+  </mandant>
+  <mandant id="14">
+    <longName>VP EDU</longName>
+    <shortName>EDU</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_vpedu</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10100</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10102/">
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10101</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_vpedu_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10105</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10107/">
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10106</webconsole>
+    </test>
+  </mandant>
+  <mandant id="15">
+    <longName>VP FSI</longName>
+    <shortName>VP FSI</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_vpfsi</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10120</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10122/">
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10121</webconsole>
+    </prod>
+    <test/>
+  </mandant>
+  <mandant id="16">
+    <longName>Direktion Universitäre Medizin / Prorektorat Forschung</longName>
+    <shortName>VPMedRes</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_vpmedres</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10040</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10042/">
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10041</webconsole>
+    </prod>
+    <test/>
+  </mandant>
+  <mandant id="17">
+    <longName>Vetsuisse-Fakultät</longName>
+    <shortName>VSF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_vsf</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10190</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10192/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10191</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_vsf_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10195</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10197/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+        <server toId="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10196</webconsole>
+    </test>
+  </mandant>
+  <mandant id="18">
+    <longName>Wirtschaftswissenschaftliche Fakultät</longName>
+    <shortName>WWF</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_wwf</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10260</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10262/">
+        <server toId="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
+        <server toId="ext" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="ext">http://10.74.145.110:28412/MuegiService</url>
+        <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+      </muegi>
+      <webconsole>10261</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_wwf_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10265</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10267/">
+        <server toId="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
+        <server toId="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
+        <server toId="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
+        <server toId="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
+        <server toId="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
+        <server toId="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
+        <server toId="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
+        <server toId="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
+        <server toId="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+      </ueberweisung>
+      <muegi>
+        <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
+      </muegi>
+      <webconsole>10266</webconsole>
+    </test>
+  </mandant>
+  <mandant id="19">
+    <longName>Zentrum für Zahnmedizin</longName>
+    <shortName>ZZM</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_zzm</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10270</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10272/"/>
+      <muegi/>
+      <webconsole>10271</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_zzm_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10275</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10277/"/>
+      <muegi/>
+      <webconsole>10276</webconsole>
+    </test>
+  </mandant>
+  <mandant id="50">
+    <longName>AIS Benutzungsverwaltung</longName>
+    <shortName>AIS Benutzung</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>star_uaz_benutzung</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap04:10020</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap04:10022/"/>
+      <muegi/>
+      <webconsole>10021</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>star_uaz_benutzung_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10025</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10027/"/>
+      <muegi/>
+      <webconsole>10026</webconsole>
+    </test>
+  </mandant>
+  <mandant id="60">
+    <longName>Lizenzserver</longName>
+    <shortName>Lizenzserver</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>axioma_lizenzserver</name>
+      </db>
+      <app>
+        <server>ziaxiomapap03.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomapap03:10320</remotingUrl>
+      <ueberweisung url="http://ziaxiomapap03:10322/"/>
+      <muegi/>
+      <webconsole>10321</webconsole>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>axioma_lizenzserver_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
+      </app>
+      <remotingUrl>ziaxiomatap02:10325</remotingUrl>
+      <ueberweisung url="http://ziaxiomatap02:10327/"/>
+      <muegi/>
+      <webconsole>10326</webconsole>
+    </test>
+  </mandant>
+  <mandant id="70">
+    <longName>AIS UAZ</longName>
+    <shortName>AIS UAZ</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>star_uaz</name>
+      </db>
+      <app>
+        <server>ziaxiomapap04.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
+      </app>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>star_uaz_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
+      </app>
+    </test>
+  </mandant>
+  <mandant id="71">
+    <longName>AIS AFM</longName>
+    <shortName>AIS AFM</shortName>
+    <prod>
+      <db>
+        <server>ziaxiomapsql02.d.uzh.ch</server>
+        <name>star_afm</name>
+      </db>
+      <app>
+        <server>ziaxiomapap04.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
+      </app>
+    </prod>
+    <test>
+      <db>
+        <server>ziaxiomatsql02.d.uzh.ch</server>
+        <name>star_afm_TEST</name>
+      </db>
+      <app>
+        <server>ziaxiomatap02.d.uzh.ch</server>
+        <installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
+      </app>
+    </test>
+  </mandant>
 </mandanten>
