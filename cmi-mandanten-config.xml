@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- 
-Autor: Roger Rutishauser - DBA, September 2024
+Autor: Roger Rutishauser - DBA, September/Oktober 2024
 
 ANMERKUNGEN
 ***********
@@ -17,10 +17,6 @@ Mobile
 objektLoader
 	Im MetaTool.ini von Server steht nur der Hostname z.B. zaixiomapap03
 	Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
-
-STS
-	URL setzt sich wie folgt zusammen: <STSServer>/<owinServer_relay><mandant>
-	z.B. https://sts.cmicloud.ch/uzhbmitest
 
 WebDav
 	URL setzt sich wie folgt zusammen: https://<owinServer_relay><mandant>.cmicloud.ch/webdav
