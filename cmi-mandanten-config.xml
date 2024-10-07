@@ -39,7 +39,6 @@ Testsystem
 
 -->
 <mandanten>
-	<STSServer>https://sts.cmicloud.ch</STSServer>
 	<relayServer>https://relay.cmiaxioma.ch/</relayServer>
 	<!-- ******************** CMI/Axioma ******************** -->
 	<mandant id="1">
@@ -57,6 +56,10 @@ Testsystem
 				<user>UZH\srv_cmi_bm</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhbmi</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="1ps">10110</port>
 			</objektLoader>
@@ -96,6 +99,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhbmitest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="1ts">10115</port>
 			</objektLoader>
@@ -139,6 +146,10 @@ Testsystem
 				<user>UZH\srv_cmi_dfpdib</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhfpi</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="2ps">10140</port>
 			</objektLoader>
@@ -174,6 +185,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhfpitest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="2ts">10145</port>
 			</objektLoader>
@@ -213,6 +228,10 @@ Testsystem
 				<user>UZH\srv_cmi_gs</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhgs</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="3ps">10240</port>
 			</objektLoader>
@@ -259,6 +278,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhgstest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="3ts">10245</port>
 			</objektLoader>
@@ -305,6 +328,10 @@ Testsystem
 				<user>UZH\srv_cmi_info</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhinfo</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="4ps">10230</port>
 			</objektLoader>
@@ -335,6 +362,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhinfotest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="4ts">10235</port>
 			</objektLoader>
@@ -370,6 +401,10 @@ Testsystem
 				<user>UZH\srv_cmi_irev</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhirev</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="5ps">10080</port>
 			</objektLoader>
@@ -400,6 +435,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhirevtest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="5ts">10085</port>
 			</objektLoader>
@@ -435,6 +474,10 @@ Testsystem
 				<user>UZH\srv_cmi_mef</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhmef</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="6ps">10070</port>
 			</objektLoader>
@@ -479,6 +522,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhmeftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="6ts">10075</port>
 			</objektLoader>
@@ -526,6 +573,10 @@ Testsystem
 				<user>UZH\srv_cmi_mnf</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhmnf</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="7ps">10050</port>
 			</objektLoader>
@@ -570,6 +621,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhmnftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="7ts">10055</port>
 			</objektLoader>
@@ -617,6 +672,10 @@ Testsystem
 				<user>UZH\srv_cmi_phf</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhphf</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="8ps">10090</port>
 			</objektLoader>
@@ -661,6 +720,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhphftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="8ts">10095</port>
 			</objektLoader>
@@ -708,6 +771,10 @@ Testsystem
 				<user>UZH\srv_cmi_prof</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhprof</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="9ps">10150</port>
 			</objektLoader>
@@ -752,6 +819,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhproftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port id="9ts">10155</port>
 			</objektLoader>
@@ -799,6 +870,10 @@ Testsystem
 				<user>UZH\srv_cmi_recht</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhrecht</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="10ps">10220</port>
 			</objektLoader>
@@ -834,6 +909,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhrechttest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="10ts">10225</port>
 			</objektLoader>
@@ -874,6 +953,10 @@ Testsystem
 				<user>UZH\srv_cmi_rwf</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhrwf</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="11ps">10000</port>
 			</objektLoader>
@@ -918,6 +1001,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhrwftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="11ts">10005</port>
 			</objektLoader>
@@ -965,6 +1052,10 @@ Testsystem
 				<user>UZH\srv_cmi_trf</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhthf</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="12ps">10210</port>
 			</objektLoader>
@@ -1009,6 +1100,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhthftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="12ts">10215</port>
 			</objektLoader>
@@ -1056,6 +1151,10 @@ Testsystem
 				<user>UZH\srv_cmi_vert</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhvert</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="13ps">10060</port>
 			</objektLoader>
@@ -1092,6 +1191,10 @@ Testsystem
 				<user>UZH\srv_cmi_edu</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhgsw</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="14ps">10100</port>
 			</objektLoader>
@@ -1134,6 +1237,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhgswtest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="14ts">10105</port>
 			</objektLoader>
@@ -1180,6 +1287,10 @@ Testsystem
 				<user>UZH\srv_cmi_fsi</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhrww</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="15ps">10120</port>
 			</objektLoader>
@@ -1220,6 +1331,10 @@ Testsystem
 				<user>UZH\srv_cmi_medres</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhmnw</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="16ps">10040</port>
 			</objektLoader>
@@ -1267,6 +1382,10 @@ Testsystem
 				<user>UZH\srv_cmi_vsf</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhvsf</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="17ps">10190</port>
 			</objektLoader>
@@ -1311,6 +1430,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhvsftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="17ts">10195</port>
 			</objektLoader>
@@ -1358,6 +1481,10 @@ Testsystem
 				<user>UZH\srv_cmi_wwf</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhwwf</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="18ps">10260</port>
 			</objektLoader>
@@ -1401,6 +1528,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhwwftest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="18ts">10265</port>
 			</objektLoader>
@@ -1447,6 +1578,10 @@ Testsystem
 				<user>UZH\srv_cmi_zzm</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhzzm</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="19ps">10270</port>
 			</objektLoader>
@@ -1477,6 +1612,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>true</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhzzmtest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="19ts">10275</port>
 			</objektLoader>
@@ -1512,6 +1651,7 @@ Testsystem
 				<user>UZH\srv_cmi_lizenz</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts/>
 			<objektLoader>
 				<port ref="20ps">10320</port>
 			</objektLoader>
@@ -1542,6 +1682,7 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts/>
 			<objektLoader>
 				<port ref="20ts">10325</port>
 			</objektLoader>
@@ -1577,6 +1718,10 @@ Testsystem
 				<user>UZH\srv_cmi_benu</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhbenu</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="30ps">10020</port>
 			</objektLoader>
@@ -1607,6 +1752,10 @@ Testsystem
 				<user>UZH\srv_cmi_test</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts>
+				<v2>https://sts.cmicloud.ch/uzhbenutest</v2>
+				<v3>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</v3>
+			</sts>
 			<objektLoader>
 				<port ref="30ts">10025</port>
 			</objektLoader>
@@ -1643,6 +1792,7 @@ Testsystem
 				<user>UZH\srv_ais_uaz</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts/>
 			<objektLoader>
 				<port ref="40ps">10010</port>
 			</objektLoader>
@@ -1671,6 +1821,7 @@ Testsystem
 				<user>UZH\srv_ais_test</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts/>
 			<objektLoader>
 				<port ref="40ts">10015</port>
 			</objektLoader>
@@ -1704,6 +1855,7 @@ Testsystem
 				<user>UZH\srv_ais_afm</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts/>
 			<objektLoader>
 				<port ref="41ps">10250</port>
 			</objektLoader>
@@ -1732,6 +1884,7 @@ Testsystem
 				<user>UZH\srv_ais_test</user>
 				<lizenzserver>false</lizenzserver>
 			</app>
+			<sts/>
 			<objektLoader>
 				<port ref="41ts">10255</port>
 			</objektLoader>
