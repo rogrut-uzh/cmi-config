@@ -1274,11 +1274,11 @@ Testsystem
 		<installId>2624</installId>
 		<prod>
 			<db>
-				<server id="15ps">ziaxiomapsql02</server>
+				<server>ziaxiomapsql02</server>
 				<name>axioma_vpfsi</name>
 			</db>
 			<app>
-				<server>ziaxiomapap03</server>
+				<server id="15ps">ziaxiomapap03</server>
 				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
 				<user>UZH\srv_cmi_fsi</user>
 				<lizenzserver>true</lizenzserver>
