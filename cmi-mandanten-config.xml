@@ -688,6 +688,7 @@ Testsystem
 				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
 				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
 				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
+				<server ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</server>
 				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
 				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
 				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
