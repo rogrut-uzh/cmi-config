@@ -1,10 +1,3 @@
-# Define the listener URL and port
-$listenerUrl = "http://localhost:8081/"
-# path to XML file
-$xmlFilePath = "C:\DBA-Scripts\CMI-Config-API\cmi-mandanten-config.xml"
-
-
-
 <#
 
 Nach was soll gesucht werden können?
@@ -29,7 +22,34 @@ Was für Felder von mandant sollen zurückgegeben werden?
 - applizenzserver         mandant/[prod or test]/app/lizenzserver
 
 
+
+
+caddy for reverse proxy:
+- download and install caddy
+- caddy.exe run ---> create windows service
+- caddyfile:
+:80 {
+    reverse_proxy /api/data localhost:8081
+}
+- caddy.exe reload
+
+
+endpoint example:
+http://your-server-ip/api/data?nameFull=Bedarfmanagement&server=ziaxiomapsql02
+
 #>
+
+
+
+
+
+# Define the listener URL and port
+$listenerUrl = "http://localhost:8081/"
+# path to XML file
+$xmlFilePath = "C:\DBA-Scripts\CMI-Config-API\cmi-mandanten-config.xml"
+
+
+
 
 
 
