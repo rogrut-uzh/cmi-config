@@ -1,0 +1,10 @@
+# Serve HTTP on port 80 without redirecting to HTTPS
+http://ziaxiomatap02.d.uzh.ch {
+    reverse_proxy localhost:8088
+}
+
+# Serve HTTPS on port 443
+#https://ziaxiomatap02.d.uzh.ch {
+#    tls roger.rutishauser@uzh.ch  # Use your email for Let's Encrypt
+#    reverse_proxy localhost:8088
+#}

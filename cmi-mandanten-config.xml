@@ -1,1312 +1,1508 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- 
-Autor: Roger Rutishauser - DBA, September/Oktober 2024
+*********************
+* CMI Configuration *
+*********************
 
-ANMERKUNGEN
-***********
+REMARKS
 
-Lizenzserver
-	Wenn ein Mandant nicht am Lizenzserver angeschlossen ist: <lizenzserver>false</lizenzserver>
-	Wenn ein Mandant am Lizenzserver angeschlossen ist: <lizenzserver>true</lizenzserver>
-	Definiert in MetaTools.ini von Server.
+___ Every mandant has its own set of config nodes. The attribute "id" is not used other than to distinguish a mandant-node from another.
+<mandant id="6">
+	___ Every mandant is divided into prod and test environment.
+	<prod>
+		___ Name of the mandant. 
+		<namefull>Medizinische Fakultät</namefull>
+		___ Short name of the mandant.
 
-Mobile
-	URL setzt sich wie folgt zusammen: https://<owinServer_relay><mandadnt>.cmicloud.ch
-	z.B. https://uzhbmi.cmicloud.ch
+	
+	
+	
+	
+    Lizenzserver
+        Wenn ein Mandant nicht am Lizenzserver angeschlossen ist: <haslizenzserver>false</haslizenzserver>
+        Wenn ein Mandant am Lizenzserver angeschlossen ist: <haslizenzserver>true</haslizenzserver>
+        Definiert in MetaTools.ini von Server.
 
-objektLoader
-	Im MetaTool.ini von Server steht nur der Hostname z.B. zaixiomapap03
-	Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
+    Mobile
+        URL setzt sich wie folgt zusammen: https://<owinserverrelay><mandadnt>.cmicloud.ch
+        z.B. https://uzhbmi.cmicloud.ch
 
-WebDav
-	URL setzt sich wie folgt zusammen: https://<owinServer_relay><mandant>.cmicloud.ch/webdav
-	z.B. https://uzhbmi.cmicloud.ch/webdav
+    objektloader
+        Im MetaTool.ini von Server steht nur der host z.B. zaixiomapap03
+        Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
 
-<owinServer_relay>
-	Relevant für folgende Files
-	- C:\Program Files\CMI AG\RelayServer\CMI_<mandant>_RelayOPCService_uzhbmi\Thinktecture.Relay.OnPremiseConnectorService.exe.config
-	- C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10\Server\MetaTool.ini
+    WebDav
+        URL setzt sich wie folgt zusammen: https://<owinserverrelay><mandant>.cmicloud.ch/webdav
+        z.B. https://uzhbmi.cmicloud.ch/webdav
 
-Testsystem
-	Folgende Mandanten haben kein Testsystem:
-	- 13 Vertragsverwaltung
-	- 15 VP FSI
-	- 16 Direktion Universitäre Medizin / Prorektorat Forschung (Medres)
+    <owinserverrelay>
+        Relevant für folgende Files
+        - C:\Program Files\CMI AG\RelayServer\CMI_<mandant>_RelayOPCService_uzhbmi\Thinktecture.Relay.OnPremiseConnectorService.exe.config
+        - C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10\Server\MetaTool.ini
+        - Der Relay Server ist immer https://relay.cmiaxioma.ch/
 
+    Testsystem
+        Folgende Mandanten haben kein Testsystem:
+        - 13 Vertragsverwaltung
+        - 15 VP FSI
+        - 16 Direktion Universitäre Medizin / Prorektorat Forschung (Medres)
+		
+	Mügi
+		Für Traktanden
+		
+		
+		service name nicht display name
+
+AUTHOR
+    Roger Rutishauser - DBA, September/October 2024
 -->
 <mandanten>
-	<relayServer>https://relay.cmiaxioma.ch/</relayServer>
 	<!-- ******************** CMI/Axioma ******************** -->
 	<mandant id="1">
-		<nameFull>Bedarfmanagement</nameFull>
-		<nameShort>BM</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Bedarfmanagement</namefull>
+			<nameshort>BM</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_bm</name>
 			</db>
 			<app>
-				<server id="1ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_bm</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>21.0.10</releaseversion>
+				<host id="1ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>BM 21.0.10</installfolder>
+				<servicename>CMI BM 21.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_bm</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmi</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="1ps">10110</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="1ps">10111</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="1ps">10112</port>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhbmi</mandant>
 				<port>
 					<private ref="1ps">10113</private>
 					<public ref="1ps">10114</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>Bedarfmanagement</namefull>
+			<nameshort>BM</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_bm_TEST</name>
 			</db>
 			<app>
-				<server id="1ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="1ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>BM 22.0.10</installfolder>
+				<servicename>CMI BM 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmitest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="1ts">10115</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="1ts">10116</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="1ts">10117</port>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhbmitest</mandant>
 				<port>
 					<private ref="1ts">10118</private>
 					<public ref="1ts">10119</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="2">
-		<nameFull>Direktion DFP-DIP</nameFull>
-		<nameShort>DFPDIB</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Direktion DFP-DIP</namefull>
+			<nameshort>DFPDIB</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_dfpdib</name>
 			</db>
 			<app>
-				<server id="2ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_dfpdib</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="2ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Direktion DFPDIB 22.0.10</installfolder>
+				<servicename>CMI Direktion DFPDIB 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_dfpdib</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhfpi</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhfpi</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="2ps">10140</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="2ps">10141</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="2ps">10142</port>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhfpi</mandant>
 				<port>
 					<private ref="2ps">10143</private>
 					<public ref="2ps">10144</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Direktion DFP-DIP</namefull>
+			<nameshort>DFPDIB</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_dfpdib_TEST</name>
 			</db>
 			<app>
-				<server id="2ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="2ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Direktion DFPDIB 22.0.10</installfolder>
+				<servicename>CMI Direktion DFPDIB TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhfpitest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhfpitest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="2ts">10145</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="2ts">10146</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="2ts">10147</port>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhfpitest</mandant>
 				<port>
 					<private ref="2ts">10148</private>
 					<public ref="2ts">10149</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="3">
-		<nameFull>Generalsekretariat</nameFull>
-		<nameShort>GS</nameShort>
-		<installId>2624</installId>
 		<prod>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_generalsek</name>
 			</db>
 			<app>
-				<server id="3ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_gs</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="3ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Generalsekretariat 22.0.10</installfolder>
+				<servicename>CMI Generalsekretariat 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_gs</serviceuser>
+				<servicenamerelay>xxxxxx</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgs</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="3ps">10240</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="3ps">10241</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="3ps">10242</port>
-				<server ref="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="15" name="UZH-FSI">http://ziaxiomapap03:10122/UeberweisungsService</server>
-				<server ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="15" name="UZH-FSI">http://ziaxiomapap03:10122/UeberweisungsService</url>
+				<url ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhgs</mandant>
 				<port>
 					<private ref="3ps">10243</private>
 					<public ref="3ps">10244</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Generalsekretariat</namefull>
+			<nameshort>GS</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_generalsek_TEST</name>
 			</db>
 			<app>
-				<server id="3ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="3ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Generalsekretariat 22.0.10</installfolder>
+				<servicename>CMI Generalsekretariat TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgstest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="3ts">10245</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="1ts">10246</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="3ts">10247</port>
-				<server ref="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhgstest</mandant>
 				<port>
 					<private ref="1ts">10248</private>
 					<public ref="1ts">10249</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="4">
-		<nameFull>Informatik</nameFull>
-		<nameShort>Informatik</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Informatik</namefull>
+			<nameshort>Informatik</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_informatik</name>
 			</db>
 			<app>
-				<server id="4ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_info</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="4ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Informatik 22.0.10</installfolder>
+				<servicename>CMI Informatik 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_info</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhinfo</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfo</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="4ps">10230</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="4ps">10231</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="4ps">10232</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhinfo</mandant>
 				<port>
 					<private ref="1ts">10233</private>
 					<public ref="1ts">10234</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>Informatik</namefull>
+			<nameshort>Informatik</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_informatik_TEST</name>
 			</db>
 			<app>
-				<server id="4ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="4ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Informatik 22.0.10</installfolder>
+				<servicename>CMI Informatik TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhinfotest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfotest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="4ts">10235</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="4ts">10236</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="4ts">10237</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhinfotest</mandant>
 				<port>
 					<private ref="4ts">10238</private>
 					<public ref="4ts">10239</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="5">
-		<nameFull>Interne Revision</nameFull>
-		<nameShort>Intrev</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Interne Revision</namefull>
+			<nameshort>Intrev</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_intrev</name>
 			</db>
 			<app>
-				<server id="5ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_irev</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="5ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Interne Revision 22.0.10</installfolder>
+				<servicename>XXXXXXX</servicename>
+				<serviceuser>UZH\srv_cmi_irev</serviceuser>
+				<servicenamerelay>xxxxxx</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirev</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="5ps">10080</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="5ps">10081</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="5ps">10082</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhirev</mandant>
 				<port>
 					<private ref="5ps">10083</private>
 					<public ref="5ps">10084</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>Interne Revision</namefull>
+			<nameshort>Intrev</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_intrev_TEST</name>
 			</db>
 			<app>
-				<server id="5ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="5ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Interne Revision 22.0.10</installfolder>
+				<servicename>CMI Interne Revision 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirevtest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="5ts">10085</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="5ts">10086</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="5ts">10087</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhirevtest</mandant>
 				<port>
 					<private ref="5ts">10088</private>
 					<public ref="5ts">10089</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="6">
-		<nameFull>Medizinische Fakultät</nameFull>
-		<nameShort>MF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Medizinische Fakultät</namefull>
+			<nameshort>MF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_medizinfak</name>
 			</db>
 			<app>
-				<server id="6ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_mef</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="6ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Medizinische Fakultaet 22.0.10</installfolder>
+				<servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_mef</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmef</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="6ps">10070</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="6ps">10071</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="1ts">10072</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhmef</mandant>
 				<port>
 					<private ref="6ps">10073</private>
 					<public ref="6ps">10074</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Medizinische Fakultät</namefull>
+			<nameshort>MF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_medizinfak_TEST</name>
 			</db>
 			<app>
-				<server id="6ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="6ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Medizinische Fakultaet 22.0.10</installfolder>
+				<servicename>CMI Medizinische Fakultaet TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmeftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="6ts">10075</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="6ts">10076</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="6ts">10077</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhmeftest</mandant>
 				<port>
 					<private ref="6ts">10078</private>
 					<public ref="6ts">10079</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="7">
-		<nameFull>Mathematisch-Naturwissenschaftliche Fakultät</nameFull>
-		<nameShort>MNF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
+			<nameshort>MNF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_mnf</name>
 			</db>
 			<app>
-				<server id="7ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_mnf</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="7ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>MNF 22.0.10</installfolder>
+				<servicename>CMI MNF 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_mnf</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhmnf</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnf</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="7ps">10050</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="7ps">10051</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="7ps">10052</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhmnf</mandant>
 				<port>
 					<private ref="7ps">10053</private>
 					<public ref="7ps">10054</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
+			<nameshort>MNF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_mnf_TEST</name>
 			</db>
 			<app>
-				<server id="7ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="7ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>MNF 22.0.10</installfolder>
+				<servicename>CMI MNF TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="7ts">10055</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="7ts">10056</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="7ts">10057</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhmnftest</mandant>
 				<port>
 					<private ref="7ts">10058</private>
 					<public ref="7ts">10059</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="8">
-		<nameFull>Philosophische Fakultät</nameFull>
-		<nameShort>PhF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Philosophische Fakultät</namefull>
+			<nameshort>PhF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_philosophfak</name>
 			</db>
 			<app>
-				<server id="8ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_phf</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="8ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Philosophische Fakultaet 22.0.10</installfolder>
+				<servicename>CMI Philosophische Fakultaet 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_phf</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhphf</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphf</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="8ps">10090</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="8ps">10091</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="8ps">10092</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhphf</mandant>
 				<port>
 					<private ref="8ps">10093</private>
 					<public ref="8ps">10094</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Philosophische Fakultät</namefull>
+			<nameshort>PhF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_philosophfak_TEST</name>
 			</db>
 			<app>
-				<server id="8ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>24.0.6</releaseversion>
+				<host id="8ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Philosophische Fakultaet 24.0.6</installfolder>
+				<servicename>CMI Philosophische Fakultaet TEST 24.0.6</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="8ts">10095</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="8ts">10096</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="8ts">10097</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhphftest</mandant>
 				<port>
 					<private ref="8ts">10098</private>
 					<public ref="8ts">10099</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="9">
-		<nameFull>Professuren</nameFull>
-		<nameShort>Prof</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Professuren</namefull>
+			<nameshort>Prof</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_professuren</name>
 			</db>
 			<app>
-				<server id="9ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_prof</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="9ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Professuren 22.0.10</installfolder>
+				<servicename>CMI Professuren 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_prof</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhprof</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhprof</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="9ps">10150</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="9ps">10151</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="9ps">10152</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhprof</mandant>
 				<port>
 					<private ref="9ps">10153</private>
 					<public ref="9ps">10154</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Professuren</namefull>
+			<nameshort>Prof</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_professuren_TEST</name>
 			</db>
 			<app>
-				<server id="9ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="9ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Professuren 22.0.10</installfolder>
+				<servicename>CMI Professuren TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhproftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port id="9ts">10155</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="9ts">10156</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="9ts">10157</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="2" name="UZH-DFPDIB_TEST">http://ziaxiomatap02:10147/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhproftest</mandant>
 				<port>
 					<private ref="9ts">10158</private>
 					<public ref="9ts">10159</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="10">
-		<nameFull>Rechtsdienst</nameFull>
-		<nameShort>Rechtsdienst</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Rechtsdienst</namefull>
+			<nameshort>Rechtsdienst</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_rechtsdienst</name>
 			</db>
 			<app>
-				<server id="10ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_recht</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="10ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Rechtsdienst 22.0.10</installfolder>
+				<servicename>CMI Rechtsdienst 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_recht</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhrecht</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrecht</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="10ps">10220</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="10ps">10221</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="10ps">10222</port>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhrecht</mandant>
 				<port>
 					<private ref="10ps">10223</private>
 					<public ref="10ps">10224</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Rechtsdienst</namefull>
+			<nameshort>Rechtsdienst</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_rechtsdienst_TEST</name>
 			</db>
 			<app>
-				<server id="10ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="10ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Rechtsdienst 22.0.10</installfolder>
+				<servicename>CMI Rechtsdienst TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrechttest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="10ts">10225</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="10ts">10226</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="10ts">10227</port>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhrechttest</mandant>
 				<port>
 					<private ref="10ts">10228</private>
 					<public ref="10ts">10229</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="11">
-		<nameFull>Rechtswissenschaftliche Fakultät</nameFull>
-		<nameShort>RWF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Rechtswissenschaftliche Fakultät</namefull>
+			<nameshort>RWF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_rwf</name>
 			</db>
 			<app>
-				<server id="11ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_rwf</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="11ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>RWF 22.0.10</installfolder>
+				<servicename>CMI RWF 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_rwf</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhrwf</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwf</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="11ps">10000</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="11ps">10001</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="11ps">10002</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhrwf</mandant>
 				<port>
 					<private ref="11ps">10003</private>
 					<public ref="11ps">10004</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Rechtswissenschaftliche Fakultät</namefull>
+			<nameshort>RWF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_rwf_TEST</name>
 			</db>
 			<app>
-				<server id="11ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="11ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>RWF 22.0.10</installfolder>
+				<servicename>CMI RWF TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="11ts">10005</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="11ts">10006</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="11ts">10007</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhrwftest</mandant>
 				<port>
 					<private ref="11ts">10008</private>
 					<public ref="11ts">10009</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="12">
-		<nameFull>Theologische und Religionswissenschaftliche Fakultät</nameFull>
-		<nameShort>TRF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
+			<nameshort>TRF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_trf</name>
 			</db>
 			<app>
-				<server id="12ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_trf</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="12ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>TRF 22.0.10</installfolder>
+				<servicename>CMI TRF 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_trf</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhthf</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthf</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="12ps">10210</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="12ps">10211</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="12ps">10212</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhthf</mandant>
 				<port>
 					<private ref="12ps">10213</private>
 					<public ref="12ps">10214</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
+			<nameshort>TRF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_trf_TEST</name>
 			</db>
 			<app>
-				<server id="12ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="12ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>TRF 22.0.10</installfolder>
+				<servicename>CMI TRF TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="12ts">10215</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="12ts">10216</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="12ts">10217</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhthftest</mandant>
 				<port>
 					<private ref="12ts">10218</private>
 					<public ref="12ts">10219</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="13">
-		<nameFull>Vertragsverwaltung</nameFull>
-		<nameShort>VW</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Vertragsverwaltung</namefull>
+			<nameshort>VW</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vertragsvw</name>
 			</db>
 			<app>
-				<server id="13ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_vert</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="13ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Vertragsverwaltung 22.0.10</installfolder>
+				<servicename>CMI Vertragsverwaltung 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_vert</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvert</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="13ps">10060</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="13ps">10061</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="13ps">10062</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhvert</mandant>
 				<port>
 					<private ref="13ps">10063</private>
 					<public ref="13ps">10064</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test/>
 	</mandant>
 	<mandant id="14">
-		<nameFull>VP EDU</nameFull>
-		<nameShort>EDU</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>VP EDU</namefull>
+			<nameshort>EDU</nameshort>
+			<namealternative>Prorektorat Lehre und Studium</namealternative>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vpedu</name>
 			</db>
 			<app>
-				<server id="14ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_edu</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="14ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>VP Edu 22.0.10</installfolder>
+				<servicename>CMI VP Edu 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_edu</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhgsw</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgsw</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="14ps">10100</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="14ps">10101</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="14ps">10102</port>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhgsw</mandant>
 				<port>
 					<private ref="14ps">10103</private>
 					<public ref="14ps">10104</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>VP EDU</namefull>
+			<nameshort>EDU</nameshort>
+			<namealternative>Prorektorat Lehre und Studium</namealternative>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vpedu_TEST</name>
 			</db>
 			<app>
-				<server id="14ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>24.0.6</releaseversion>
+				<host id="14ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>VP Edu 24.0.6</installfolder>
+				<servicename>CMI VP Edu TEST 24.0.6</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgswtest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="14ts">10105</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="14ts">10106</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="14ts">10107</port>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="10" name="UZH-Recht_TEST">http://ziaxiomatap02:10227/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhgswtest</mandant>
 				<port>
 					<private ref="14ts">10108</private>
 					<public ref="14ts">10109</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="15">
-		<nameFull>VP FSI</nameFull>
-		<nameShort>VP FSI</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>VP FSI</namefull>
+			<nameshort>VP FSI</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vpfsi</name>
 			</db>
 			<app>
-				<server id="15ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_fsi</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="15ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>VP FSI 22.0.10</installfolder>
+				<servicename>CMI VP FSI 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_fsi</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhrww</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrww</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="15ps">10120</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="15ps">10121</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="15ps">10122</port>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhrww</mandant>
 				<port>
 					<private ref="15ps">10113</private>
 					<public ref="15ps">10114</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
@@ -1314,50 +1510,55 @@ Testsystem
 		<test/>
 	</mandant>
 	<mandant id="16">
-		<nameFull>Direktion Universitäre Medizin / Prorektorat Forschung</nameFull>
-		<nameShort>VPMedRes</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Direktion Universitäre Medizin / Prorektorat Forschung</namefull>
+			<nameshort>VPMedRes</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vpmedres</name>
 			</db>
 			<app>
-				<server id="16ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_medres</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="16ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>VP MedRes 22.0.10</installfolder>
+				<servicename>CMI VP MedRes 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_medres</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhmnw</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnw</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="16ps">10040</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="16ps">10041</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="16ps">10042</port>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhmnw</mandant>
 				<port>
 					<private ref="16ps">10043</private>
 					<public ref="16ps">10044</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
@@ -1365,538 +1566,631 @@ Testsystem
 		<test/>
 	</mandant>
 	<mandant id="17">
-		<nameFull>Vetsuisse-Fakultät</nameFull>
-		<nameShort>VSF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Vetsuisse-Fakultät</namefull>
+			<nameshort>VSF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vsf</name>
 			</db>
 			<app>
-				<server id="17ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_vsf</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="17ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>VSF 22.0.10</installfolder>
+				<servicename>CMI VSF 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_vsf</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhvsf</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsf</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="17ps">10190</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="17ps">10191</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="17ps">10192</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhvsf</mandant>
 				<port>
 					<private ref="17ps">10193</private>
 					<public ref="17ps">10194</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Vetsuisse-Fakultät</namefull>
+			<nameshort>VSF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_vsf_TEST</name>
 			</db>
 			<app>
-				<server id="17ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="17ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>VSF 22.0.10</installfolder>
+				<servicename>CMI VSF TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="17ts">10195</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="17ts">10196</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="17ts">10197</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhvsftest</mandant>
 				<port>
 					<private ref="17ts">10198</private>
 					<public ref="17ts">10199</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="18">
-		<nameFull>Wirtschaftswissenschaftliche Fakultät</nameFull>
-		<nameShort>WWF</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
+			<nameshort>WWF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_wwf</name>
 			</db>
 			<app>
-				<server id="18ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_wwf</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="18ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>WWF 22.0.10</installfolder>
+				<servicename>CMI WWF 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_wwf</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhwwf</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwf</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="18ps">10260</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="18ps">10261</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="18ps">10262</port>
-				<server ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</server>
-				<server ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhwwf</mandant>
 				<port>
 					<private ref="18ps">10263</private>
 					<public ref="18ps">10264</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 		</prod>
 		<test>
+			<namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
+			<nameshort>WWF</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_wwf_TEST</name>
 			</db>
 			<app>
-				<server id="18ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="18ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>WWF 22.0.10</installfolder>
+				<servicename>CMI WWF TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwftest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="18ts">10265</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="18ts">10266</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="18ts">10267</port>
-				<server ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</server>
-				<server ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</server>
-				<server ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</server>
-				<server ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</server>
-				<server ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</server>
-				<server ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</server>
-				<server ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</server>
-				<server ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</server>
-				<server ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</server>
+				<url ref="1" name="UZH-BM_TEST">http://ziaxiomatap02:10117/UeberweisungsService</url>
+				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
+				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
+				<url ref="6" name="UZH-MeF_TEST">http://ziaxiomatap02:10077/UeberweisungsService</url>
+				<url ref="7" name="UZH-MNF_TEST">http://ziaxiomatap02:10057/UeberweisungsService</url>
+				<url ref="8" name="UZH-PhF_TEST">http://ziaxiomatap02:10097/UeberweisungsService</url>
+				<url ref="11" name="UZH-RWF_TEST">http://ziaxiomatap02:10007/UeberweisungsService</url>
+				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
+				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhwwftest</mandant>
 				<port>
 					<private ref="18ts">10268</private>
 					<public ref="18ts">10269</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 		</test>
 	</mandant>
 	<mandant id="19">
-		<nameFull>Zentrum für Zahnmedizin</nameFull>
-		<nameShort>ZZM</nameShort>
-		<installId>2624</installId>
 		<prod>
+			<namefull>Zentrum für Zahnmedizin</namefull>
+			<nameshort>ZZM</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_zzm</name>
 			</db>
 			<app>
-				<server id="19ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_zzm</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="19ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>ZZM 22.0.10</installfolder>
+				<servicename>CMI ZZM 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_zzm</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhzzm</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzm</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="19ps">10270</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="19ps">10271</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="19ps">10272</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhzzm</mandant>
 				<port>
 					<private ref="19ps">10273</private>
 					<public ref="19ps">10274</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>Zentrum für Zahnmedizin</namefull>
+			<nameshort>ZZM</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_zzm_TEST</name>
 			</db>
 			<app>
-				<server id="19ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>true</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="19ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>ZZM 22.0.10</installfolder>
+				<servicename>CMI ZZM TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>true</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzmtest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="19ts">10275</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="19ts">10276</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="19ts">10277</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhzzmtest</mandant>
 				<port>
 					<private ref="19ts">10278</private>
 					<public ref="19ts">10279</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="20">
-		<nameFull>Lizenzserver</nameFull>
-		<nameShort>Lizenzserver</nameShort>
-		<installId/>
 		<prod>
+			<namefull>Lizenzserver</namefull>
+			<nameshort>Lizenzserver</nameshort>
+			<namealternative/>
+			<installid/>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_lizenzserver</name>
 			</db>
 			<app>
-				<server id="20ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_lizenz</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="20ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installfolder>Lizenzserver PRODUKTION 22.0.10</installfolder>
+				<servicename>CMI Lizenzserver 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_lizenz</serviceuser>
+				<servicenamerelay/>
+				<serviceuserrelay/>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts/>
-			<objektLoader>
+			<objektloader>
 				<port ref="20ps">10320</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="20ps">10321</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="20ps">10322</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>local</mandant>
 				<port>
 					<private ref="20ps">10323</private>
 					<public ref="20ps">10324</public>
 				</port>
 				<relay/>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>Lizenzserver</namefull>
+			<nameshort>Lizenzserver</nameshort>
+			<namealternative/>
+			<installid/>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>axioma_lizenzserver_TEST</name>
 			</db>
 			<app>
-				<server id="20ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\CMI Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="20ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
+				<installfolder>Lizenzserver TEST 22.0.10</installfolder>
+				<servicename>CMI Lizenzserver TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay/>
+				<serviceuserrelay/>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts/>
-			<objektLoader>
+			<objektloader>
 				<port ref="20ts">10325</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="20ts">10326</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="20ts">10327</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>local</mandant>
 				<port>
 					<private ref="20ts">10328</private>
 					<public ref="20ts">10329</public>
 				</port>
 				<relay/>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="30">
-		<nameFull>AIS Benutzungsverwaltung</nameFull>
-		<nameShort>AIS Benutzung</nameShort>
-		<installId>2644</installId>
 		<prod>
+			<namefull>AIS Benutzungsverwaltung</namefull>
+			<nameshort>AIS Benutzung</nameshort>
+			<namealternative/>
+			<installid>2644</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>star_uaz_benutzung</name>
 			</db>
 			<app>
-				<server id="30ps">ziaxiomapap03</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
-				<user>UZH\srv_cmi_benu</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="30ps">ziaxiomapap03</host>
+				<installpathroot>C:\Program Files\CMI AG\AIS Produktiv</installpathroot>
+				<installfolder>UAZ Benutzungsverwaltung 22.0.10</installfolder>
+				<servicename>AIS UAZ Benutzungsverwaltung 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_benu</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenu</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="30ps">10020</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="30ps">10021</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="30ps">10022</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhbenu</mandant>
 				<port>
 					<private ref="30ps">10023</private>
 					<public ref="30ps">10024</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>AIS Benutzungsverwaltung</namefull>
+			<nameshort>AIS Benutzung</nameshort>
+			<namealternative/>
+			<installid>2644</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>star_uaz_benutzung_TEST</name>
 			</db>
 			<app>
-				<server id="30ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
-				<user>UZH\srv_cmi_test</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>22.0.10</releaseversion>
+				<host id="30ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\AIS Test</installpathroot>
+				<installfolder>UAZ Benutzungsverwaltung 22.0.10</installfolder>
+				<servicename>AIS UAZ Benutzungsverwaltung TEST 22.0.10</servicename>
+				<serviceuser>UZH\srv_cmi_test</serviceuser>
+				<servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
+				<serviceuserrelay>Network Service</serviceuserrelay>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenutest</v2>
 				<v3>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</v3>
 			</sts>
-			<objektLoader>
+			<objektloader>
 				<port ref="30ts">10025</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="30ts">10026</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung>
 				<port ref="30ts">10027</port>
 			</ueberweisung>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhbenutest</mandant>
 				<port>
 					<private ref="30ts">10028</private>
 					<public ref="30ts">10029</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<!-- ******************** CMI AIS/CMI Star ******************** -->
 	<mandant id="40">
-		<nameFull>AIS UAZ</nameFull>
-		<nameShort>AIS UAZ</nameShort>
-		<installId>1784</installId>
 		<prod>
+			<namefull>AIS UAZ</namefull>
+			<nameshort>AIS UAZ</nameshort>
+			<namealternative/>
+			<installid>1784</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>star_uaz</name>
 			</db>
 			<app>
-				<server id="40ps">ziaxiomapap04</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
-				<user>UZH\srv_ais_uaz</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>23.1.3</releaseversion>
+				<host id="40ps">ziaxiomapap04</host>
+				<installpathroot>C:\Program Files\CMI AG\AIS Produktiv</installpathroot>
+				<installfolder>UAZ Archiv 23.1.3</installfolder>
+				<servicename>AIS UAZ Archiv 23.1.3</servicename>
+				<serviceuser>UZH\srv_ais_uaz</serviceuser>
+				<servicenamerelay/>
+				<serviceuserrelay/>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts/>
-			<objektLoader>
+			<objektloader>
 				<port ref="40ps">10010</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="40ps">10011</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung/>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhuaz</mandant>
 				<port>
 					<private ref="40ps">10013</private>
 					<public ref="40ps">10014</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>AIS UAZ</namefull>
+			<nameshort>AIS UAZ</nameshort>
+			<namealternative/>
+			<installid>1784</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>star_uaz_TEST</name>
 			</db>
 			<app>
-				<server id="40ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
-				<user>UZH\srv_ais_test</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>23.1.3</releaseversion>
+				<host id="40ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\AIS Test</installpathroot>
+				<installfolder>UAZ Archiv 23.1.3</installfolder>
+				<servicename>AIS UAZ Archiv TEST 23.1.3</servicename>
+				<serviceuser>UZH\srv_ais_test</serviceuser>
+				<servicenamerelay/>
+				<serviceuserrelay/>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts/>
-			<objektLoader>
+			<objektloader>
 				<port ref="40ts">10015</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="40ts">10016</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung/>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhuaztest</mandant>
 				<port>
 					<private ref="40ts">10018</private>
 					<public ref="40ts">10019</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>
 	<mandant id="41">
-		<nameFull>AIS AFM</nameFull>
-		<nameShort>AIS AFM</nameShort>
-		<installId>4787</installId>
 		<prod>
+			<namefull>AIS AFM</namefull>
+			<nameshort>AIS AFM</nameshort>
+			<namealternative/>
+			<installid>4787</installid>
 			<db>
-				<server>ziaxiomapsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>star_afm</name>
 			</db>
 			<app>
-				<server id="41ps">ziaxiomapap04</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Produktiv</installPathRoot>
-				<user>UZH\srv_ais_afm</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>23.1.3</releaseversion>
+				<host id="41ps">ziaxiomapap04</host>
+				<installpathroot>C:\Program Files\CMI AG\AIS Produktiv</installpathroot>
+				<installfolder>AFM Archiv 23.1.3</installfolder>
+				<servicename>AIS AFM Archiv 23.1.3</servicename>
+				<serviceuser>UZH\srv_ais_afm</serviceuser>
+				<servicenamerelay/>
+				<serviceuserrelay/>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts/>
-			<objektLoader>
+			<objektloader>
 				<port ref="41ps">10250</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="41ps">10251</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung/>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhafm</mandant>
 				<port>
 					<private ref="41ps">10253</private>
 					<public ref="41ps">10254</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</prod>
 		<test>
+			<namefull>AIS AFM</namefull>
+			<nameshort>AIS AFM</nameshort>
+			<namealternative/>
+			<installid>4787</installid>
 			<db>
-				<server>ziaxiomatsql02</server>
+				<host>ziaxiomapsql02</host>
 				<name>star_afm_TEST</name>
 			</db>
 			<app>
-				<server id="41ts">ziaxiomatap02</server>
-				<installPathRoot>C:\Program Files\CMI AG\AIS Test</installPathRoot>
-				<user>UZH\srv_ais_test</user>
-				<lizenzserver>false</lizenzserver>
+				<releaseversion>23.1.3</releaseversion>
+				<host id="41ts">ziaxiomatap02</host>
+				<installpathroot>C:\Program Files\CMI AG\AIS Test</installpathroot>
+				<installfolder>AFM Archiv 23.1.3</installfolder>
+				<servicename>AIS AFM Archiv TEST 23.1.3</servicename>
+				<serviceuser>UZH\srv_ais_test</serviceuser>
+				<servicenamerelay/>
+				<serviceuserrelay/>
+				<haslizenzserver>false</haslizenzserver>
 			</app>
 			<sts/>
-			<objektLoader>
+			<objektloader>
 				<port ref="41ts">10255</port>
-			</objektLoader>
-			<webConsole>
+			</objektloader>
+			<webconsole>
 				<port ref="41ts">10256</port>
-			</webConsole>
+			</webconsole>
 			<ueberweisung/>
-			<owinServer_relay>
+			<owinserverrelay>
 				<mandant>uzhafmtest</mandant>
 				<port>
 					<private ref="41ts">10258</private>
 					<public ref="41ts">10259</public>
 				</port>
-				<relay>https://relay.cmiaxioma.ch/</relay>
-			</owinServer_relay>
+			</owinserverrelay>
 			<muegi/>
 		</test>
 	</mandant>

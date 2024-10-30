@@ -1,124 +1,167 @@
 from flask import Flask, jsonify, request
-import xmltodict
-import json
+import xml.etree.ElementTree as ET
+from collections import defaultdict
+'''
+******************************
+* CMI Configuration REST API *
+******************************
+
+PREREQUISITES
+    - install python3 (make available to all windows users)
+    - and packages: pip install Flask xmltodict (as administrator so that it's available to all users)
+    - Get caddy for reverse proxy. Put it to c:\caddy (currently installed: caddy_2.8.4_windows_amd64)
+    - The XML file with the CMI configuration must be present and accessible. Modify the path if nescessary.
+    - change api_port if you want to run it on a different port than 8088.
+'''
+xml_data_path = 'C:\DBA-Scripts\cmi-config-rest-api\cmi-mandanten-config.xml'
+api_port = 8088
 
 '''
-start with:
-python .\cmi-config-rest-api.py
+START
+    python .\cmi-config-rest-api.py
 
+CADDY
+    - c:\caddy\caddy.exe run --config c:\caddy\Caddyfile
+    After changes on Caddyfile:
+    - c:\caddy\caddy.exe reload
 
-Nach was soll gesucht werden können?
-- namefull           mandant/nameFull
-- nameshort          mandant/nameShort
-- installid          mandant/installId
-- dbname             mandant/[prod or test]/db/name
-- applizenzserver    mandant/[prod or test]/app/lizenzserver
-- owinmandant        mandant/[prod or test]/owinServer_relay/mandant
+LOGIC
+    The API logic is as follows:
 
-zusätzlich Filter für prod/test (?)
+    http://localhost:8088/api/data 
+    --> return whole content
 
-Was für Felder von mandant sollen zurückgegeben werden?
-- namefull                mandant/nameFull
-- nameshort               mandant/nameShort
-- installid               mandant/installId
-- dbserver                mandant/[prod or test]/db/server
-- dbname                  mandant/[prod or test]/db/name
-- appserver               mandant/[prod or test]/app/server
-- appinstallpathroot      mandant/[prod or test]/app/installPathRoot
-- appuser                 mandant/[prod or test]/app/user
-- applizenzserver         mandant/[prod or test]/app/lizenzserver
-- ......
+    http://localhost:8088/api/data/prod 
+    --> return every mandant but only the prod section
 
+    http://localhost:8088/api/data/test 
+    --> return every mandant but only the test section
 
+    http://localhost:8088/api/data/prod/db 
+    --> return the db part of every mandant from prod
 
-caddy for reverse proxy:
-- download and install caddy
-- caddy.exe run ---> create windows service
-- caddyfile:
-:80 {
-    reverse_proxy /api/data localhost:8088
-}
-- caddy.exe reload
+    http://localhost:8088/api/data/prod/db/name 
+    --> return the db name part of every mandant from prod
 
+    http://localhost:8088/api/data/prod?nameFull=Bedarfsmanagement 
+    --> return the whole prod section of the mandant who has nameFull "Bedarfsfmanagement"
 
-endpoint example:
-http://your-server-ip/api/data?nameFull=Bedarfmanagement&server=ziaxiomapsql02
+    http://localhost:8088/api/data/prod/db/name?nameShort=BM 
+    --> return the prod db name part of the mandant where nameShort is "BM"
 
+    http://localhost:8088/api/data/prod/app/user?db_name=axioma_bm 
+    --> return the prod app user part of the mandant where db name is "axioma_bm"
+
+    http://localhost:8088/api/data/prod/app/user?db_name=axioma_bm&app_lizenzserver=false 
+    --> return the prod app user part of the mandant where db name is "axioma_bm" and app lizenzserver is "false"
+
+AUTHOR
+    Roger Rutishauser - DBA, October 2024
 '''
 
 app = Flask(__name__)
 
-# Load XML data from file and parse it to a dictionary
+# Rekursive Funktion zum Laden und Strukturieren der XML-Daten
+def parse_element(element):
+    # Wenn der Knoten keine Kinder hat, gib den Text zurück
+    if len(element) == 0:
+        return element.text.strip() if element.text else None
+    
+    # Andernfalls erstelle ein Dictionary für diesen Knoten
+    result = defaultdict(list)
+    for child in element:
+        if len(child) > 0:
+            # Rekursiver Aufruf, wenn der Knoten weitere Kinder hat
+            result[child.tag] = parse_element(child)
+        elif child.tag == 'server':  # Spezifische Behandlung für mehrfach vorkommende `server`-Knoten
+            result['server'].append({
+                'name': child.attrib.get('name', ''),
+                'text': child.text.strip() if child.text else None
+            })
+        elif child.tag in result:
+            # Falls der Tag mehrfach vorkommt und kein `server`-Knoten ist, als Liste speichern
+            if isinstance(result[child.tag], list):
+                result[child.tag].append(child.text.strip() if child.text else None)
+            else:
+                result[child.tag] = [result[child.tag], child.text.strip() if child.text else None]
+        else:
+            result[child.tag] = child.text.strip() if child.text else None
+    return dict(result)
+
+# Funktion zum Laden und Strukturieren der XML-Daten der gesamten Datei
 def load_xml_data(file_path):
-    with open(file_path, 'r', encoding='utf-8') as file:
-        xml_data = file.read()
-    return xmltodict.parse(xml_data)
+    tree = ET.parse(file_path)
+    root = tree.getroot()
+    data = {'mandanten': []}
 
-# Load data initially
-xml_data_path = 'C:\DBA-Scripts\cmi-config-rest-api\cmi-mandanten-config.xml'  # Path to your XML file
-xml_data = load_xml_data(xml_data_path)
+    for mandant in root.findall('mandant'):
+        mandant_dict = {}
 
-# Endpoint to fetch XML data with optional filters
-@app.route('/api/data', methods=['GET'])
-def get_data():
-    try:
-        # Reload XML data each time to ensure up-to-date info
-        data = load_xml_data(xml_data_path)
-        mandanten = data['mandanten']['mandant']
-        
-        # Ensure mandanten is a list to handle both single and multiple mandant entries
-        if not isinstance(mandanten, list):
-            mandanten = [mandanten]
-            
-        # Apply filters based on query parameters
-        filters = request.args
-        if filters:
-            for key, value in filters.items():
-                if key != 'return_value': # Only apply filters, exclude `return_value`
-                    mandanten = [
-                        m for m in mandanten
-                        if (m.get(key) and m[key] == value) or # for first level filters, like nameFull, nameShort, installId
-                        (key == 'prod_db_name' and m['prod']['db']['name'] == value) or
-                        (key == 'test_db_name' and m['test']['db']['name'] == value) or
-                        (key == 'prod_app_lizenzserver' and m['prod']['app']['lizenzserver'] == value) or
-                        (key == 'test_app_lizenzserver' and m['test']['app']['lizenzserver'] == value) or
-                        (key == 'prod_owinServer_relay' and m['prod']['owinServer']['relay'] == value) or
-                        (key == 'test_owinServer_relay' and m['test']['owinServer']['relay'] == value)
-                    ]
+        # Verarbeite alle direkten Kinder von <mandant> außer 'prod' und 'test'
+        for child in mandant:
+            if child.tag not in ['prod', 'test']:
+                mandant_dict[child.tag] = child.text.strip() if child.text else None
 
-        # Extract the requested field if `return_value` is specified
-        return_value = request.args.get('return_value')
-        if return_value:
-            # Map return_value to the appropriate path in the nested structure
-            value_map = {
-                'nameFull': lambda m: m['nameFull'],
-                'prod_db_server': lambda m: m['prod']['db']['server'],
-                'test_db_server': lambda m: m['test']['db']['server'],
-                'prod_db_name': lambda m: m['prod']['db']['name'],
-                'test_db_name': lambda m: m['test']['db']['name'],
-                'prod_app_server': lambda m: m['prod']['app']['server'],
-                'test_app_server': lambda m: m['test']['app']['server'],
-                'prod_app_installPathRoot': lambda m: m['prod']['app']['installPathRoot'],
-                'test_app_installPathRoot': lambda m: m['test']['app']['installPathRoot'],
-                'prod_app_user': lambda m: m['prod']['app']['user'],
-                'test_app_user': lambda m: m['test']['app']['user'],
-                'prod_app_lizenzserver': lambda m: m['prod']['app']['lizenzserver'],
-                'test_app_lizenzserver': lambda m: m['test']['app']['lizenzserver'],
-                'prod_sts_v3': lambda m: m['prod']['sts']['v3'],
-                'test_sts_v3': lambda m: m['test']['sts']['v3'],
-                'prod_objektLoader_port': lambda m: m['prod']['objektLoader']['port'],
-                'test_objektLoader_port': lambda m: m['test']['objektLoader']['port'],
-            }
+        # Verarbeite die 'prod' und 'test' Umgebungen
+        for env in ['prod', 'test']:
+            env_data = mandant.find(env)
+            if env_data is not None:
+                env_dict = {}
 
-            # Only return the specified field for each matching mandant
-            mandanten = [
-                {return_value: value_map[return_value](m)} for m in mandanten if return_value in value_map
-            ]
+                for section in env_data:
+                    # Benutze die rekursive Funktion, um jeden Abschnitt zu verarbeiten
+                    env_dict[section.tag] = parse_element(section)
 
-        return jsonify(mandanten)
+                # `prod` und `test` in das mandant_dict einfügen
+                mandant_dict[env] = env_dict
 
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        data['mandanten'].append(mandant_dict)
+
+    return data
+
+# Funktion zur Filteranwendung auf Mandantendaten basierend auf Query-Parametern
+def apply_filters(mandant, filters, environment):
+    env_data = mandant.get(environment, {})
+    for key, value in filters.items():
+        keys = key.split('_')
+        data = env_data
+
+        for k in keys:
+            data = data.get(k)
+            if data is None:
+                break
+
+        if data is None or str(data) != str(value):
+            return False
+
+    return True
+
+# Haupt-API-Endpunkt mit dynamischem Abschnitts-Handling
+@app.route('/api/data/<environment>', defaults={'path_segments': ''}, methods=['GET'])
+@app.route('/api/data/<environment>/<path:path_segments>', methods=['GET'])
+def get_environment_data(environment, path_segments):
+    data = load_xml_data(xml_data_path)
+    mandanten = data.get('mandanten', [])
+    
+    filters = {key: value for key, value in request.args.items()}
+    results = []
+
+    path_keys = path_segments.split('/') if path_segments else []
+
+    for mandant in mandanten:
+        # Filter anwenden
+        if filters and not apply_filters(mandant, filters, environment):
+            continue
+
+        selected_data = mandant.get(environment, {})
+        for key in path_keys:
+            selected_data = selected_data.get(key, {})
+            if not selected_data:
+                break
+
+        results.append({mandant.get('nameshort', 'unknown'): selected_data})
+
+    return jsonify(results if results else {"message": "No matching data found"}), 200
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8088)
+    app.run(port=api_port)
