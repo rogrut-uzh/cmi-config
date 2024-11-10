@@ -6,21 +6,80 @@
 
 REMARKS
 
+<mandant id="6">
+	<prod>
+		<namefull>Medizinische Fakultät</namefull>
+
 ___ Every mandant has its own set of config nodes. The attribute "id" is not used other than to distinguish a mandant-node from another.
 <mandant id="6">
 	___ Every mandant is divided into prod and test environment.
 	<prod>
-		___ Name of the mandant. 
+		___ Name of the mandant. Has no effect on settings.
 		<namefull>Medizinische Fakultät</namefull>
-		___ Short name of the mandant.
-
-	
+		___ Short name of the mandant. Has no effect on settings.
+		<nameshort>MF</nameshort>
+		___ Alternative form of name of the mandant. Has no effect on settings.
+		<namealternative/>
+		___ InstallId. Has no effect on settings.
+		<installid>2624</installid>
+		<db>
+			<host>ziaxiomapsql02</host>
+			<name>axioma_medizinfak</name>
+		</db>
+		<app>
+			<releaseversion>22.0.10</releaseversion>
+			<host id="6ps">ziaxiomapap03</host>
+			<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+			<installfolder>Medizinische Fakultaet 22.0.10</installfolder>
+			<servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
+			<serviceuser>UZH\srv_cmi_mef</serviceuser>
+			<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
+			<serviceuserrelay>Network Service</serviceuserrelay>
+			<haslicenseserver>true</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
+		</app>
+		<sts>
+			<v2>https://sts.cmicloud.ch/uzhmef</v2>
+			<v3>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</v3>
+		</sts>
+		<objektloader>
+			<port id="6ps">10070</port>
+		</objektloader>
+		<webconsole>
+			<port ref="6ps">10071</port>
+		</webconsole>
+		<ueberweisung>
+			<port ref="1ts">10072</port>
+			<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+			<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+			<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+			<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+			<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+			<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+			<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+			<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+			<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+			<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+			<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
+		</ueberweisung>
+		<owinserverrelay>
+			<mandant>uzhmef</mandant>
+			<port>
+				<private ref="6ps">10073</private>
+				<public ref="6ps">10074</public>
+			</port>
+		</owinserverrelay>
+		<muegi>
+			<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+			<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
+		</muegi>
+	</prod>
+	<test>
 	
 	
 	
     Lizenzserver
-        Wenn ein Mandant nicht am Lizenzserver angeschlossen ist: <haslizenzserver>false</haslizenzserver>
-        Wenn ein Mandant am Lizenzserver angeschlossen ist: <haslizenzserver>true</haslizenzserver>
+        Wenn ein Mandant nicht am Lizenzserver angeschlossen ist: <haslicenseserver>false</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
+        Wenn ein Mandant am Lizenzserver angeschlossen ist: <haslicenseserver>true</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
         Definiert in MetaTools.ini von Server.
 
     Mobile
@@ -77,7 +136,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_bm</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>https://uzhbmi.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmi</v2>
@@ -101,6 +161,7 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhbmi</mandant>
 				<port>
@@ -109,6 +170,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmi</zusammenarbeitdritte>
+				<sitzungsvorbereitung/>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Bedarfmanagement</namefull>
@@ -128,7 +193,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>https://uzhbmitest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmitest</v2>
@@ -151,6 +217,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhbmitest</mandant>
 				<port>
@@ -159,6 +228,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmitest</zusammenarbeitdritte>
+				<sitzungsvorbereitung/>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="2">
@@ -180,7 +253,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_dfpdib</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhfpi</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>https://uzhfpi.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhfpi</v2>
@@ -198,6 +272,9 @@ AUTHOR
 				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhfpi</mandant>
 				<port>
@@ -208,6 +285,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpi</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Direktion DFP-DIP</namefull>
@@ -227,7 +308,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhfpitest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>https://uzhfpitest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhfpitest</v2>
@@ -244,6 +326,9 @@ AUTHOR
 				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
 				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhfpitest</mandant>
 				<port>
@@ -254,6 +339,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgstest</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="3">
@@ -271,7 +360,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_gs</serviceuser>
 				<servicenamerelay>xxxxxx</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgs</v2>
@@ -300,6 +390,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhgs</mandant>
 				<port>
@@ -310,6 +403,10 @@ AUTHOR
 			<muegi>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Generalsekretariat</namefull>
@@ -329,7 +426,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgstest</v2>
@@ -355,6 +453,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhgstest</mandant>
 				<port>
@@ -363,6 +464,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="4">
@@ -384,7 +489,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_info</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhinfo</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfo</v2>
@@ -399,6 +505,9 @@ AUTHOR
 			<ueberweisung>
 				<port ref="4ps">10232</port>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhinfo</mandant>
 				<port>
@@ -407,6 +516,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Informatik</namefull>
@@ -426,7 +539,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhinfotest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfotest</v2>
@@ -441,6 +555,9 @@ AUTHOR
 			<ueberweisung>
 				<port ref="4ts">10237</port>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhinfotest</mandant>
 				<port>
@@ -449,6 +566,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="5">
@@ -470,7 +591,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_irev</serviceuser>
 				<servicenamerelay>xxxxxx</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirev</v2>
@@ -485,6 +607,9 @@ AUTHOR
 			<ueberweisung>
 				<port ref="5ps">10082</port>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhirev</mandant>
 				<port>
@@ -493,6 +618,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Interne Revision</namefull>
@@ -512,7 +641,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirevtest</v2>
@@ -527,6 +657,9 @@ AUTHOR
 			<ueberweisung>
 				<port ref="5ts">10087</port>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhirevtest</mandant>
 				<port>
@@ -535,12 +668,16 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="6">
 		<prod>
 			<namefull>Medizinische Fakultät</namefull>
-			<nameshort>MF</nameshort>
+			<nameshort>MeF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
 			<db>
@@ -556,7 +693,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_mef</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmef</v2>
@@ -582,6 +720,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhmef</mandant>
 				<port>
@@ -593,6 +734,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Medizinische Fakultät</namefull>
@@ -612,7 +757,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmeftest</v2>
@@ -637,6 +783,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhmeftest</mandant>
 				<port>
@@ -647,6 +796,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="7">
@@ -668,7 +821,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_mnf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmnf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnf</v2>
@@ -694,6 +848,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhmnf</mandant>
 				<port>
@@ -705,6 +862,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
@@ -724,7 +885,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnftest</v2>
@@ -749,6 +911,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhmnftest</mandant>
 				<port>
@@ -759,6 +924,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="8">
@@ -780,7 +949,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_phf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhphf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphf</v2>
@@ -807,6 +977,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhphf</mandant>
 				<port>
@@ -818,6 +991,10 @@ AUTHOR
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Philosophische Fakultät</namefull>
@@ -837,7 +1014,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphftest</v2>
@@ -862,6 +1040,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhphftest</mandant>
 				<port>
@@ -872,6 +1053,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="9">
@@ -893,7 +1078,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_prof</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhprof</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhprof</v2>
@@ -919,6 +1105,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhprof</mandant>
 				<port>
@@ -930,6 +1119,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Professuren</namefull>
@@ -949,7 +1142,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhproftest</v2>
@@ -974,6 +1168,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhproftest</mandant>
 				<port>
@@ -984,6 +1181,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="10">
@@ -1005,7 +1206,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_recht</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrecht</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrecht</v2>
@@ -1023,6 +1225,9 @@ AUTHOR
 				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhrecht</mandant>
 				<port>
@@ -1033,6 +1238,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Rechtsdienst</namefull>
@@ -1052,7 +1261,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrechttest</v2>
@@ -1070,6 +1280,9 @@ AUTHOR
 				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhrechttest</mandant>
 				<port>
@@ -1080,6 +1293,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="11">
@@ -1101,7 +1318,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_rwf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrwf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwf</v2>
@@ -1127,6 +1345,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhrwf</mandant>
 				<port>
@@ -1138,6 +1359,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Rechtswissenschaftliche Fakultät</namefull>
@@ -1157,7 +1382,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwftest</v2>
@@ -1182,6 +1408,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhrwftest</mandant>
 				<port>
@@ -1192,6 +1421,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="12">
@@ -1213,7 +1446,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_trf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhthf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthf</v2>
@@ -1239,6 +1473,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhthf</mandant>
 				<port>
@@ -1250,6 +1487,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
@@ -1269,7 +1510,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthftest</v2>
@@ -1294,6 +1536,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhthftest</mandant>
 				<port>
@@ -1304,6 +1549,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="13">
@@ -1325,7 +1574,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_vert</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvert</v2>
@@ -1340,6 +1590,7 @@ AUTHOR
 			<ueberweisung>
 				<port ref="13ps">10062</port>
 			</ueberweisung>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhvert</mandant>
 				<port>
@@ -1348,6 +1599,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test/>
 	</mandant>
@@ -1370,7 +1625,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_edu</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgsw</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgsw</v2>
@@ -1395,6 +1651,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhgsw</mandant>
 				<port>
@@ -1405,6 +1664,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>VP EDU</namefull>
@@ -1424,7 +1687,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgswtest</v2>
@@ -1448,6 +1712,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhgswtest</mandant>
 				<port>
@@ -1458,6 +1725,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="15">
@@ -1479,7 +1750,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_fsi</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrww</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrww</v2>
@@ -1496,6 +1768,9 @@ AUTHOR
 				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhrww</mandant>
 				<port>
@@ -1506,6 +1781,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test/>
 	</mandant>
@@ -1528,7 +1807,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_medres</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmnw</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnw</v2>
@@ -1552,6 +1832,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhmnw</mandant>
 				<port>
@@ -1562,6 +1845,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test/>
 	</mandant>
@@ -1584,7 +1871,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_vsf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhvsf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsf</v2>
@@ -1610,6 +1898,9 @@ AUTHOR
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhvsf</mandant>
 				<port>
@@ -1621,6 +1912,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Vetsuisse-Fakultät</namefull>
@@ -1640,7 +1935,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsftest</v2>
@@ -1665,6 +1961,9 @@ AUTHOR
 				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhvsftest</mandant>
 				<port>
@@ -1675,6 +1974,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="18">
@@ -1696,7 +1999,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_wwf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhwwf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwf</v2>
@@ -1721,6 +2025,9 @@ AUTHOR
 				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhwwf</mandant>
 				<port>
@@ -1732,6 +2039,10 @@ AUTHOR
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
@@ -1751,7 +2062,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwftest</v2>
@@ -1775,6 +2087,9 @@ AUTHOR
 				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhwwftest</mandant>
 				<port>
@@ -1785,6 +2100,10 @@ AUTHOR
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="19">
@@ -1806,7 +2125,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_zzm</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhzzm</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzm</v2>
@@ -1821,6 +2141,9 @@ AUTHOR
 			<ueberweisung>
 				<port ref="19ps">10272</port>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ps">10320</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhzzm</mandant>
 				<port>
@@ -1829,6 +2152,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Zentrum für Zahnmedizin</namefull>
@@ -1848,7 +2175,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>true</haslizenzserver>
+				<haslicenseserver>true</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzmtest</v2>
@@ -1863,6 +2191,9 @@ AUTHOR
 			<ueberweisung>
 				<port ref="19ts">10277</port>
 			</ueberweisung>
+			<licenseserver>
+				<port ref="20ts">10325</port>
+			</licenseserver>
 			<owinserverrelay>
 				<mandant>uzhzzmtest</mandant>
 				<port>
@@ -1871,6 +2202,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="20">
@@ -1892,7 +2227,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_lizenz</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts/>
 			<objektloader>
@@ -1904,6 +2240,7 @@ AUTHOR
 			<ueberweisung>
 				<port ref="20ps">10322</port>
 			</ueberweisung>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>local</mandant>
 				<port>
@@ -1913,6 +2250,10 @@ AUTHOR
 				<relay/>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>Lizenzserver</namefull>
@@ -1932,7 +2273,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts/>
 			<objektloader>
@@ -1944,6 +2286,7 @@ AUTHOR
 			<ueberweisung>
 				<port ref="20ts">10327</port>
 			</ueberweisung>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>local</mandant>
 				<port>
@@ -1953,6 +2296,10 @@ AUTHOR
 				<relay/>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="30">
@@ -1974,7 +2321,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_benu</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenu</v2>
@@ -1989,6 +2337,7 @@ AUTHOR
 			<ueberweisung>
 				<port ref="30ps">10022</port>
 			</ueberweisung>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhbenu</mandant>
 				<port>
@@ -1997,6 +2346,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>AIS Benutzungsverwaltung</namefull>
@@ -2016,7 +2369,8 @@ AUTHOR
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenutest</v2>
@@ -2031,6 +2385,7 @@ AUTHOR
 			<ueberweisung>
 				<port ref="30ts">10027</port>
 			</ueberweisung>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhbenutest</mandant>
 				<port>
@@ -2039,6 +2394,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<!-- ******************** CMI AIS/CMI Star ******************** -->
@@ -2061,7 +2420,8 @@ AUTHOR
 				<serviceuser>UZH\srv_ais_uaz</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts/>
 			<objektloader>
@@ -2071,6 +2431,7 @@ AUTHOR
 				<port ref="40ps">10011</port>
 			</webconsole>
 			<ueberweisung/>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhuaz</mandant>
 				<port>
@@ -2079,6 +2440,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>AIS UAZ</namefull>
@@ -2098,7 +2463,8 @@ AUTHOR
 				<serviceuser>UZH\srv_ais_test</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts/>
 			<objektloader>
@@ -2108,6 +2474,7 @@ AUTHOR
 				<port ref="40ts">10016</port>
 			</webconsole>
 			<ueberweisung/>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhuaztest</mandant>
 				<port>
@@ -2116,6 +2483,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 	<mandant id="41">
@@ -2137,7 +2508,8 @@ AUTHOR
 				<serviceuser>UZH\srv_ais_afm</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts/>
 			<objektloader>
@@ -2147,6 +2519,7 @@ AUTHOR
 				<port ref="41ps">10251</port>
 			</webconsole>
 			<ueberweisung/>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhafm</mandant>
 				<port>
@@ -2155,6 +2528,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</prod>
 		<test>
 			<namefull>AIS AFM</namefull>
@@ -2174,7 +2551,8 @@ AUTHOR
 				<serviceuser>UZH\srv_ais_test</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslizenzserver>false</haslizenzserver>
+				<haslicenseserver>false</haslicenseserver>
+				<weburl>xxxxxxxxxxxx</weburl>
 			</app>
 			<sts/>
 			<objektloader>
@@ -2184,6 +2562,7 @@ AUTHOR
 				<port ref="41ts">10256</port>
 			</webconsole>
 			<ueberweisung/>
+			<licenseserver/>
 			<owinserverrelay>
 				<mandant>uzhafmtest</mandant>
 				<port>
@@ -2192,6 +2571,10 @@ AUTHOR
 				</port>
 			</owinserverrelay>
 			<muegi/>
+			<mobile>
+				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
+				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+			</mobile>
 		</test>
 	</mandant>
 </mandanten>
