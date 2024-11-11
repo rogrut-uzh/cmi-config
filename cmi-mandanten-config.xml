@@ -76,6 +76,8 @@ ___ Every mandant has its own set of config nodes. The attribute "id" is not use
 	<test>
 	
 	
+	<weburl> = MobileFirst im metatool.ini
+	
 	
     Lizenzserver
         Wenn ein Mandant nicht am Lizenzserver angeschlossen ist: <haslicenseserver>false</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
@@ -114,6 +116,90 @@ ___ Every mandant has its own set of config nodes. The attribute "id" is not use
 
 AUTHOR
     Roger Rutishauser - DBA, September/October 2024
+	
+
+
+MetaTool.ini
+***
+#****************************************
+#* Generalsekretariat CMI V22.0.10 TEST *
+#****************************************
+[ObjektLoader]
+Port=10245
+Server=ziaxiomatap02.uzh.ch
+-> Unter diesem Port läuft die App.
+
+[WebConsole]
+Port=10246
+MachineName=ziaxiomatap02.uzh.ch
+-> Welche Subdienste am laufen sind.
+
+[Ueberweisung]
+Port=10247
+MachineName=ziaxiomatap02.uzh.ch
+-> Hier werden Überweisungen von anderen Mandanten angenommen.
+
+#*************************
+#* CMI Lizenzserver TEST *
+#*************************
+[LicenseServer]
+Port=10325
+Server=ziaxiomatap02.uzh.ch
+Hier werden die Lizenzen bezogen
+
+
+[DataBase]
+Dialect = SQLServer
+ConnectString = Data Source=ZIAXIOMATSQL02,1433;Initial Catalog=axioma_generalsek_TEST;Trusted_Connection=True;Pooling=true
+
+[Fulltext]
+Directory=C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\Fulltext
+
+[NotificationPublisher]
+Active = true
+-> Notifikationen für Publikitationen von Sitzungen
+
+[Notificator]
+Active = true
+-> Notifikationen für alles andere
+
+[Renderer]
+Running=0-24
+-> Wann der Renderer läuft
+
+[Trace]
+Path=C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\Trace
+PurgeAfterDays=12
+#Debug, Info, Warning (=Default), Exception
+Level=Warning
+
+[OwinServer]
+Server=*
+PortPrivate=10248
+PortPublic=10249
+Mandant=uzhgstest
+MobileClients_BaseDirectory="C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\MobileClients"
+-> Ermöglichen Kommunikation vom Desktop-Client und Webclient
+
+[MobileFirst]
+Url=https://uzhgstest.cmicloud.ch
+-> URL vom Webclient
+
+[WebDav]
+Url=https://uzhgstest.cmicloud.ch/webdav
+-> Dokumentenbearbeitung mit Webclient.
+
+[PushService]
+ServerUrl=https://uzhgstest.cmicloud.ch/push
+PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
+-> Wenn mehrere Personen in Dekstop oder Webclient ein Dok am bearbeiten sind, werden änderungen realtime updated.
+
+
+
+
+
+
+
 -->
 <mandanten>
 	<!-- ******************** CMI/Axioma ******************** -->
@@ -137,7 +223,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>https://uzhbmi.cmicloud.ch</weburl>
+				<weburl/><!-- Release 21 hat kein Webclient -->
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmi</v2>
@@ -358,10 +444,10 @@ AUTHOR
 				<installfolder>Generalsekretariat 22.0.10</installfolder>
 				<servicename>CMI Generalsekretariat 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_gs</serviceuser>
-				<servicenamerelay>xxxxxx</servicenamerelay>
+				<servicenamerelay>CMIRelayOPCServiceuzhgs</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhgs.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgs</v2>
@@ -427,7 +513,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhgstest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgstest</v2>
@@ -490,7 +576,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhinfo</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhinfo.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfo</v2>
@@ -540,7 +626,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhinfotest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhinfotest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfotest</v2>
@@ -587,12 +673,12 @@ AUTHOR
 				<host id="5ps">ziaxiomapap03</host>
 				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
 				<installfolder>Interne Revision 22.0.10</installfolder>
-				<servicename>XXXXXXX</servicename>
+				<servicename>CMI Interne Revision 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_irev</serviceuser>
-				<servicenamerelay>xxxxxx</servicenamerelay>
+				<servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhirev.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirev</v2>
@@ -635,14 +721,14 @@ AUTHOR
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="5ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
+				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
 				<installfolder>Interne Revision 22.0.10</installfolder>
-				<servicename>CMI Interne Revision 22.0.10</servicename>
+				<servicename>CMI Interne Revision TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
-				<servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
+				<servicenamerelay>CMIRelayOPCServiceuzhirevtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhirevtest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirevtest</v2>
@@ -694,7 +780,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhmef.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmef</v2>
@@ -758,7 +844,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhmeftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmeftest</v2>
@@ -822,7 +908,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhmnf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhmnf.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnf</v2>
@@ -886,7 +972,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhmnftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnftest</v2>
@@ -950,7 +1036,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhphf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhphf.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphf</v2>
@@ -1015,7 +1101,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhphftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphftest</v2>
@@ -1079,7 +1165,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhprof</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhprof.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhprof</v2>
@@ -1143,7 +1229,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhproftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhproftest</v2>
@@ -1207,7 +1293,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhrecht</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhrecht.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrecht</v2>
@@ -1262,7 +1348,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhrechttest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrechttest</v2>
@@ -1319,7 +1405,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhrwf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhrwf.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwf</v2>
@@ -1383,7 +1469,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhrwftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwftest</v2>
@@ -1447,7 +1533,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhthf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhthf.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthf</v2>
@@ -1511,7 +1597,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhthftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthftest</v2>
@@ -1575,7 +1661,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhvert.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvert</v2>
@@ -1626,7 +1712,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhgsw</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhgsw.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgsw</v2>
@@ -1688,7 +1774,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhgswtest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgswtest</v2>
@@ -1751,7 +1837,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhrww</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhrww.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrww</v2>
@@ -1808,7 +1894,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhmnw</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhmnw.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnw</v2>
@@ -1872,7 +1958,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhvsf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhvsf.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsf</v2>
@@ -1936,7 +2022,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhvsftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsftest</v2>
@@ -2000,7 +2086,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhwwf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhwwf.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwf</v2>
@@ -2063,7 +2149,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhwwftest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwftest</v2>
@@ -2126,7 +2212,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhzzm</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhzzm.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzm</v2>
@@ -2176,7 +2262,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>true</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhzzmtest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzmtest</v2>
@@ -2228,7 +2314,7 @@ AUTHOR
 				<servicenamerelay/>
 				<serviceuserrelay/>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl/>
 			</app>
 			<sts/>
 			<objektloader>
@@ -2274,7 +2360,7 @@ AUTHOR
 				<servicenamerelay/>
 				<serviceuserrelay/>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl/>
 			</app>
 			<sts/>
 			<objektloader>
@@ -2322,7 +2408,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhbenu.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenu</v2>
@@ -2370,7 +2456,7 @@ AUTHOR
 				<servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://uzhbenutest.cmicloud.ch</weburl>
 			</app>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenutest</v2>
@@ -2421,7 +2507,7 @@ AUTHOR
 				<servicenamerelay/>
 				<serviceuserrelay/>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl>https://mobile.cmistar.ch/webclients-r22/uzh/#/</weburl>
 			</app>
 			<sts/>
 			<objektloader>
