@@ -202,7 +202,7 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 
 -->
 <mandanten>
-	<!-- ******************** CMI/Axioma ******************** -->
+	<!-- ******************** CMI (Axioma) ******************** -->
 	<mandant id="1">
 		<prod>
 			<namefull>Bedarfmanagement</namefull>
@@ -433,6 +433,10 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 	</mandant>
 	<mandant id="3">
 		<prod>
+			<namefull>Generalsekretariat</namefull>
+			<nameshort>GS</nameshort>
+			<namealternative/>
+			<installid>2624</installid>
 			<db>
 				<host>ziaxiomapsql02</host>
 				<name>axioma_generalsek</name>
@@ -2486,7 +2490,7 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			</mobile>
 		</test>
 	</mandant>
-	<!-- ******************** CMI AIS/CMI Star ******************** -->
+	<!-- ******************** CMI AIS ******************** -->
 	<mandant id="40">
 		<prod>
 			<namefull>AIS UAZ</namefull>
@@ -2527,8 +2531,8 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			</owinserverrelay>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung/>
 			</mobile>
 		</prod>
 		<test>
@@ -2550,7 +2554,7 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<servicenamerelay/>
 				<serviceuserrelay/>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl/><!-- gibt es nicht, zu teuer -->
 			</app>
 			<sts/>
 			<objektloader>
@@ -2570,8 +2574,8 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			</owinserverrelay>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung/>
 			</mobile>
 		</test>
 	</mandant>
@@ -2595,7 +2599,7 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<servicenamerelay/>
 				<serviceuserrelay/>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl/><!-- gibt es nicht -->
 			</app>
 			<sts/>
 			<objektloader>
@@ -2615,8 +2619,8 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			</owinserverrelay>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung/>
 			</mobile>
 		</prod>
 		<test>
@@ -2638,7 +2642,7 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<servicenamerelay/>
 				<serviceuserrelay/>
 				<haslicenseserver>false</haslicenseserver>
-				<weburl>xxxxxxxxxxxx</weburl>
+				<weburl/><!-- gibt es nicht -->
 			</app>
 			<sts/>
 			<objektloader>
@@ -2658,8 +2662,8 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			</owinserverrelay>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung/>
 			</mobile>
 		</test>
 	</mandant>
