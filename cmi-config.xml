@@ -4,122 +4,189 @@
 * CMI Configuration *
 *********************
 
-REMARKS
+AUTHOR
+    Roger Rutishauser - ADB-DBA, September, October, November 2024
 
-<mandant id="6">
-	<prod>
-		<namefull>Medizinische Fakultät</namefull>
+
+REMARKS
 
 ___ Every mandant has its own set of config nodes. The attribute "id" is not used other than to distinguish a mandant-node from another.
 <mandant id="6">
-	___ Every mandant is divided into prod and test environment.
-	<prod>
-		___ Name of the mandant. Has no effect on settings.
-		<namefull>Medizinische Fakultät</namefull>
-		___ Short name of the mandant. Has no effect on settings.
-		<nameshort>MF</nameshort>
-		___ Alternative form of name of the mandant. Has no effect on settings.
-		<namealternative/>
-		___ InstallId. Has no effect on settings.
-		<installid>2624</installid>
-		<db>
-			<host>ziaxiomapsql02</host>
-			<name>axioma_medizinfak</name>
-		</db>
-		<app>
-			<releaseversion>22.0.10</releaseversion>
-			<host id="6ps">ziaxiomapap03</host>
-			<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-			<installfolder>Medizinische Fakultaet 22.0.10</installfolder>
-			<servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
-			<serviceuser>UZH\srv_cmi_mef</serviceuser>
-			<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
-			<serviceuserrelay>Network Service</serviceuserrelay>
-			<haslicenseserver>true</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
-		</app>
-		<sts>
-			<v2>https://sts.cmicloud.ch/uzhmef</v2>
-			<v3>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</v3>
-		</sts>
-		<objektloader>
-			<port id="6ps">10070</port>
-		</objektloader>
-		<webconsole>
-			<port ref="6ps">10071</port>
-		</webconsole>
-		<ueberweisung>
-			<port ref="1ts">10072</port>
-			<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-			<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-			<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-			<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-			<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-			<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-			<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-			<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-			<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-			<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-			<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
-		</ueberweisung>
-		<owinserverrelay>
-			<mandant>uzhmef</mandant>
-			<port>
-				<private ref="6ps">10073</private>
-				<public ref="6ps">10074</public>
-			</port>
-		</owinserverrelay>
-		<muegi>
-			<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
-		</muegi>
-	</prod>
-	<test>
-	
-	
-	<weburl> = MobileFirst im metatool.ini
-	
-	
-    Lizenzserver
-        Wenn ein Mandant nicht am Lizenzserver angeschlossen ist: <haslicenseserver>false</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
-        Wenn ein Mandant am Lizenzserver angeschlossen ist: <haslicenseserver>true</haslicenseserver><weburl>xxxxxxxxxxxx</weburl>
-        Definiert in MetaTools.ini von Server.
 
-    Mobile
-        URL setzt sich wie folgt zusammen: https://<owinserverrelay><mandadnt>.cmicloud.ch
-        z.B. https://uzhbmi.cmicloud.ch
+    ___ Every mandant is divided into prod and test environment.
+    <prod>
 
-    objektloader
-        Im MetaTool.ini von Server steht nur der host z.B. zaixiomapap03
-        Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
+        ___ Name of the mandant. Has no effect neither on settings nor Software-Center/Intune/Citrix.
+        <namefull>Medizinische Fakultät</namefull>
 
-    WebDav
-        URL setzt sich wie folgt zusammen: https://<owinserverrelay><mandant>.cmicloud.ch/webdav
-        z.B. https://uzhbmi.cmicloud.ch/webdav
+        ___ Short name of the mandant. Has no effect on settings.
+        <nameshort>MF</nameshort>
 
-    <owinserverrelay>
-        Relevant für folgende Files
-        - C:\Program Files\CMI AG\RelayServer\CMI_<mandant>_RelayOPCService_uzhbmi\Thinktecture.Relay.OnPremiseConnectorService.exe.config
-        - C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10\Server\MetaTool.ini
-        - Der Relay Server ist immer https://relay.cmiaxioma.ch/
+        ___ Alternative form of name of the mandant. Has no effect neither on settings nor Software-Center/Intune/Citrix.
+        <namealternative/>
 
-    Testsystem
-        Folgende Mandanten haben kein Testsystem:
-        - 13 Vertragsverwaltung
-        - 15 VP FSI
-        - 16 Direktion Universitäre Medizin / Prorektorat Forschung (Medres)
-		
-	Mügi
-		Für Traktanden
-		
-		
-		service name nicht display name
+        ___ InstallId. Has no effect neither on settings nor Software-Center/Intune/Citrix.
+        <installid>2624</installid>
 
-AUTHOR
-    Roger Rutishauser - DBA, September/October 2024
-	
+        ___ Database information. Auszug aus MetaTool.ini:
+        ___ [DataBase]
+        ___ Dialect = SQLServer
+        ___ ConnectString = Data Source=ZIAXIOMAPSQL02,1433;Initial Catalog=axioma_dfpdib;Trusted_Connection=True;Pooling=true
+        <database>
+
+            ___ Hostname where the database is located
+            <host>ZIAXIOMAPSQL02</host>
+
+            __ database name
+            <name>axioma_medizinfak</name>
+
+        </database>
+
+        ___ app specific information
+        <app>
+
+            ___ release version number
+            <releaseversion>22.0.10</releaseversion>
+
+            ___ host name where the mandant is installed
+            <host id="6ps">ziaxiomapap03</host>
+
+            ___ installation path
+            <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 22.0.10</installpath>
+
+            ___ windows service names and users
+            <servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
+            <serviceuser>UZH\srv_cmi_mef</serviceuser>
+            <servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
+            <serviceuserrelay>Network Service</serviceuserrelay>
+        </app>
+
+        ___ Falls leer, ist Lizenz direkt in der App. Ansonsten wird der Lizenzserver verwendet (CMI Installation). Auszug aus MetaTool.ini:
+        ___ [LicenseServer]
+        ___ Port=10320
+        ___ Server=ziaxiomapap03
+        <licenseserver>
+            <port>10325</port>
+            <server>ziaxiomatap02</server>
+        </licenseserver>
+
+        ___ mobilefirst: Web-Client URL. Auszug aus MetaTool.ini:
+        ___ [MobileFirst]
+        ___ Url=https://uzhgstest.cmicloud.ch
+        <mobilefirst>https://uzhfpi.cmicloud.ch</mobilefirst>
+
+        ___ STS: CMI Security Token Service. See https://dokumentation.cmiag.ch/cmi-sts-3/latest/
+        <sts>
+
+            ___ v2 soon deprecated
+            <v2>https://sts.cmicloud.ch/uzhmef</v2>
+    
+            ___ v3
+            <v3>
+
+                ___ ea: Enterprise App. Redirects. Verwaltet durch Thomas Schurter.
+                <ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
+
+                ___ desktopclient: Diese URL muss im Desktop-Client von CMI hinterlegt sein, bei den STS-Einstellungen.
+                <desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
+
+            </v3>
+
+        </sts>
+
+        ___ Unter diesem Port läuft die App. Auszug aus MetaTool.ini:
+        ___ [ObjektLoader]
+        ___ Port=10245
+        ___ Server=ziaxiomatap02
+        ___ Im MetaTool.ini von Server steht nur der host z.B. zaixiomapap03
+        ___ Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
+        <objektloader>
+            <port id="6ps">10070</port>
+        </objektloader>
+
+        ___ Port, unter welchem Subdienste am laufen sind. Auszug aus MetaTool.ini:
+        ___ [WebConsole]
+        ___ Port=10246
+        ___ MachineName=ziaxiomapap03
+        <webconsole>
+            <port ref="6ps">10071</port>
+        </webconsole>
+
+        ___ Überweisungen
+        <ueberweisung>
+
+            ___ port: Unter diesem Port ist der Mandant erreichbar. Auszug aus von MetaTool.ini:
+            ___ [Ueberweisung]
+            ___ Port=10247
+            ___ MachineName=ziaxiomapap03
+            <port ref="1ts">10072</port>
+
+            ___ url: An folgende URLs kann Überwiesen werden. Sie müssen das Gegenstück in ihrer eigenen Liste haben. Diese URLs werden im Desktop-Client gepflegt. Suche nach Typ "Server" listet sie auf (Als Administrator einloggen).
+            <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+            <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+            <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
+            <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
+            <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+            <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
+            <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
+            <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
+            <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+            <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+            <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
+        </ueberweisung>
+
+        ___ owinserver: Ermöglicht Kommunikation vom Desktop-Client und Webclient. Auszug aus MetaTool.ini:
+        ___ [OwinServer]
+        ___ Server=*
+        ___ PortPrivate=10248
+        ___ PortPublic=10249
+        ___ Mandant=uzhgstest
+        ___ MobileClients_BaseDirectory="C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\MobileClients"
+        
+        ___ Auszug aus Thinkecture.Relay.OnPremiseConnectorService.exe.config:
+        ___ <relayServer baseUrl="https://relay.cmiaxioma.ch/" ignoreSslErrors="false" timeout="00:00:30">
+        ___     <security authenticationType="Identity" accessTokenRefreshWindow="0.00:01:00"> 
+        ___         <identity userName="uzhirevtest" password="asgXfO1BP5f+JGc1HvLOiec+Qb/AQD3hnHY2IcsxdIKGajsi3gxfE7cmZV6ejOcPc2a6QO7/7EDhpQADIw3h8sMiMtE17wu/RdJ3BEs7CMCUURx5CH9bkEvNmQLDDSQ35/hrcQ==" />
+        ___     </security>
+        ___     <onPremiseTargets>
+        ___         <web key="webapiprivate" baseUrl="http://ziaxiomatap02:10088/" />
+        ___         <web key="webapipublic" baseUrl="http://ziaxiomatap02:10089/" />
+        ___     </onPremiseTargets>
+        ___ </relayServer>
+        <owinserver>
+            <mandant>uzhmef</mandant>
+            <port>
+                <private ref="6ps">10073</private>
+                <public ref="6ps">10074</public>
+            </port>
+        </owinserver>
+
+        ___ Im Desktop Client hinterlegt:
+        <muegi>
+            <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+            <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
+        </muegi>
+    </prod>
+    <test>
 
 
-MetaTool.ini
+
+
+
+WebDav
+    URL setzt sich wie folgt zusammen: https://<owinserver><mandant>.cmicloud.ch/webdav
+    z.B. https://uzhbmi.cmicloud.ch/webdav
+
+<owinserver>
+    Relevant für folgende Files
+    - C:\Program Files\CMI AG\RelayServer\CMI_<mandant>_RelayOPCService_uzhbmi\Thinktecture.Relay.OnPremiseConnectorService.exe.config
+    - C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10\Server\MetaTool.ini
+    - Der Relay Server ist immer https://relay.cmiaxioma.ch/
+
+
+
+
+MetaTool.ini Beispiel als Referenz:
 ***
 #****************************************
 #* Generalsekretariat CMI V22.0.10 TEST *
@@ -127,17 +194,14 @@ MetaTool.ini
 [ObjektLoader]
 Port=10245
 Server=ziaxiomatap02.uzh.ch
--> Unter diesem Port läuft die App.
 
 [WebConsole]
 Port=10246
 MachineName=ziaxiomatap02.uzh.ch
--> Welche Subdienste am laufen sind.
 
 [Ueberweisung]
 Port=10247
 MachineName=ziaxiomatap02.uzh.ch
--> Hier werden Überweisungen von anderen Mandanten angenommen.
 
 #*************************
 #* CMI Lizenzserver TEST *
@@ -145,7 +209,6 @@ MachineName=ziaxiomatap02.uzh.ch
 [LicenseServer]
 Port=10325
 Server=ziaxiomatap02.uzh.ch
-Hier werden die Lizenzen bezogen
 
 
 [DataBase]
@@ -191,15 +254,8 @@ Url=https://uzhgstest.cmicloud.ch/webdav
 
 [PushService]
 ServerUrl=https://uzhgstest.cmicloud.ch/push
-PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
+PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 -> Wenn mehrere Personen in Dekstop oder Webclient ein Dok am bearbeiten sind, werden änderungen realtime updated.
-
-
-
-
-
-
-
 -->
 <mandanten>
 	<!-- ******************** CMI (Axioma) ******************** -->
@@ -209,25 +265,28 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>BM</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_bm</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>21.0.10</releaseversion>
 				<host id="1ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>BM 21.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10</installpath>
 				<servicename>CMI BM 21.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_bm</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl/><!-- Release 21 hat kein Webclient -->
 			</app>
+			<licenseserver/>
+			<!-- Release 21 hat kein Webclient -->
+			<mobilefirst/>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmi</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="1ps">10110</port>
@@ -247,44 +306,54 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhbmi</mandant>
 				<port>
 					<private ref="1ps">10113</private>
 					<public ref="1ps">10114</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmi</zusammenarbeitdritte>
 				<sitzungsvorbereitung/>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:05-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>21:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>05:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Bedarfmanagement</namefull>
 			<nameshort>BM</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_bm_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="1ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>BM 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\BM 22.0.10</installpath>
 				<servicename>CMI BM 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhbmitest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhbmitest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmitest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhbmitest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="1ts">10115</port>
@@ -303,21 +372,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhbmitest</mandant>
 				<port>
 					<private ref="1ts">10118</private>
 					<public ref="1ts">10119</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmitest</zusammenarbeitdritte>
 				<sitzungsvorbereitung/>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:05-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>21:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>05:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="2">
@@ -326,25 +398,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>DFPDIB</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_dfpdib</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="2ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Direktion DFPDIB 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Direktion DFPDIB 22.0.10</installpath>
 				<servicename>CMI Direktion DFPDIB 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_dfpdib</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhfpi</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhfpi.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhfpi.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhfpi</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhfpi</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="2ps">10140</port>
@@ -358,48 +435,56 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhfpi</mandant>
 				<port>
 					<private ref="2ps">10143</private>
 					<public ref="2ps">10144</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
 				<zusammenarbeitdritte/>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpi</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>20:10-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>22:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>05:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Direktion DFP-DIP</namefull>
 			<nameshort>DFPDIB</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_dfpdib_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="2ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Direktion DFPDIB 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 22.0.10</installpath>
 				<servicename>CMI Direktion DFPDIB TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhfpitest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhfpitest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhfpitest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhfpitest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhfpitest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="2ts">10145</port>
@@ -412,23 +497,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="3" name="UZH-GS_TEST">http://ziaxiomatap02:10247/UeberweisungsService</url>
 				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhfpitest</mandant>
 				<port>
 					<private ref="2ts">10148</private>
 					<public ref="2ts">10149</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
 				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpi</sitzungsvorbereitung>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpitest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>20:10-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>22:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>05:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="3">
@@ -437,25 +525,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>GS</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_generalsek</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="3ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Generalsekretariat 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 22.0.10</installpath>
 				<servicename>CMI Generalsekretariat 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_gs</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgs</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhgs.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhgs.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgs</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhgs</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="3ps">10240</port>
@@ -480,48 +573,56 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhgs</mandant>
 				<port>
 					<private ref="3ps">10243</private>
 					<public ref="3ps">10244</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgs</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgs</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgs</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>20:30-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>21:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>00:05-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Generalsekretariat</namefull>
 			<nameshort>GS</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_generalsek_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="3ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Generalsekretariat 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10</installpath>
 				<servicename>CMI Generalsekretariat TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhgstest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhgstest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgstest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhgstest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="3ts">10245</port>
@@ -543,21 +644,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhgstest</mandant>
 				<port>
 					<private ref="1ts">10248</private>
 					<public ref="1ts">10249</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgstest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgstest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgstest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>20:30-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>21:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>00:05-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="4">
@@ -566,25 +670,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>Informatik</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_informatik</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="4ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Informatik 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Informatik 22.0.10</installpath>
 				<servicename>CMI Informatik 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_info</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhinfo</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhinfo.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhinfo.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfo</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhinfo</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="4ps">10230</port>
@@ -595,46 +704,54 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="4ps">10232</port>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhinfo</mandant>
 				<port>
 					<private ref="1ts">10233</private>
 					<public ref="1ts">10234</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhinfo</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfo</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:40-SaSo-weekly</adr-sync>
+				<fulltext-optimize>05:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Informatik</namefull>
 			<nameshort>Informatik</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_informatik_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="4ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Informatik 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Informatik 22.0.10</installpath>
 				<servicename>CMI Informatik TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhinfotest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhinfotest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhinfotest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhinfotest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhinfotest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="4ts">10235</port>
@@ -645,21 +762,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="4ts">10237</port>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhinfotest</mandant>
 				<port>
 					<private ref="4ts">10238</private>
 					<public ref="4ts">10239</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhinfotest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfotest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:40-SaSo-weekly</adr-sync>
+				<fulltext-optimize>05:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="5">
@@ -668,25 +788,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>Intrev</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_intrev</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="5ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Interne Revision 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Interne Revision 22.0.10</installpath>
 				<servicename>CMI Interne Revision 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_irev</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhirev.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhirev.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirev</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhirev</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="5ps">10080</port>
@@ -697,46 +822,54 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="5ps">10082</port>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhirev</mandant>
 				<port>
 					<private ref="5ps">10083</private>
 					<public ref="5ps">10084</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirev</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>20:40-SaSo-weekly</adr-sync>
+				<fulltext-optimize>00:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>18:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Interne Revision</namefull>
 			<nameshort>Intrev</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_intrev_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="5ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Interne Revision 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 22.0.10</installpath>
 				<servicename>CMI Interne Revision TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhirevtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhirevtest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhirevtest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhirevtest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhirevtest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="5ts">10085</port>
@@ -747,21 +880,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="5ts">10087</port>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhirevtest</mandant>
 				<port>
 					<private ref="5ts">10088</private>
 					<public ref="5ts">10089</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirevtest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>20:40-SaSo-weekly</adr-sync>
+				<fulltext-optimize>00:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>18:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="6">
@@ -770,25 +906,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>MeF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_medizinfak</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="6ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Medizinische Fakultaet 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 22.0.10</installpath>
 				<servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_mef</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhmef.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhmef.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmef</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="6ps">10070</port>
@@ -810,49 +951,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhmef</mandant>
 				<port>
 					<private ref="6ps">10073</private>
 					<public ref="6ps">10074</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmef</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmef</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhmef</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>21:00-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>00:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Medizinische Fakultät</namefull>
 			<nameshort>MF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_medizinfak_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="6ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Medizinische Fakultaet 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 22.0.10</installpath>
 				<servicename>CMI Medizinische Fakultaet TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhmeftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhmeftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmeftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhmeftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="6ts">10075</port>
@@ -873,23 +1022,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhmeftest</mandant>
 				<port>
 					<private ref="6ts">10078</private>
 					<public ref="6ts">10079</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmeftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmeftest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhmeftest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>21:00-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>00:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="7">
@@ -898,25 +1050,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>MNF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_mnf</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="7ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>MNF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\MNF 22.0.10</installpath>
 				<servicename>CMI MNF 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_mnf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmnf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhmnf.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhmnf.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnf</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhmnf</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="7ps">10050</port>
@@ -938,49 +1095,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhmnf</mandant>
 				<port>
 					<private ref="7ps">10053</private>
 					<public ref="7ps">10054</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnf</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnf</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>23:00-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>00:45-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
 			<nameshort>MNF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_mnf_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="7ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>MNF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\MNF 22.0.10</installpath>
 				<servicename>CMI MNF TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhmnftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhmnftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhmnftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="7ts">10055</port>
@@ -1001,23 +1166,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhmnftest</mandant>
 				<port>
 					<private ref="7ts">10058</private>
 					<public ref="7ts">10059</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnftest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>23:00-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>00:45-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="8">
@@ -1026,25 +1194,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>PhF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_philosophfak</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="8ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Philosophische Fakultaet 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Philosophische Fakultaet 22.0.10</installpath>
 				<servicename>CMI Philosophische Fakultaet 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_phf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhphf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhphf.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhphf.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphf</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhphf</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="8ps">10090</port>
@@ -1067,49 +1240,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhphf</mandant>
 				<port>
 					<private ref="8ps">10093</private>
 					<public ref="8ps">10094</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhphf</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphf</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:10-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>02:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Philosophische Fakultät</namefull>
 			<nameshort>PhF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_philosophfak_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>24.0.6</releaseversion>
 				<host id="8ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Philosophische Fakultaet 24.0.6</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 24.0.6</installpath>
 				<servicename>CMI Philosophische Fakultaet TEST 24.0.6</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhphftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhphftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhphftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhphftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="8ts">10095</port>
@@ -1130,23 +1311,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhphftest</mandant>
 				<port>
 					<private ref="8ts">10098</private>
 					<public ref="8ts">10099</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhphftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphftest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:10-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>02:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:00-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="9">
@@ -1155,25 +1339,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>Prof</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_professuren</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="9ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Professuren 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Professuren 22.0.10</installpath>
 				<servicename>CMI Professuren 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_prof</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhprof</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhprof.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhprof.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhprof</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhprof</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="9ps">10150</port>
@@ -1195,49 +1384,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhprof</mandant>
 				<port>
 					<private ref="9ps">10153</private>
 					<public ref="9ps">10154</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhprof</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhprof</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhprof</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>21:20-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>02:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Professuren</namefull>
 			<nameshort>Prof</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_professuren_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="9ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Professuren 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Professuren 22.0.10</installpath>
 				<servicename>CMI Professuren TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhproftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhproftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhproftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhproftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port id="9ts">10155</port>
@@ -1258,23 +1455,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhproftest</mandant>
 				<port>
 					<private ref="9ts">10158</private>
 					<public ref="9ts">10159</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhproftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhproftest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhproftest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>21:20-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>02:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="10">
@@ -1283,25 +1483,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>Rechtsdienst</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_rechtsdienst</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="10ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Rechtsdienst 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 22.0.10</installpath>
 				<servicename>CMI Rechtsdienst 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_recht</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrecht</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhrecht.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhrecht.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrecht</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhrecht</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="10ps">10220</port>
@@ -1315,48 +1520,56 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhrecht</mandant>
 				<port>
 					<private ref="10ps">10223</private>
 					<public ref="10ps">10224</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrecht</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>22:00-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>04:45-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>06:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Rechtsdienst</namefull>
 			<nameshort>Rechtsdienst</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_rechtsdienst_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="10ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Rechtsdienst 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 22.0.10</installpath>
 				<servicename>CMI Rechtsdienst TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhrechttest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhrechttest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrechttest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhrechttest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="10ts">10225</port>
@@ -1370,23 +1583,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhrechttest</mandant>
 				<port>
 					<private ref="10ts">10228</private>
 					<public ref="10ts">10229</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhrechttest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrechttest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrechttest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:00-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>04:45-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>06:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="11">
@@ -1395,25 +1611,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>RWF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_rwf</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="11ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>RWF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 22.0.10</installpath>
 				<servicename>CMI RWF 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_rwf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrwf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhrwf.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhrwf.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwf</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhrwf</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="11ps">10000</port>
@@ -1435,49 +1656,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhrwf</mandant>
 				<port>
 					<private ref="11ps">10003</private>
 					<public ref="11ps">10004</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhrwf</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrwf</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrwf</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:20-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>23:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>21:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Rechtswissenschaftliche Fakultät</namefull>
 			<nameshort>RWF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_rwf_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="11ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>RWF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\RWF 22.0.10</installpath>
 				<servicename>CMI RWF TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhrwftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhrwftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrwftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhrwftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="11ts">10005</port>
@@ -1498,23 +1727,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhrwftest</mandant>
 				<port>
 					<private ref="11ts">10008</private>
 					<public ref="11ts">10009</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhrwftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrwftest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrwftest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:20-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>23:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>21:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="12">
@@ -1523,25 +1755,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>TRF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_trf</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="12ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>TRF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\TRF 22.0.10</installpath>
 				<servicename>CMI TRF 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_trf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhthf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhthf.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhthf.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthf</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhthf</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="12ps">10210</port>
@@ -1563,49 +1800,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhthf</mandant>
 				<port>
 					<private ref="12ps">10213</private>
 					<public ref="12ps">10214</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhthf</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthf</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>23:20-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>04:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
 			<nameshort>TRF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_trf_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="12ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>TRF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\TRF 22.0.10</installpath>
 				<servicename>CMI TRF TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhthftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhthftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhthftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhthftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="12ts">10215</port>
@@ -1626,23 +1871,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhthftest</mandant>
 				<port>
 					<private ref="12ts">10218</private>
 					<public ref="12ts">10219</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhthftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthftest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>23:20-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>04:30-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="13">
@@ -1651,25 +1899,27 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>VW</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vertragsvw</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="13ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Vertragsverwaltung 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Vertragsverwaltung 22.0.10</installpath>
 				<servicename>CMI Vertragsverwaltung 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_vert</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl>https://uzhvert.cmicloud.ch</weburl>
 			</app>
+			<licenseserver/>
+			<mobilefirst>https://uzhvert.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvert</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhvert</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="13ps">10060</port>
@@ -1680,19 +1930,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="13ps">10062</port>
 			</ueberweisung>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhvert</mandant>
 				<port>
 					<private ref="13ps">10063</private>
 					<public ref="13ps">10064</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung/>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhvert</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:40-SaSo-weekly</adr-sync>
+				<fulltext-optimize>05:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test/>
 	</mandant>
@@ -1702,25 +1957,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>EDU</nameshort>
 			<namealternative>Prorektorat Lehre und Studium</namealternative>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vpedu</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="14ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>VP Edu 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\VP Edu 22.0.10</installpath>
 				<servicename>CMI VP Edu 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_edu</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgsw</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhgsw.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhgsw.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgsw</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhgsw</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="14ps">10100</port>
@@ -1741,48 +2001,56 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhgsw</mandant>
 				<port>
 					<private ref="14ps">10103</private>
 					<public ref="14ps">10104</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgsw</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgsw</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:30-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>03:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>04:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>VP EDU</namefull>
 			<nameshort>EDU</nameshort>
 			<namealternative>Prorektorat Lehre und Studium</namealternative>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vpedu_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>24.0.6</releaseversion>
 				<host id="14ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>VP Edu 24.0.6</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 24.0.6</installpath>
 				<servicename>CMI VP Edu TEST 24.0.6</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhgswtest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhgswtest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhgswtest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhgswtest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="14ts">10105</port>
@@ -1802,23 +2070,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhgswtest</mandant>
 				<port>
 					<private ref="14ts">10108</private>
 					<public ref="14ts">10109</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgswtest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgswtest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:30-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>03:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>04:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="15">
@@ -1827,25 +2098,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>VP FSI</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vpfsi</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="15ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>VP FSI 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\VP FSI 22.0.10</installpath>
 				<servicename>CMI VP FSI 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_fsi</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhrww</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhrww.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhrww.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhrww</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhrww</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="15ps">10120</port>
@@ -1858,23 +2134,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhrww</mandant>
 				<port>
 					<private ref="15ps">10113</private>
 					<public ref="15ps">10114</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte/>
+				<sitzungsvorbereitung/>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:50-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>04:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>05:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test/>
 	</mandant>
@@ -1884,25 +2163,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>VPMedRes</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vpmedres</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="16ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>VP MedRes 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\VP MedRes 22.0.10</installpath>
 				<servicename>CMI VP MedRes 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_medres</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhmnw</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhmnw.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhmnw.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhmnw</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhmnw</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="16ps">10040</port>
@@ -1922,23 +2206,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhmnw</mandant>
 				<port>
 					<private ref="16ps">10043</private>
 					<public ref="16ps">10044</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnw</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnw</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>21:40-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>03:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>05:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test/>
 	</mandant>
@@ -1948,25 +2235,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>VSF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vsf</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="17ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>VSF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\VSF 22.0.10</installpath>
 				<servicename>CMI VSF 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_vsf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhvsf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhvsf.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhvsf.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsf</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhvsf</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="17ps">10190</port>
@@ -1988,49 +2280,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhvsf</mandant>
 				<port>
 					<private ref="17ps">10193</private>
 					<public ref="17ps">10194</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhvsf</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsf</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>23:30-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>22:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>04:45-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Vetsuisse-Fakultät</namefull>
 			<nameshort>VSF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_vsf_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="17ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>VSF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\VSF 22.0.10</installpath>
 				<servicename>CMI VSF TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhvsftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhvsftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvsftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhvsftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="17ts">10195</port>
@@ -2051,23 +2351,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="14" name="UZH-EDU_TEST">http://ziaxiomatap02:10107/UeberweisungsService</url>
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhvsftest</mandant>
 				<port>
 					<private ref="17ts">10198</private>
 					<public ref="17ts">10199</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhvsftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsftest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>23:30-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>22:15-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>04:45-Sa-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="18">
@@ -2076,25 +2379,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>WWF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_wwf</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="18ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>WWF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 22.0.10</installpath>
 				<servicename>CMI WWF 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_wwf</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhwwf</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhwwf.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhwwf.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwf</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhwwf</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="18ps">10260</port>
@@ -2115,49 +2423,57 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhwwf</mandant>
 				<port>
 					<private ref="18ps">10263</private>
 					<public ref="18ps">10264</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 				<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhwwf</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwf</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>22:50-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>01:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
 			<nameshort>WWF</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_wwf_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="18ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>WWF 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\WWF 22.0.10</installpath>
 				<servicename>CMI WWF TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhwwftest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhwwftest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhwwftest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhwwftest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="18ts">10265</port>
@@ -2177,23 +2493,26 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<url ref="12" name="UZH-TRF_TEST">http://ziaxiomatap02:10217/UeberweisungsService</url>
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhwwftest</mandant>
 				<port>
 					<private ref="18ts">10268</private>
 					<public ref="18ts">10269</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi>
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhwwftest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwftest</sitzungsvorbereitung>
+				<dossierbrowser/>
 			</mobile>
+			<jobs>
+				<adr-sync>22:50-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>01:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="19">
@@ -2202,25 +2521,30 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>ZZM</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_zzm</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="19ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>ZZM 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\ZZM 22.0.10</installpath>
 				<servicename>CMI ZZM 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_zzm</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhzzm</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhzzm.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10320</port>
+				<server>ziaxiomapap03</server>
+			</licenseserver>
+			<mobilefirst>https://uzhzzm.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzm</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhzzm</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="19ps">10270</port>
@@ -2231,46 +2555,54 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="19ps">10272</port>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ps">10320</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhzzm</mandant>
 				<port>
 					<private ref="19ps">10273</private>
 					<public ref="19ps">10274</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhzzm</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhzzm</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhzzm</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:55-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>01:05-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>Zentrum für Zahnmedizin</namefull>
 			<nameshort>ZZM</nameshort>
 			<namealternative/>
 			<installid>2624</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_zzm_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="19ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>ZZM 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\ZZM 22.0.10</installpath>
 				<servicename>CMI ZZM TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>true</haslicenseserver>
-				<weburl>https://uzhzzmtest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver>
+				<port>10325</port>
+				<server>ziaxiomatap02</server>
+			</licenseserver>
+			<mobilefirst>https://uzhzzmtest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhzzmtest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhzzmtest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="19ts">10275</port>
@@ -2281,21 +2613,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="19ts">10277</port>
 			</ueberweisung>
-			<licenseserver>
-				<port ref="20ts">10325</port>
-			</licenseserver>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhzzmtest</mandant>
 				<port>
 					<private ref="19ts">10278</private>
 					<public ref="19ts">10279</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhzzmtest</zusammenarbeitdritte>
+				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhzzmtest</sitzungsvorbereitung>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhzzmtest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>22:55-MoDiMiDoFrSaSo-weekly</adr-sync>
+				<fulltext-optimize>01:05-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="20">
@@ -2304,22 +2639,21 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>Lizenzserver</nameshort>
 			<namealternative/>
 			<installid/>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_lizenzserver</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="20ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Produktiv</installpathroot>
-				<installfolder>Lizenzserver PRODUKTION 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 22.0.10</installpath>
 				<servicename>CMI Lizenzserver 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_lizenz</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl/>
 			</app>
+			<licenseserver/>
+			<mobilefirst/>
 			<sts/>
 			<objektloader>
 				<port ref="20ps">10320</port>
@@ -2330,42 +2664,38 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="20ps">10322</port>
 			</ueberweisung>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>local</mandant>
 				<port>
 					<private ref="20ps">10323</private>
 					<public ref="20ps">10324</public>
 				</port>
 				<relay/>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
-			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
-			</mobile>
+			<mobile/>
+			<jobs/>
 		</prod>
 		<test>
 			<namefull>Lizenzserver</namefull>
 			<nameshort>Lizenzserver</nameshort>
 			<namealternative/>
 			<installid/>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_lizenzserver_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="20ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\CMI Test</installpathroot>
-				<installfolder>Lizenzserver TEST 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 22.0.10</installpath>
 				<servicename>CMI Lizenzserver TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl/>
 			</app>
+			<licenseserver/>
+			<mobilefirst/>
 			<sts/>
 			<objektloader>
 				<port ref="20ts">10325</port>
@@ -2376,20 +2706,17 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="20ts">10327</port>
 			</ueberweisung>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>local</mandant>
 				<port>
 					<private ref="20ts">10328</private>
 					<public ref="20ts">10329</public>
 				</port>
 				<relay/>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
-			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
-			</mobile>
+			<mobile/>
+			<jobs/>
 		</test>
 	</mandant>
 	<mandant id="30">
@@ -2398,25 +2725,27 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>AIS Benutzung</nameshort>
 			<namealternative/>
 			<installid>2644</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>star_uaz_benutzung</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="30ps">ziaxiomapap03</host>
-				<installpathroot>C:\Program Files\CMI AG\AIS Produktiv</installpathroot>
-				<installfolder>UAZ Benutzungsverwaltung 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Benutzungsverwaltung 22.0.10</installpath>
 				<servicename>AIS UAZ Benutzungsverwaltung 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_benu</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl>https://uzhbenu.cmicloud.ch</weburl>
 			</app>
+			<licenseserver/>
+			<mobilefirst>https://uzhbenu.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenu</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhbenu</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="30ps">10020</port>
@@ -2427,44 +2756,51 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="30ps">10022</port>
 			</ueberweisung>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhbenu</mandant>
 				<port>
 					<private ref="30ps">10023</private>
 					<public ref="30ps">10024</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbenu</zusammenarbeitdritte>
+				<sitzungsvorbereitung/>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenu</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>23:00-SaSo-weekly</adr-sync>
+				<fulltext-optimize>21:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>AIS Benutzungsverwaltung</namefull>
 			<nameshort>AIS Benutzung</nameshort>
 			<namealternative/>
 			<installid>2644</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>star_uaz_benutzung_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>22.0.10</releaseversion>
 				<host id="30ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\AIS Test</installpathroot>
-				<installfolder>UAZ Benutzungsverwaltung 22.0.10</installfolder>
+				<installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 22.0.10</installpath>
 				<servicename>AIS UAZ Benutzungsverwaltung TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
 				<servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl>https://uzhbenutest.cmicloud.ch</weburl>
 			</app>
+			<licenseserver/>
+			<mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenutest</v2>
-				<v3>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</v3>
+				<v3>
+					<ea>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</ea>
+					<desktopclient>https://sts3.prod.cmicloud.ch/uzhbenutest</desktopclient>
+				</v3>
 			</sts>
 			<objektloader>
 				<port ref="30ts">10025</port>
@@ -2475,19 +2811,24 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<ueberweisung>
 				<port ref="30ts">10027</port>
 			</ueberweisung>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhbenutest</mandant>
 				<port>
 					<private ref="30ts">10028</private>
 					<public ref="30ts">10029</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
 			<mobile>
-				<zusammenarbeitdritte>xxxxxxxxxxxxx</zusammenarbeitdritte>
-				<sitzungsvorbereitung>xxxxxxxxxxxxxxx</sitzungsvorbereitung>
+				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbenutest</zusammenarbeitdritte>
+				<sitzungsvorbereitung/>
+				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenutest</dossierbrowser>
 			</mobile>
+			<jobs>
+				<adr-sync>23:00-SaSo-weekly</adr-sync>
+				<fulltext-optimize>21:30-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>19:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<!-- ******************** CMI AIS ******************** -->
@@ -2497,22 +2838,21 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>AIS UAZ</nameshort>
 			<namealternative/>
 			<installid>1784</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>star_uaz</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>23.1.3</releaseversion>
 				<host id="40ps">ziaxiomapap04</host>
-				<installpathroot>C:\Program Files\CMI AG\AIS Produktiv</installpathroot>
-				<installfolder>UAZ Archiv 23.1.3</installfolder>
+				<installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Archiv 23.1.3</installpath>
 				<servicename>AIS UAZ Archiv 23.1.3</servicename>
 				<serviceuser>UZH\srv_ais_uaz</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl>https://mobile.cmistar.ch/webclients-r22/uzh/#/</weburl>
 			</app>
+			<licenseserver/>
+			<mobilefirst>https://mobile.cmistar.ch/webclients-r22/uzh/#/</mobilefirst>
 			<sts/>
 			<objektloader>
 				<port ref="40ps">10010</port>
@@ -2521,41 +2861,41 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<port ref="40ps">10011</port>
 			</webconsole>
 			<ueberweisung/>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhuaz</mandant>
 				<port>
 					<private ref="40ps">10013</private>
 					<public ref="40ps">10014</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
-			<mobile>
-				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung/>
-			</mobile>
+			<mobile/>
+			<jobs>
+				<adr-sync/>
+				<fulltext-optimize>21:45-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>AIS UAZ</namefull>
 			<nameshort>AIS UAZ</nameshort>
 			<namealternative/>
 			<installid>1784</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>star_uaz_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>23.1.3</releaseversion>
 				<host id="40ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\AIS Test</installpathroot>
-				<installfolder>UAZ Archiv 23.1.3</installfolder>
+				<installpath>C:\Program Files\CMI AG\AIS Test\UAZ Archiv 23.1.3</installpath>
 				<servicename>AIS UAZ Archiv TEST 23.1.3</servicename>
 				<serviceuser>UZH\srv_ais_test</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl/><!-- gibt es nicht, zu teuer -->
 			</app>
+			<licenseserver/>
+			<mobilefirst/>
 			<sts/>
 			<objektloader>
 				<port ref="40ts">10015</port>
@@ -2564,19 +2904,20 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<port ref="40ts">10016</port>
 			</webconsole>
 			<ueberweisung/>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhuaztest</mandant>
 				<port>
 					<private ref="40ts">10018</private>
 					<public ref="40ts">10019</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
-			<mobile>
-				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung/>
-			</mobile>
+			<mobile/>
+			<jobs>
+				<adr-sync/>
+				<fulltext-optimize>21:45-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:00-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 	<mandant id="41">
@@ -2585,22 +2926,20 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 			<nameshort>AIS AFM</nameshort>
 			<namealternative/>
 			<installid>4787</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>star_afm</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>23.1.3</releaseversion>
 				<host id="41ps">ziaxiomapap04</host>
-				<installpathroot>C:\Program Files\CMI AG\AIS Produktiv</installpathroot>
-				<installfolder>AFM Archiv 23.1.3</installfolder>
+				<installpath>C:\Program Files\CMI AG\AIS Produktiv\AFM Archiv 23.1.3</installpath>
 				<servicename>AIS AFM Archiv 23.1.3</servicename>
 				<serviceuser>UZH\srv_ais_afm</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl/><!-- gibt es nicht -->
 			</app>
+			<mobilefirst/>
 			<sts/>
 			<objektloader>
 				<port ref="41ps">10250</port>
@@ -2609,41 +2948,41 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<port ref="41ps">10251</port>
 			</webconsole>
 			<ueberweisung/>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhafm</mandant>
 				<port>
 					<private ref="41ps">10253</private>
 					<public ref="41ps">10254</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
-			<mobile>
-				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung/>
-			</mobile>
+			<mobile/>
+			<jobs>
+				<adr-sync/>
+				<fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</prod>
 		<test>
 			<namefull>AIS AFM</namefull>
 			<nameshort>AIS AFM</nameshort>
 			<namealternative/>
 			<installid>4787</installid>
-			<db>
-				<host>ziaxiomapsql02</host>
+			<database>
+				<host>ZIAXIOMAPSQL02</host>
 				<name>star_afm_TEST</name>
-			</db>
+			</database>
 			<app>
 				<releaseversion>23.1.3</releaseversion>
 				<host id="41ts">ziaxiomatap02</host>
-				<installpathroot>C:\Program Files\CMI AG\AIS Test</installpathroot>
-				<installfolder>AFM Archiv 23.1.3</installfolder>
+				<installpath>C:\Program Files\CMI AG\AIS Test\AFM Archiv 23.1.3</installpath>
 				<servicename>AIS AFM Archiv TEST 23.1.3</servicename>
 				<serviceuser>UZH\srv_ais_test</serviceuser>
 				<servicenamerelay/>
 				<serviceuserrelay/>
-				<haslicenseserver>false</haslicenseserver>
-				<weburl/><!-- gibt es nicht -->
 			</app>
+			<licenseserver/>
+			<mobilefirst/>
 			<sts/>
 			<objektloader>
 				<port ref="41ts">10255</port>
@@ -2652,19 +2991,20 @@ PushServiceClientSecret=$7#ZKWXk)](}|(-M?we30hu!]iNZ*4BzL-1@(Y+6Xu
 				<port ref="41ts">10256</port>
 			</webconsole>
 			<ueberweisung/>
-			<licenseserver/>
-			<owinserverrelay>
+			<owinserver>
 				<mandant>uzhafmtest</mandant>
 				<port>
 					<private ref="41ts">10258</private>
 					<public ref="41ts">10259</public>
 				</port>
-			</owinserverrelay>
+			</owinserver>
 			<muegi/>
-			<mobile>
-				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung/>
-			</mobile>
+			<mobile/>
+			<jobs>
+				<adr-sync/>
+				<fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
+				<fulltext-rebuild>20:30-So-weekly</fulltext-rebuild>
+			</jobs>
 		</test>
 	</mandant>
 </mandanten>
