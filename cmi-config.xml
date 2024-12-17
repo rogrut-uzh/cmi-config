@@ -23,7 +23,7 @@ ___ Every mandant has its own set of config nodes. The attribute "id" is not use
         <nameshort>MF</nameshort>
 
         ___ Alternative form of name of the mandant. Has no effect neither on settings nor Software-Center/Intune/Citrix.
-        <namealternative/>
+        
 
         ___ InstallId. Has no effect neither on settings nor Software-Center/Intune/Citrix.
         <installid>2624</installid>
@@ -263,7 +263,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Bedarfmanagement</namefull>
 			<nameshort>BM</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -278,9 +278,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 			</app>
-			<licenseserver/>
+			
 			<!-- Release 21 hat kein Webclient -->
-			<mobilefirst/>
+			
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbmi</v2>
 				<v3>
@@ -313,11 +313,11 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="1ps">10114</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmi</zusammenarbeitdritte>
-				<sitzungsvorbereitung/>
-				<dossierbrowser/>
+				
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:05-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -328,7 +328,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Bedarfmanagement</namefull>
 			<nameshort>BM</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -379,11 +379,11 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="1ts">10119</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmitest</zusammenarbeitdritte>
-				<sitzungsvorbereitung/>
-				<dossierbrowser/>
+				
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:05-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -396,7 +396,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Direktion DFP-DIP</namefull>
 			<nameshort>DFPDIB</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -446,9 +446,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpi</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>20:10-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -459,7 +459,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Direktion DFP-DIP</namefull>
 			<nameshort>DFPDIB</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -508,9 +508,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpitest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>20:10-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -523,7 +523,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Generalsekretariat</namefull>
 			<nameshort>GS</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -597,7 +597,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Generalsekretariat</namefull>
 			<nameshort>GS</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -651,7 +651,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="1ts">10249</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgstest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgstest</sitzungsvorbereitung>
@@ -668,7 +668,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Informatik</namefull>
 			<nameshort>Informatik</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -711,9 +711,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="1ts">10234</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhinfo</sitzungsvorbereitung>
 				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfo</dossierbrowser>
 			</mobile>
@@ -726,7 +726,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Informatik</namefull>
 			<nameshort>Informatik</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -769,9 +769,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="4ts">10239</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhinfotest</sitzungsvorbereitung>
 				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfotest</dossierbrowser>
 			</mobile>
@@ -786,7 +786,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Interne Revision</namefull>
 			<nameshort>Intrev</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -829,11 +829,11 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="5ps">10084</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirev</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>20:40-SaSo-weekly</adr-sync>
@@ -844,7 +844,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Interne Revision</namefull>
 			<nameshort>Intrev</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -887,11 +887,11 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="5ts">10089</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirevtest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>20:40-SaSo-weekly</adr-sync>
@@ -904,7 +904,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Medizinische Fakultät</namefull>
 			<nameshort>MeF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -976,7 +976,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Medizinische Fakultät</namefull>
 			<nameshort>MF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1048,7 +1048,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
 			<nameshort>MNF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1109,7 +1109,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnf</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnf</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>23:00-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1120,7 +1120,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
 			<nameshort>MNF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1179,7 +1179,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnftest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnftest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>23:00-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1192,7 +1192,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Philosophische Fakultät</namefull>
 			<nameshort>PhF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1254,7 +1254,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhphf</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphf</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:10-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1265,7 +1265,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Philosophische Fakultät</namefull>
 			<nameshort>PhF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1324,7 +1324,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhphftest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphftest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:10-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1337,7 +1337,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Professuren</namefull>
 			<nameshort>Prof</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1409,7 +1409,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Professuren</namefull>
 			<nameshort>Prof</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1481,7 +1481,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Rechtsdienst</namefull>
 			<nameshort>Rechtsdienst</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1531,9 +1531,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte/>
+				
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrecht</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>22:00-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1544,7 +1544,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Rechtsdienst</namefull>
 			<nameshort>Rechtsdienst</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1609,7 +1609,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Rechtswissenschaftliche Fakultät</namefull>
 			<nameshort>RWF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1681,7 +1681,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Rechtswissenschaftliche Fakultät</namefull>
 			<nameshort>RWF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1753,7 +1753,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
 			<nameshort>TRF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1814,7 +1814,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhthf</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthf</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>23:20-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1825,7 +1825,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
 			<nameshort>TRF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1884,7 +1884,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhthftest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthftest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>23:20-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -1897,7 +1897,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Vertragsverwaltung</namefull>
 			<nameshort>VW</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -1912,7 +1912,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 			</app>
-			<licenseserver/>
+			
 			<mobilefirst>https://uzhvert.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhvert</v2>
@@ -1937,10 +1937,10 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="13ps">10064</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
-				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung/>
+				
+				
 				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhvert</dossierbrowser>
 			</mobile>
 			<jobs>
@@ -1949,7 +1949,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
 			</jobs>
 		</prod>
-		<test/>
+		
 	</mandant>
 	<mandant id="14">
 		<prod>
@@ -2014,7 +2014,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgsw</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgsw</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:30-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2083,7 +2083,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgswtest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgswtest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:30-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2096,7 +2096,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>VP FSI</namefull>
 			<nameshort>VP FSI</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2145,9 +2145,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
 			</muegi>
 			<mobile>
-				<zusammenarbeitdritte/>
-				<sitzungsvorbereitung/>
-				<dossierbrowser/>
+				
+				
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:50-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2155,13 +2155,13 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<fulltext-rebuild>05:30-So-weekly</fulltext-rebuild>
 			</jobs>
 		</prod>
-		<test/>
+		
 	</mandant>
 	<mandant id="16">
 		<prod>
 			<namefull>Direktion Universitäre Medizin / Prorektorat Forschung</namefull>
 			<nameshort>VPMedRes</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2219,7 +2219,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnw</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnw</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>21:40-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2227,13 +2227,13 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<fulltext-rebuild>05:00-So-weekly</fulltext-rebuild>
 			</jobs>
 		</prod>
-		<test/>
+		
 	</mandant>
 	<mandant id="17">
 		<prod>
 			<namefull>Vetsuisse-Fakultät</namefull>
 			<nameshort>VSF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2294,7 +2294,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhvsf</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsf</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>23:30-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2305,7 +2305,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Vetsuisse-Fakultät</namefull>
 			<nameshort>VSF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2364,7 +2364,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhvsftest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsftest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>23:30-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2377,7 +2377,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
 			<nameshort>WWF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2437,7 +2437,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhwwf</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwf</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>22:50-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2448,7 +2448,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
 			<nameshort>WWF</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2506,7 +2506,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhwwftest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwftest</sitzungsvorbereitung>
-				<dossierbrowser/>
+				
 			</mobile>
 			<jobs>
 				<adr-sync>22:50-MoDiMiDoFrSaSo-weekly</adr-sync>
@@ -2519,7 +2519,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Zentrum für Zahnmedizin</namefull>
 			<nameshort>ZZM</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2562,7 +2562,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="19ps">10274</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhzzm</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhzzm</sitzungsvorbereitung>
@@ -2577,7 +2577,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>Zentrum für Zahnmedizin</namefull>
 			<nameshort>ZZM</nameshort>
-			<namealternative/>
+			
 			<installid>2624</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2620,7 +2620,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="19ts">10279</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhzzmtest</zusammenarbeitdritte>
 				<sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhzzmtest</sitzungsvorbereitung>
@@ -2637,8 +2637,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>Lizenzserver</namefull>
 			<nameshort>Lizenzserver</nameshort>
-			<namealternative/>
-			<installid/>
+			
+			
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_lizenzserver</name>
@@ -2649,12 +2649,12 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 22.0.10</installpath>
 				<servicename>CMI Lizenzserver 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_lizenz</serviceuser>
-				<servicenamerelay/>
-				<serviceuserrelay/>
+				
+				
 			</app>
-			<licenseserver/>
-			<mobilefirst/>
-			<sts/>
+			
+			
+			
 			<objektloader>
 				<port ref="20ps">10320</port>
 			</objektloader>
@@ -2670,17 +2670,17 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<private ref="20ps">10323</private>
 					<public ref="20ps">10324</public>
 				</port>
-				<relay/>
+				
 			</owinserver>
-			<muegi/>
-			<mobile/>
-			<jobs/>
+			
+			
+			
 		</prod>
 		<test>
 			<namefull>Lizenzserver</namefull>
 			<nameshort>Lizenzserver</nameshort>
-			<namealternative/>
-			<installid/>
+			
+			
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
 				<name>axioma_lizenzserver_TEST</name>
@@ -2691,12 +2691,12 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 22.0.10</installpath>
 				<servicename>CMI Lizenzserver TEST 22.0.10</servicename>
 				<serviceuser>UZH\srv_cmi_test</serviceuser>
-				<servicenamerelay/>
-				<serviceuserrelay/>
+				
+				
 			</app>
-			<licenseserver/>
-			<mobilefirst/>
-			<sts/>
+			
+			
+			
 			<objektloader>
 				<port ref="20ts">10325</port>
 			</objektloader>
@@ -2712,18 +2712,18 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<private ref="20ts">10328</private>
 					<public ref="20ts">10329</public>
 				</port>
-				<relay/>
+				
 			</owinserver>
-			<muegi/>
-			<mobile/>
-			<jobs/>
+			
+			
+			
 		</test>
 	</mandant>
 	<mandant id="30">
 		<prod>
 			<namefull>AIS Benutzungsverwaltung</namefull>
 			<nameshort>AIS Benutzung</nameshort>
-			<namealternative/>
+			
 			<installid>2644</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2738,7 +2738,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 			</app>
-			<licenseserver/>
+			
 			<mobilefirst>https://uzhbenu.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenu</v2>
@@ -2763,10 +2763,10 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="30ps">10024</public>
 				</port>
 			</owinserver>
-			<muegi/>
+			
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbenu</zusammenarbeitdritte>
-				<sitzungsvorbereitung/>
+				
 				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenu</dossierbrowser>
 			</mobile>
 			<jobs>
@@ -2778,7 +2778,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>AIS Benutzungsverwaltung</namefull>
 			<nameshort>AIS Benutzung</nameshort>
-			<namealternative/>
+			
 			<installid>2644</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2793,7 +2793,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
 				<serviceuserrelay>Network Service</serviceuserrelay>
 			</app>
-			<licenseserver/>
+			
 			<mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
 			<sts>
 				<v2>https://sts.cmicloud.ch/uzhbenutest</v2>
@@ -2818,10 +2818,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="30ts">10029</public>
 				</port>
 			</owinserver>
-			<muegi/>
 			<mobile>
 				<zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbenutest</zusammenarbeitdritte>
-				<sitzungsvorbereitung/>
 				<dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenutest</dossierbrowser>
 			</mobile>
 			<jobs>
@@ -2836,7 +2834,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>AIS UAZ</namefull>
 			<nameshort>AIS UAZ</nameshort>
-			<namealternative/>
 			<installid>1784</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2848,19 +2845,14 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Archiv 23.1.3</installpath>
 				<servicename>AIS UAZ Archiv 23.1.3</servicename>
 				<serviceuser>UZH\srv_ais_uaz</serviceuser>
-				<servicenamerelay/>
-				<serviceuserrelay/>
 			</app>
-			<licenseserver/>
 			<mobilefirst>https://mobile.cmistar.ch/webclients-r22/uzh/#/</mobilefirst>
-			<sts/>
 			<objektloader>
 				<port ref="40ps">10010</port>
 			</objektloader>
 			<webconsole>
 				<port ref="40ps">10011</port>
 			</webconsole>
-			<ueberweisung/>
 			<owinserver>
 				<mandant>uzhuaz</mandant>
 				<port>
@@ -2868,10 +2860,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="40ps">10014</public>
 				</port>
 			</owinserver>
-			<muegi/>
-			<mobile/>
 			<jobs>
-				<adr-sync/>
+				
 				<fulltext-optimize>21:45-MoDiMiDoFr-weekly</fulltext-optimize>
 				<fulltext-rebuild>20:00-So-weekly</fulltext-rebuild>
 			</jobs>
@@ -2879,7 +2869,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>AIS UAZ</namefull>
 			<nameshort>AIS UAZ</nameshort>
-			<namealternative/>
 			<installid>1784</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2891,19 +2880,13 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<installpath>C:\Program Files\CMI AG\AIS Test\UAZ Archiv 24.0.5</installpath>
 				<servicename>AIS UAZ Archiv TEST 24.0.5</servicename>
 				<serviceuser>UZH\srv_ais_test</serviceuser>
-				<servicenamerelay/>
-				<serviceuserrelay/>
 			</app>
-			<licenseserver/>
-			<mobilefirst/>
-			<sts/>
 			<objektloader>
 				<port ref="40ts">10015</port>
 			</objektloader>
 			<webconsole>
 				<port ref="40ts">10016</port>
 			</webconsole>
-			<ueberweisung/>
 			<owinserver>
 				<mandant>uzhuaztest</mandant>
 				<port>
@@ -2911,10 +2894,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="40ts">10019</public>
 				</port>
 			</owinserver>
-			<muegi/>
-			<mobile/>
 			<jobs>
-				<adr-sync/>
 				<fulltext-optimize>21:45-MoDiMiDoFr-weekly</fulltext-optimize>
 				<fulltext-rebuild>20:00-So-weekly</fulltext-rebuild>
 			</jobs>
@@ -2924,7 +2904,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<prod>
 			<namefull>AIS AFM</namefull>
 			<nameshort>AIS AFM</nameshort>
-			<namealternative/>
+			
 			<installid>4787</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2936,18 +2916,18 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<installpath>C:\Program Files\CMI AG\AIS Produktiv\AFM Archiv 23.1.3</installpath>
 				<servicename>AIS AFM Archiv 23.1.3</servicename>
 				<serviceuser>UZH\srv_ais_afm</serviceuser>
-				<servicenamerelay/>
-				<serviceuserrelay/>
+				
+				
 			</app>
-			<mobilefirst/>
-			<sts/>
+			
+			
 			<objektloader>
 				<port ref="41ps">10250</port>
 			</objektloader>
 			<webconsole>
 				<port ref="41ps">10251</port>
 			</webconsole>
-			<ueberweisung/>
+			
 			<owinserver>
 				<mandant>uzhafm</mandant>
 				<port>
@@ -2955,10 +2935,10 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="41ps">10254</public>
 				</port>
 			</owinserver>
-			<muegi/>
-			<mobile/>
+			
+			
 			<jobs>
-				<adr-sync/>
+				
 				<fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
 				<fulltext-rebuild>20:30-So-weekly</fulltext-rebuild>
 			</jobs>
@@ -2966,7 +2946,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 		<test>
 			<namefull>AIS AFM</namefull>
 			<nameshort>AIS AFM</nameshort>
-			<namealternative/>
+			
 			<installid>4787</installid>
 			<database>
 				<host>ZIAXIOMAPSQL02</host>
@@ -2978,19 +2958,19 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<installpath>C:\Program Files\CMI AG\AIS Test\AFM Archiv 24.0.5</installpath>
 				<servicename>AIS AFM Archiv TEST 24.0.5</servicename>
 				<serviceuser>UZH\srv_ais_test</serviceuser>
-				<servicenamerelay/>
-				<serviceuserrelay/>
+				
+				
 			</app>
-			<licenseserver/>
-			<mobilefirst/>
-			<sts/>
+			
+			
+			
 			<objektloader>
 				<port ref="41ts">10255</port>
 			</objektloader>
 			<webconsole>
 				<port ref="41ts">10256</port>
 			</webconsole>
-			<ueberweisung/>
+			
 			<owinserver>
 				<mandant>uzhafmtest</mandant>
 				<port>
@@ -2998,10 +2978,10 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 					<public ref="41ts">10259</public>
 				</port>
 			</owinserver>
-			<muegi/>
-			<mobile/>
+			
+			
 			<jobs>
-				<adr-sync/>
+				
 				<fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
 				<fulltext-rebuild>20:30-So-weekly</fulltext-rebuild>
 			</jobs>
