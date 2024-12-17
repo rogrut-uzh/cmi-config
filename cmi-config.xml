@@ -304,7 +304,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhbmi</mandant>
+				<mand>uzhbmi</mand>
 				<port>
 					<private ref="1ps">10113</private>
 					<public ref="1ps">10114</public>
@@ -366,7 +366,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhbmitest</mandant>
+				<mand>uzhbmitest</mand>
 				<port>
 					<private ref="1ts">10118</private>
 					<public ref="1ts">10119</public>
@@ -425,7 +425,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhfpi</mandant>
+				<mand>uzhfpi</mand>
 				<port>
 					<private ref="2ps">10143</private>
 					<public ref="2ps">10144</public>
@@ -484,7 +484,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhfpitest</mandant>
+				<mand>uzhfpitest</mand>
 				<port>
 					<private ref="2ts">10148</private>
 					<public ref="2ts">10149</public>
@@ -557,7 +557,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhgs</mandant>
+				<mand>uzhgs</mand>
 				<port>
 					<private ref="3ps">10243</private>
 					<public ref="3ps">10244</public>
@@ -627,7 +627,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhgstest</mandant>
+				<mand>uzhgstest</mand>
 				<port>
 					<private ref="1ts">10248</private>
 					<public ref="1ts">10249</public>
@@ -685,7 +685,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="4ps">10232</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhinfo</mandant>
+				<mand>uzhinfo</mand>
 				<port>
 					<private ref="1ts">10233</private>
 					<public ref="1ts">10234</public>
@@ -740,7 +740,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="4ts">10237</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhinfotest</mandant>
+				<mand>uzhinfotest</mand>
 				<port>
 					<private ref="4ts">10238</private>
 					<public ref="4ts">10239</public>
@@ -797,7 +797,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="5ps">10082</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhirev</mandant>
+				<mand>uzhirev</mand>
 				<port>
 					<private ref="5ps">10083</private>
 					<public ref="5ps">10084</public>
@@ -851,7 +851,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="5ts">10087</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhirevtest</mandant>
+				<mand>uzhirevtest</mand>
 				<port>
 					<private ref="5ts">10088</private>
 					<public ref="5ts">10089</public>
@@ -918,7 +918,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhmef</mandant>
+				<mand>uzhmef</mand>
 				<port>
 					<private ref="6ps">10073</private>
 					<public ref="6ps">10074</public>
@@ -988,7 +988,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhmeftest</mandant>
+				<mand>uzhmeftest</mand>
 				<port>
 					<private ref="6ts">10078</private>
 					<public ref="6ts">10079</public>
@@ -1060,7 +1060,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhmnf</mandant>
+				<mand>uzhmnf</mand>
 				<port>
 					<private ref="7ps">10053</private>
 					<public ref="7ps">10054</public>
@@ -1129,7 +1129,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhmnftest</mandant>
+				<mand>uzhmnftest</mand>
 				<port>
 					<private ref="7ts">10058</private>
 					<public ref="7ts">10059</public>
@@ -1201,7 +1201,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhphf</mandant>
+				<mand>uzhphf</mand>
 				<port>
 					<private ref="8ps">10093</private>
 					<public ref="8ps">10094</public>
@@ -1270,7 +1270,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhphftest</mandant>
+				<mand>uzhphftest</mand>
 				<port>
 					<private ref="8ts">10098</private>
 					<public ref="8ts">10099</public>
@@ -1341,7 +1341,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhprof</mandant>
+				<mand>uzhprof</mand>
 				<port>
 					<private ref="9ps">10153</private>
 					<public ref="9ps">10154</public>
@@ -1411,7 +1411,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhproftest</mandant>
+				<mand>uzhproftest</mand>
 				<port>
 					<private ref="9ts">10158</private>
 					<public ref="9ts">10159</public>
@@ -1475,7 +1475,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhrecht</mandant>
+				<mand>uzhrecht</mand>
 				<port>
 					<private ref="10ps">10223</private>
 					<public ref="10ps">10224</public>
@@ -1535,7 +1535,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhrechttest</mandant>
+				<mand>uzhrechttest</mand>
 				<port>
 					<private ref="10ts">10228</private>
 					<public ref="10ts">10229</public>
@@ -1607,7 +1607,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhrwf</mandant>
+				<mand>uzhrwf</mand>
 				<port>
 					<private ref="11ps">10003</private>
 					<public ref="11ps">10004</public>
@@ -1677,7 +1677,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhrwftest</mandant>
+				<mand>uzhrwftest</mand>
 				<port>
 					<private ref="11ts">10008</private>
 					<public ref="11ts">10009</public>
@@ -1749,7 +1749,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhthf</mandant>
+				<mand>uzhthf</mand>
 				<port>
 					<private ref="12ps">10213</private>
 					<public ref="12ps">10214</public>
@@ -1818,7 +1818,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhthftest</mandant>
+				<mand>uzhthftest</mand>
 				<port>
 					<private ref="12ts">10218</private>
 					<public ref="12ts">10219</public>
@@ -1874,7 +1874,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="13ps">10062</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhvert</mandant>
+				<mand>uzhvert</mand>
 				<port>
 					<private ref="13ps">10063</private>
 					<public ref="13ps">10064</public>
@@ -1941,7 +1941,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhgsw</mandant>
+				<mand>uzhgsw</mand>
 				<port>
 					<private ref="14ps">10103</private>
 					<public ref="14ps">10104</public>
@@ -2009,7 +2009,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhgswtest</mandant>
+				<mand>uzhgswtest</mand>
 				<port>
 					<private ref="14ts">10108</private>
 					<public ref="14ts">10109</public>
@@ -2071,7 +2071,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhrww</mandant>
+				<mand>uzhrww</mand>
 				<port>
 					<private ref="15ps">10113</private>
 					<public ref="15ps">10114</public>
@@ -2136,7 +2136,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhmnw</mandant>
+				<mand>uzhmnw</mand>
 				<port>
 					<private ref="16ps">10043</private>
 					<public ref="16ps">10044</public>
@@ -2207,7 +2207,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhvsf</mandant>
+				<mand>uzhvsf</mand>
 				<port>
 					<private ref="17ps">10193</private>
 					<public ref="17ps">10194</public>
@@ -2276,7 +2276,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhvsftest</mandant>
+				<mand>uzhvsftest</mand>
 				<port>
 					<private ref="17ts">10198</private>
 					<public ref="17ts">10199</public>
@@ -2346,7 +2346,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhwwf</mandant>
+				<mand>uzhwwf</mand>
 				<port>
 					<private ref="18ps">10263</private>
 					<public ref="18ps">10264</public>
@@ -2414,7 +2414,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhwwftest</mandant>
+				<mand>uzhwwftest</mand>
 				<port>
 					<private ref="18ts">10268</private>
 					<public ref="18ts">10269</public>
@@ -2474,7 +2474,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="19ps">10272</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhzzm</mandant>
+				<mand>uzhzzm</mand>
 				<port>
 					<private ref="19ps">10273</private>
 					<public ref="19ps">10274</public>
@@ -2530,7 +2530,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="19ts">10277</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhzzmtest</mandant>
+				<mand>uzhzzmtest</mand>
 				<port>
 					<private ref="19ts">10278</private>
 					<public ref="19ts">10279</public>
@@ -2573,7 +2573,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="20ps">10322</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>local</mandant>
+				<mand>local</mand>
 				<port>
 					<private ref="20ps">10323</private>
 					<public ref="20ps">10324</public>
@@ -2604,7 +2604,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="20ts">10327</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>local</mandant>
+				<mand>local</mand>
 				<port>
 					<private ref="20ts">10328</private>
 					<public ref="20ts">10329</public>
@@ -2648,7 +2648,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="30ps">10022</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhbenu</mandant>
+				<mand>uzhbenu</mand>
 				<port>
 					<private ref="30ps">10023</private>
 					<public ref="30ps">10024</public>
@@ -2699,7 +2699,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="30ts">10027</port>
 			</ueberweisung>
 			<owinserver>
-				<mandant>uzhbenutest</mandant>
+				<mand>uzhbenutest</mand>
 				<port>
 					<private ref="30ts">10028</private>
 					<public ref="30ts">10029</public>
@@ -2741,7 +2741,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="40ps">10011</port>
 			</webconsole>
 			<owinserver>
-				<mandant>uzhuaz</mandant>
+				<mand>uzhuaz</mand>
 				<port>
 					<private ref="40ps">10013</private>
 					<public ref="40ps">10014</public>
@@ -2774,7 +2774,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="40ts">10016</port>
 			</webconsole>
 			<owinserver>
-				<mandant>uzhuaztest</mandant>
+				<mand>uzhuaztest</mand>
 				<port>
 					<private ref="40ts">10018</private>
 					<public ref="40ts">10019</public>
@@ -2809,7 +2809,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="41ps">10251</port>
 			</webconsole>
 			<owinserver>
-				<mandant>uzhafm</mandant>
+				<mand>uzhafm</mand>
 				<port>
 					<private ref="41ps">10253</private>
 					<public ref="41ps">10254</public>
@@ -2842,7 +2842,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
 				<port ref="41ts">10256</port>
 			</webconsole>
 			<owinserver>
-				<mandant>uzhafmtest</mandant>
+				<mand>uzhafmtest</mand>
 				<port>
 					<private ref="41ts">10258</private>
 					<public ref="41ts">10259</public>
