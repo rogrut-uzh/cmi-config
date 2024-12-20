@@ -314,9 +314,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmi</zusammenarbeitdritte>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:05-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>21:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>05:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:05-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>21:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>05:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -374,9 +374,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpi</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>20:10-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>22:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>05:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>20:10-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>22:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>05:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -447,9 +447,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgs</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>20:30-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>21:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>00:05-Sa-weekly</fulltext-rebuild>
+                    <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -502,9 +502,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfo</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:40-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>05:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
+                    <adrsync>22:40-SaSo-weekly</adrsync>
+                    <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -556,9 +556,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirev</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>20:40-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>00:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>18:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>20:40-SaSo-weekly</adrsync>
+                    <fulltextoptimize>00:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>18:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -627,9 +627,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhmef</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:00-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>00:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:00-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>00:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -697,9 +697,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnf</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:00-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>00:45-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>23:00-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>00:45-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -768,9 +768,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphf</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:10-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>02:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:10-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>02:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -839,9 +839,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhprof</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:20-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>02:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:20-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>02:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -899,9 +899,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrecht</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:00-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>04:45-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>06:00-So-weekly</fulltext-rebuild>
+                    <adrsync>22:00-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>04:45-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>06:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -970,9 +970,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrwf</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:20-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>23:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>21:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>22:20-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>23:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>21:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1040,9 +1040,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthf</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:20-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>04:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>04:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1090,9 +1090,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhvert</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:40-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>05:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
+                    <adrsync>22:40-SaSo-weekly</adrsync>
+                    <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1159,9 +1159,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgsw</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:30-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>03:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>04:30-So-weekly</fulltext-rebuild>
+                    <adrsync>21:30-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>03:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>04:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1215,9 +1215,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adr-sync>21:50-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>04:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>05:30-So-weekly</fulltext-rebuild>
+                    <adrsync>21:50-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>04:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>05:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1282,9 +1282,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnw</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:40-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>03:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>05:00-So-weekly</fulltext-rebuild>
+                    <adrsync>21:40-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>03:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>05:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1352,9 +1352,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsf</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:30-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>22:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>04:45-Sa-weekly</fulltext-rebuild>
+                    <adrsync>23:30-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>22:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>04:45-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1421,9 +1421,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwf</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:50-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>01:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+                    <adrsync>22:50-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>01:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1477,9 +1477,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhzzm</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:55-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>01:05-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+                    <adrsync>22:55-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>01:05-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1559,9 +1559,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenu</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:00-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>21:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:30-So-weekly</fulltext-rebuild>
+                    <adrsync>23:00-SaSo-weekly</adrsync>
+                    <fulltextoptimize>21:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
         </prod>
@@ -1623,9 +1623,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmitest</zusammenarbeitdritte>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:05-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>21:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>05:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:05-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>21:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>05:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1682,9 +1682,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpitest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>20:10-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>22:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>05:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>20:10-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>22:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>05:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1749,9 +1749,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgstest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>20:30-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>21:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>00:05-Sa-weekly</fulltext-rebuild>
+                    <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1804,9 +1804,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfotest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:40-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>05:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:00-So-weekly</fulltext-rebuild>
+                    <adrsync>22:40-SaSo-weekly</adrsync>
+                    <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1858,9 +1858,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirevtest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>20:40-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>00:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>18:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>20:40-SaSo-weekly</adrsync>
+                    <fulltextoptimize>00:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>18:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1927,9 +1927,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhmeftest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:00-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>00:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:00-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>00:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1995,9 +1995,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnftest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:00-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>00:45-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>23:00-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>00:45-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2063,9 +2063,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphftest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:10-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>02:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:00-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:10-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>02:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2132,9 +2132,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhproftest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:20-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>02:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>21:20-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>02:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2194,9 +2194,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrechttest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:00-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>04:45-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>06:00-So-weekly</fulltext-rebuild>
+                    <adrsync>22:00-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>04:45-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>06:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2263,9 +2263,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrwftest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:20-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>23:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>21:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>22:20-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>23:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>21:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2331,9 +2331,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthftest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:20-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>04:30-Sa-weekly</fulltext-rebuild>
+                    <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>04:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2399,9 +2399,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgswtest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>21:30-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>03:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>04:30-So-weekly</fulltext-rebuild>
+                    <adrsync>21:30-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>03:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>04:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2467,9 +2467,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsftest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:30-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>22:15-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>04:45-Sa-weekly</fulltext-rebuild>
+                    <adrsync>23:30-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>22:15-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>04:45-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2534,9 +2534,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwftest</sitzungsvorbereitung>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:50-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>01:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+                    <adrsync>22:50-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>01:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2590,9 +2590,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhzzmtest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>22:55-MoDiMiDoFrSaSo-weekly</adr-sync>
-                    <fulltext-optimize>01:05-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>00:30-So-weekly</fulltext-rebuild>
+                    <adrsync>22:55-MoDiMiDoFrSaSo-weekly</adrsync>
+                    <fulltextoptimize>01:05-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2672,9 +2672,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenutest</dossierbrowser>
                 </mobile>
                 <jobs>
-                    <adr-sync>23:00-SaSo-weekly</adr-sync>
-                    <fulltext-optimize>21:30-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>19:30-So-weekly</fulltext-rebuild>
+                    <adrsync>23:00-SaSo-weekly</adrsync>
+                    <fulltextoptimize>21:30-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>19:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
         </test>
@@ -2711,8 +2711,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltext-optimize>21:45-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:00-So-weekly</fulltext-rebuild>
+                    <fulltextoptimize>21:45-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2744,8 +2744,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:30-So-weekly</fulltext-rebuild>
+                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
         </prod>
@@ -2779,8 +2779,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltext-optimize>21:45-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:00-So-weekly</fulltext-rebuild>
+                    <fulltextoptimize>21:45-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -2812,8 +2812,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltext-optimize>22:00-MoDiMiDoFr-weekly</fulltext-optimize>
-                    <fulltext-rebuild>20:30-So-weekly</fulltext-rebuild>
+                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
+                    <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
         </test>
