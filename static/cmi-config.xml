@@ -1166,7 +1166,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
             </mandant>
             <mandant>
                 <namefull>VP FSI</namefull>
-                <nameshort>VP FSI</nameshort>
+                <nameshort>VPFSI</nameshort>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -1515,7 +1515,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
             </mandant>
             <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
-                <nameshort>AIS Benutzung</nameshort>
+                <nameshort>AISBenutzung</nameshort>
                 <installid>2644</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2628,7 +2628,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
             </mandant>
             <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
-                <nameshort>AIS Benutzung</nameshort>
+                <nameshort>AISBenutzung</nameshort>
                 <installid>2644</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2683,7 +2683,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
         <prod>
             <mandant>
                 <namefull>AIS UAZ</namefull>
-                <nameshort>AIS UAZ</nameshort>
+                <nameshort>AISUAZ</nameshort>
                 <installid>1784</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2717,7 +2717,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
             </mandant>
             <mandant>
                 <namefull>AIS AFM</namefull>
-                <nameshort>AIS AFM</nameshort>
+                <nameshort>AISAFM</nameshort>
                 <installid>4787</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2752,7 +2752,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
         <test>
             <mandant>
                 <namefull>AIS UAZ</namefull>
-                <nameshort>AIS UAZ</nameshort>
+                <nameshort>AISUAZ</nameshort>
                 <installid>1784</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2785,7 +2785,7 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
             </mandant>
             <mandant>
                 <namefull>AIS AFM</namefull>
-                <nameshort>AIS AFM</nameshort>
+                <nameshort>AISAFM</nameshort>
                 <installid>4787</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
