@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 app = Flask(__name__)
 
 ################### change if nescessary ###############
-xml_data_path = 'D:\gitlab\cmi-config\cmi-config-v2.xml'
+xml_data_path = 'D:\gitlab\cmi-config\static\cmi-config.xml'
 api_port = 5001
 ########################################################
 
