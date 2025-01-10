@@ -77,9 +77,6 @@ ___ Every mandant has its own set of config nodes. The attribute "id" is not use
 
 		___ STS: CMI Security Token Service. See https://dokumentation.cmiag.ch/cmi-sts-3/latest/
 		<sts>
-
-			___ v2 soon deprecated
-			<v2>https://sts.cmicloud.ch/uzhmef</v2>
 	
 			___ v3
 			<v3>
@@ -279,7 +276,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <!-- Release 21 hat kein Webclient -->
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhbmi</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
@@ -342,7 +338,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhfpi.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhfpi</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhfpi</desktopclient>
@@ -402,7 +397,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgs.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhgs</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhgs</desktopclient>
@@ -475,7 +469,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhinfo.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhinfo</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfo</desktopclient>
@@ -530,7 +523,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhirev.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhirev</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhirev</desktopclient>
@@ -584,7 +576,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmef.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhmef</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
@@ -655,7 +646,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmnf.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhmnf</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnf</desktopclient>
@@ -725,7 +715,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhphf.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhphf</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhphf</desktopclient>
@@ -796,7 +785,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhprof.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhprof</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhprof</desktopclient>
@@ -867,7 +855,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrecht.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhrecht</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhrecht</desktopclient>
@@ -927,7 +914,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrwf.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhrwf</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhrwf</desktopclient>
@@ -998,7 +984,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhthf.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhthf</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhthf</desktopclient>
@@ -1064,7 +1049,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <mobilefirst>https://uzhvert.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhvert</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhvert</desktopclient>
@@ -1119,7 +1103,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgsw.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhgsw</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhgsw</desktopclient>
@@ -1187,7 +1170,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrww.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhrww</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhrww</desktopclient>
@@ -1243,7 +1225,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmnw.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhmnw</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnw</desktopclient>
@@ -1310,7 +1291,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhvsf.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhvsf</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhvsf</desktopclient>
@@ -1380,7 +1360,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhwwf.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhwwf</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhwwf</desktopclient>
@@ -1449,7 +1428,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhzzm.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhzzm</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhzzm</desktopclient>
@@ -1532,7 +1510,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <mobilefirst>https://uzhbenu.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhbenu</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhbenu</desktopclient>
@@ -1589,7 +1566,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhbmitest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhbmitest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmitest</desktopclient>
@@ -1651,7 +1627,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhfpitest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhfpitest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhfpitest</desktopclient>
@@ -1710,7 +1685,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgstest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhgstest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhgstest</desktopclient>
@@ -1777,7 +1751,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhinfotest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhinfotest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfotest</desktopclient>
@@ -1832,7 +1805,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhirevtest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhirevtest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhirevtest</desktopclient>
@@ -1886,7 +1858,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmeftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhmeftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhmeftest</desktopclient>
@@ -1955,7 +1926,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmnftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhmnftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnftest</desktopclient>
@@ -2023,7 +1993,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhphftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhphftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhphftest</desktopclient>
@@ -2091,7 +2060,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhproftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhproftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhproftest</desktopclient>
@@ -2160,7 +2128,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrechttest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhrechttest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhrechttest</desktopclient>
@@ -2222,7 +2189,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrwftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhrwftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhrwftest</desktopclient>
@@ -2291,7 +2257,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhthftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhthftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhthftest</desktopclient>
@@ -2360,7 +2325,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgswtest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhgswtest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhgswtest</desktopclient>
@@ -2427,7 +2391,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhvsftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhvsftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhvsftest</desktopclient>
@@ -2495,7 +2458,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhwwftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhwwftest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhwwftest</desktopclient>
@@ -2562,7 +2524,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhzzmtest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhzzmtest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhzzmtest</desktopclient>
@@ -2645,7 +2606,6 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
                 <sts>
-                    <v2>https://sts.cmicloud.ch/uzhbenutest</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhbenutest</desktopclient>
