@@ -275,7 +275,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <!-- Release 21 hat kein Webclient -->
-                <sts>
+		<sts>
+		    <v2>https://sts.cmicloud.ch/uzhbmi</v2>
                     <v3>
                         <ea>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
                         <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
