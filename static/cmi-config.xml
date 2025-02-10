@@ -2675,6 +2675,12 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextoptimize>21:45-MoDiMiDoFr-weekly</fulltextoptimize>
                     <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
+                <sts>
+                    <v3>
+                        <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signing-oidc</ea>
+                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaz</desktopclient>
+                    </v3>
+                </sts>
             </mandant>
             <mandant>
                 <namefull>AIS AFM</namefull>
@@ -2708,6 +2714,12 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
                     <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
+                <sts>
+                    <v3>
+                        <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signing-oidc</ea>
+                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhafm</desktopclient>
+                    </v3>
+                </sts>
             </mandant>
         </prod>
         <test>
@@ -2743,6 +2755,12 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextoptimize>21:45-MoDiMiDoFr-weekly</fulltextoptimize>
                     <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
+                <sts>
+                    <v3>
+                        <ea>https://sts3.prod.cmicloud.ch/uzhuaztest/identity/signing-oidc</ea>
+                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaztest</desktopclient>
+                    </v3>
+                </sts>
             </mandant>
             <mandant>
                 <namefull>AIS AFM</namefull>
@@ -2776,6 +2794,12 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
                     <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
+                <sts>
+                    <v3>
+                        <ea>https://sts3.prod.cmicloud.ch/uzhafmtest/identity/signing-oidc</ea>
+                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhafmtest</desktopclient>
+                    </v3>
+                </sts>
             </mandant>
         </test>
     </ais>
