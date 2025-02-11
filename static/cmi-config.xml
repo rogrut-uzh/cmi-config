@@ -5,254 +5,177 @@
 *********************
 
 AUTHOR
-	Roger Rutishauser - ADB-DBA, September-December 2024
+
+    Roger Rutishauser - ADB-DBA, September-December 2024
 
 
-REMARKS
+XML STRUCTURE
 
-___ Every mandant has its own set of config nodes. The attribute "id" is not used other than to distinguish a mandant-node from another.
-<mandant id="6">
+***** CMI or AIS
+<cmi>
 
-	___ Every mandant is divided into prod and test environment.
-	<prod>
+    ***** Environment prod or test
+    <prod>
+    
+        ***** Every mandant has its own set of config nodes. 
+        <mandant>
 
-		___ Name of the mandant. Has no effect neither on settings nor Software-Center/Intune/Citrix.
-		<namefull>Medizinische Fakultät</namefull>
+        ***** Full Name of the mandant. 
+        <namefull>Medizinische Fakultät</namefull>
 
-		___ Short name of the mandant. Has no effect on settings.
-		<nameshort>MF</nameshort>
+        ***** Short name of the mandant. 
+        <nameshort>MF</nameshort>
 
-		___ Alternative form of name of the mandant. Has no effect neither on settings nor Software-Center/Intune/Citrix.
-		
+        ***** InstallId
+        <installid>2624</installid>
 
-		___ InstallId. Has no effect neither on settings nor Software-Center/Intune/Citrix.
-		<installid>2624</installid>
+        ***** Database information. 
+        ***** Excerpt from MetaTool.ini:
+        ***** [DataBase]
+        ***** Dialect = SQLServer
+        ***** ConnectString = Data Source=ZIAXIOMAPSQL02,1433;Initial Catalog=axioma_dfpdib;Trusted_Connection=True;Pooling=true
+        <database>
 
-		___ Database information. Auszug aus MetaTool.ini:
-		___ [DataBase]
-		___ Dialect = SQLServer
-		___ ConnectString = Data Source=ZIAXIOMAPSQL02,1433;Initial Catalog=axioma_dfpdib;Trusted_Connection=True;Pooling=true
-		<database>
+            ***** Host where the database is located
+            <host>ZIAXIOMAPSQL02</host>
 
-			___ Hostname where the database is located
-			<host>ZIAXIOMAPSQL02</host>
+            __ Database name
+            <name>axioma_medizinfak</name>
 
-			__ database name
-			<name>axioma_medizinfak</name>
+        </database>
 
-		</database>
+        ***** app specific information
+        <app>
 
-		___ app specific information
-		<app>
+            ***** Release version number
+            <releaseversion>22.0.10</releaseversion>
 
-			___ release version number
-			<releaseversion>22.0.10</releaseversion>
+            ***** host name where the mandant is installed
+            <host id="6ps">ziaxiomapap03</host>
 
-			___ host name where the mandant is installed
-			<host id="6ps">ziaxiomapap03</host>
+            ***** installation path on host
+            <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 22.0.10</installpath>
 
-			___ installation path
-			<installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 22.0.10</installpath>
+            ***** windows service names and users
+            <servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
+            <serviceuser>UZH\srv_cmi_mef</serviceuser>
+            <servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
+            <serviceuserrelay>Network Service</serviceuserrelay>
+        </app>
+        
+        ***** Server and Port of the licence server that the mandant is using. 
+        ***** In case it is missing, the licence is stored directly in mandant app. 
+        ***** Excerpt from MetaTool.ini:
+        ***** [LicenseServer]
+        ***** Port=10325
+        ***** Server=ziaxiomatap02
+        <licenseserver>
+            <port>10325</port>
+            <server>ziaxiomatap02</server>
+        </licenseserver>
 
-			___ windows service names and users
-			<servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
-			<serviceuser>UZH\srv_cmi_mef</serviceuser>
-			<servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
-			<serviceuserrelay>Network Service</serviceuserrelay>
-		</app>
+        ***** mobilefirst: Web client URL. 
+        ***** Excerpt from MetaTool.ini:
+        ***** [MobileFirst]
+        ***** Url=https://uzhgstest.cmicloud.ch
+        <mobilefirst>https://uzhfpi.cmicloud.ch</mobilefirst>
 
-		___ Falls leer, ist Lizenz direkt in der App. Ansonsten wird der Lizenzserver verwendet (CMI Installation). Auszug aus MetaTool.ini:
-		___ [LicenseServer]
-		___ Port=10320
-		___ Server=ziaxiomapap03
-		<licenseserver>
-			<port>10325</port>
-			<server>ziaxiomatap02</server>
-		</licenseserver>
+        ***** STS: CMI Security Token Service. See https://dokumentation.cmiag.ch/cmi-sts-3/latest/
+        <sts>
 
-		___ mobilefirst: Web-Client URL. Auszug aus MetaTool.ini:
-		___ [MobileFirst]
-		___ Url=https://uzhgstest.cmicloud.ch
-		<mobilefirst>https://uzhfpi.cmicloud.ch</mobilefirst>
+            ***** ea: Enterprise App. Redirects. Verwaltet durch Thomas Schurter.
+            <ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
 
-		___ STS: CMI Security Token Service. See https://dokumentation.cmiag.ch/cmi-sts-3/latest/
-		<sts>
-	
-			___ v3
-			
+            ***** desktopclient: This URL must be provided in the desktop client STS settings.
+            <desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
 
-				___ ea: Enterprise App. Redirects. Verwaltet durch Thomas Schurter.
-				<ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
+        </sts>
+        
+        ***** Objektloader. The app runs on this port. 
+        ***** Excerpt from MetaTool.ini:
+        ***** [ObjektLoader]
+        ***** Port=10245
+        ***** Server=ziaxiomatap02
+        ***** Im MetaTool.ini von Server steht nur der host z.B. zaixiomapap03
+        ***** Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
+        <objektloader>
+            <port id="6ps">10070</port>
+        </objektloader>
 
-				___ desktopclient: Diese URL muss im Desktop-Client von CMI hinterlegt sein, bei den STS-Einstellungen.
-				<desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
+        ***** Webconsole. The sub-services use this port. 
+        ***** Excerpt from MetaTool.ini:
+        ***** [WebConsole]
+        ***** Port=10246
+        ***** MachineName=ziaxiomapap03
+        <webconsole>
+            <port ref="6ps">10071</port>
+        </webconsole>
 
-			
+        ***** Überweisungen
+        <ueberweisung>
 
-		</sts>
+            ***** port: The client can be reached via this port. 
+            ***** Excerpt from MetaTool.ini:
+            ***** [Ueberweisung]
+            ***** Port=10247
+            ***** MachineName=ziaxiomapap03
+            <port ref="1ts">10072</port>
 
-		___ Unter diesem Port läuft die App. Auszug aus MetaTool.ini:
-		___ [ObjektLoader]
-		___ Port=10245
-		___ Server=ziaxiomatap02
-		___ Im MetaTool.ini von Server steht nur der host z.B. zaixiomapap03
-		___ Im MetaTool.ini von Client steht der FQDN (ohne "d") drin, z.B. ziaxiomapap03.uzh.ch
-		<objektloader>
-			<port id="6ps">10070</port>
-		</objektloader>
+            ***** url: Transfers can be made to the following URLs. They must have the counterpart in their own list. These URLs are maintained in the desktop client. Search for type "Server" will list them (log in as administrator).
+            <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
+            <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+            <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
+        </ueberweisung>
 
-		___ Port, unter welchem Subdienste am laufen sind. Auszug aus MetaTool.ini:
-		___ [WebConsole]
-		___ Port=10246
-		___ MachineName=ziaxiomapap03
-		<webconsole>
-			<port ref="6ps">10071</port>
-		</webconsole>
+        ***** owinserver: Enables communication from the desktop client and web client. 
+        ***** Excerpt from MetaTool.ini:
+        ***** [OwinServer]
+        ***** Server=*
+        ***** PortPrivate=10248
+        ***** PortPublic=10249
+        ***** Mandant=uzhgstest
+        ***** MobileClients_BaseDirectory="C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\MobileClients"
+        ***** *****
+        ***** Excerpt from Thinkecture.Relay.OnPremiseConnectorService.exe.config:
+        ***** <relayServer baseUrl="https://relay.cmiaxioma.ch/" ignoreSslErrors="false" timeout="00:00:30">
+        *****       <security authenticationType="Identity" accessTokenRefreshWindow="0.00:01:00"> 
+        *****           <identity userName="uzhirevtest" password="asgXfO1BP5f+JGc1HvLOiec+Qb/AQD3hnHY2IcsxdIKGajsi3gxfE7cmZV6ejOcPc2a6QO7/7EDhpQADIw3h8sMiMtE17wu/RdJ3BEs7CMCUURx5CH9bkEvNmQLDDSQ35/hrcQ==" />
+        *****       </security>
+        *****       <onPremiseTargets>
+        *****           <web key="webapiprivate" baseUrl="http://ziaxiomatap02:10088/" />
+        *****           <web key="webapipublic" baseUrl="http://ziaxiomatap02:10089/" />
+        *****       </onPremiseTargets>
+        ***** </relayServer>
+        ***** *****
+        ***** Relay server is always https://relay.cmiaxioma.ch/
+        <owinserver>
+            <mandant>uzhmef</mandant>
+            <port>
+                <private ref="6ps">10073</private>
+                <public ref="6ps">10074</public>
+            </port>
+        </owinserver>
 
-		___ Überweisungen
-		<ueberweisung>
+        ***** Mügi. Stored in the desktop client.
+        <muegi>
+            <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+            <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
+        </muegi>
 
-			___ port: Unter diesem Port ist der Mandant erreichbar. Auszug aus von MetaTool.ini:
-			___ [Ueberweisung]
-			___ Port=10247
-			___ MachineName=ziaxiomapap03
-			<port ref="1ts">10072</port>
-
-			___ url: An folgende URLs kann Überwiesen werden. Sie müssen das Gegenstück in ihrer eigenen Liste haben. Diese URLs werden im Desktop-Client gepflegt. Suche nach Typ "Server" listet sie auf (Als Administrator einloggen).
-			<url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-			<url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-			<url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-			<url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-			<url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-			<url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-			<url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-			<url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-			<url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-			<url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-			<url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
-		</ueberweisung>
-
-		___ owinserver: Ermöglicht Kommunikation vom Desktop-Client und Webclient. Auszug aus MetaTool.ini:
-		___ [OwinServer]
-		___ Server=*
-		___ PortPrivate=10248
-		___ PortPublic=10249
-		___ Mandant=uzhgstest
-		___ MobileClients_BaseDirectory="C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\MobileClients"
-		
-		___ Auszug aus Thinkecture.Relay.OnPremiseConnectorService.exe.config:
-		___ <relayServer baseUrl="https://relay.cmiaxioma.ch/" ignoreSslErrors="false" timeout="00:00:30">
-		___		<security authenticationType="Identity" accessTokenRefreshWindow="0.00:01:00"> 
-		___			<identity userName="uzhirevtest" password="asgXfO1BP5f+JGc1HvLOiec+Qb/AQD3hnHY2IcsxdIKGajsi3gxfE7cmZV6ejOcPc2a6QO7/7EDhpQADIw3h8sMiMtE17wu/RdJ3BEs7CMCUURx5CH9bkEvNmQLDDSQ35/hrcQ==" />
-		___		</security>
-		___		<onPremiseTargets>
-		___			<web key="webapiprivate" baseUrl="http://ziaxiomatap02:10088/" />
-		___			<web key="webapipublic" baseUrl="http://ziaxiomatap02:10089/" />
-		___		</onPremiseTargets>
-		___ </relayServer>
-		<owinserver>
-			<mandant>uzhmef</mandant>
-			<port>
-				<private ref="6ps">10073</private>
-				<public ref="6ps">10074</public>
-			</port>
-		</owinserver>
-
-		___ Im Desktop Client hinterlegt:
-		<muegi>
-			<url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-			<url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
-		</muegi>
-	</prod>
-	<test>
-
-
-
-
-
-WebDav
-	URL setzt sich wie folgt zusammen: https://<owinserver><mandant>.cmicloud.ch/webdav
-	z.B. https://uzhbmi.cmicloud.ch/webdav
-
-<owinserver>
-	Relevant für folgende Files
-	- C:\Program Files\CMI AG\RelayServer\CMI_<mandant>_RelayOPCService_uzhbmi\Thinktecture.Relay.OnPremiseConnectorService.exe.config
-	- C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10\Server\MetaTool.ini
-	- Der Relay Server ist immer https://relay.cmiaxioma.ch/
-
-
-
-
-MetaTool.ini Beispiel als Referenz:
-***
-#****************************************
-#* Generalsekretariat CMI V22.0.10 TEST *
-#****************************************
-[ObjektLoader]
-Port=10245
-Server=ziaxiomatap02.uzh.ch
-
-[WebConsole]
-Port=10246
-MachineName=ziaxiomatap02.uzh.ch
-
-[Ueberweisung]
-Port=10247
-MachineName=ziaxiomatap02.uzh.ch
-
-#*************************
-#* CMI Lizenzserver TEST *
-#*************************
-[LicenseServer]
-Port=10325
-Server=ziaxiomatap02.uzh.ch
-
-
-[DataBase]
-Dialect = SQLServer
-ConnectString = Data Source=ZIAXIOMATSQL02,1433;Initial Catalog=axioma_generalsek_TEST;Trusted_Connection=True;Pooling=true
-
-[Fulltext]
-Directory=C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\Fulltext
-
-[NotificationPublisher]
-Active = true
--> Notifikationen für Publikitationen von Sitzungen
-
-[Notificator]
-Active = true
--> Notifikationen für alles andere
-
-[Renderer]
-Running=0-24
--> Wann der Renderer läuft
-
-[Trace]
-Path=C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\Trace
-PurgeAfterDays=12
-#Debug, Info, Warning (=Default), Exception
-Level=Warning
-
-[OwinServer]
-Server=*
-PortPrivate=10248
-PortPublic=10249
-Mandant=uzhgstest
-MobileClients_BaseDirectory="C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10\MobileClients"
--> Ermöglichen Kommunikation vom Desktop-Client und Webclient
-
-[MobileFirst]
-Url=https://uzhgstest.cmicloud.ch
--> URL vom Webclient
-
-[WebDav]
-Url=https://uzhgstest.cmicloud.ch/webdav
--> Dokumentenbearbeitung mit Webclient.
-
-[PushService]
-ServerUrl=https://uzhgstest.cmicloud.ch/push
-PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
--> Wenn mehrere Personen in Dekstop oder Webclient ein Dok am bearbeiten sind, werden änderungen realtime updated.
+        ***** mobile apps
+        ***** they are independent to the webclient. Push service has no effect.
+        <mobile>
+            <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgs</zusammenarbeitdritte>
+            <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgs</sitzungsvorbereitung>
+            <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgs</dossierbrowser>
+        </mobile>
+        
+        ***** Jobs that are defined within desktop client.
+        <jobs>
+            <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
+            <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
+            <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
+        </jobs>
 -->
 <root>
     <cmi>
@@ -275,12 +198,9 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <!-- Release 21 hat kein Webclient -->
-		<sts>
-		    <v2>https://sts.cmicloud.ch/uzhbmi</v2>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
-                    
+                <sts>
+                    <ea>currently STS2! STS3 will be: https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
+                    <desktopclient>currently STS2! https://sts.cmicloud.ch/uzhbmi. STS3 will be: https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="1ps">10110</port>
@@ -339,10 +259,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhfpi.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhfpi</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhfpi/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhfpi</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="2ps">10140</port>
@@ -398,10 +316,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgs.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhgs</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhgs/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhgs</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="3ps">10240</port>
@@ -470,10 +386,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhinfo.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfo</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfo</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="4ps">10230</port>
@@ -524,10 +438,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhirev.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhirev</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhirev/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhirev</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="5ps">10080</port>
@@ -577,10 +489,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmef.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhmef/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhmef</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="6ps">10070</port>
@@ -647,10 +557,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmnf.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnf</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhmnf/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnf</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="7ps">10050</port>
@@ -716,10 +624,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhphf.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhphf</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhphf/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhphf</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="8ps">10090</port>
@@ -786,10 +692,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhprof.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhprof</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhprof/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhprof</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="9ps">10150</port>
@@ -856,10 +760,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrecht.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhrecht</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhrecht/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhrecht</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="10ps">10220</port>
@@ -915,10 +817,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrwf.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhrwf</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhrwf/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhrwf</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="11ps">10000</port>
@@ -985,10 +885,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhthf.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhthf</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhthf/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhthf</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="12ps">10210</port>
@@ -1050,10 +948,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <mobilefirst>https://uzhvert.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhvert</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhvert</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="13ps">10060</port>
@@ -1104,10 +1000,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgsw.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhgsw</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhgsw/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhgsw</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="14ps">10100</port>
@@ -1171,10 +1065,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrww.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhrww</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhrww/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhrww</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="15ps">10120</port>
@@ -1226,10 +1118,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmnw.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnw</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhmnw/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnw</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="16ps">10040</port>
@@ -1292,10 +1182,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhvsf.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhvsf</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhvsf/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhvsf</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="17ps">10190</port>
@@ -1361,10 +1249,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhwwf.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhwwf</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhwwf/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhwwf</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="18ps">10260</port>
@@ -1429,10 +1315,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhzzm.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhzzm</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhzzm/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhzzm</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="19ps">10270</port>
@@ -1511,10 +1395,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <mobilefirst>https://uzhbenu.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhbenu</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhbenu/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhbenu</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="30ps">10020</port>
@@ -1567,10 +1449,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhbmitest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmitest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhbmitest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmitest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="1ts">10115</port>
@@ -1628,10 +1508,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhfpitest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhfpitest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhfpitest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhfpitest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="2ts">10145</port>
@@ -1686,10 +1564,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgstest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhgstest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhgstest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhgstest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="3ts">10245</port>
@@ -1752,10 +1628,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhinfotest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfotest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfotest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="4ts">10235</port>
@@ -1806,10 +1680,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhirevtest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhirevtest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhirevtest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhirevtest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="5ts">10085</port>
@@ -1859,10 +1731,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmeftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhmeftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhmeftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhmeftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="6ts">10075</port>
@@ -1927,10 +1797,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhmnftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhmnftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhmnftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="7ts">10055</port>
@@ -1994,10 +1862,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhphftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhphftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhphftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhphftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="8ts">10095</port>
@@ -2061,10 +1927,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhproftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhproftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhproftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhproftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port id="9ts">10155</port>
@@ -2129,10 +1993,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrechttest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhrechttest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhrechttest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhrechttest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="10ts">10225</port>
@@ -2190,10 +2052,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhrwftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhrwftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhrwftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhrwftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="11ts">10005</port>
@@ -2258,10 +2118,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhthftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhthftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhthftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhthftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="12ts">10215</port>
@@ -2326,10 +2184,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhgswtest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhgswtest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhgswtest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhgswtest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="14ts">10105</port>
@@ -2392,10 +2248,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhvsftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhvsftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhvsftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhvsftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="17ts">10195</port>
@@ -2459,10 +2313,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhwwftest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhwwftest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhwwftest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhwwftest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="18ts">10265</port>
@@ -2525,10 +2377,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </licenseserver>
                 <mobilefirst>https://uzhzzmtest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhzzmtest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhzzmtest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhzzmtest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="19ts">10275</port>
@@ -2607,10 +2457,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                 </app>
                 <mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhbenutest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhbenutest/identity/signin-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhbenutest</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="30ts">10025</port>
@@ -2676,10 +2524,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signing-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaz</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signing-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaz</desktopclient>
                 </sts>
             </mandant>
             <mandant>
@@ -2715,10 +2561,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signing-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhafm</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signing-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhafm</desktopclient>
                 </sts>
             </mandant>
         </prod>
@@ -2756,10 +2600,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhuaztest/identity/signing-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaztest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhuaztest/identity/signing-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaztest</desktopclient>
                 </sts>
             </mandant>
             <mandant>
@@ -2795,10 +2637,8 @@ PushServiceClientSecret=abcdefghijklmnopqrstuvwxyz
                     <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    
-                        <ea>https://sts3.prod.cmicloud.ch/uzhafmtest/identity/signing-oidc</ea>
-                        <desktopclient>https://sts3.prod.cmicloud.ch/uzhafmtest</desktopclient>
-                    
+                    <ea>https://sts3.prod.cmicloud.ch/uzhafmtest/identity/signing-oidc</ea>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhafmtest</desktopclient>
                 </sts>
             </mandant>
         </test>
