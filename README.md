@@ -240,4 +240,5 @@ http://localhost:5001/api/data/cmi?app/releaseversion=24.0.6
 http://localhost:5001/api/data/cmi/prod?app/releaseversion=22.0.10
 http://localhost:5001/api/data?namefull=philo
 http://localhost:5001/api/data/cmi/prod?ueberweisung/port=10112
+http://localhost:5001/api/data/cmi?muegi&licenseserver/server=ziaxiomapap03
 ```
