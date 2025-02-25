@@ -69,9 +69,6 @@ API DOCUMENTATION
                         <public ref="1ps">10114</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmi</zusammenarbeitdritte>
-                </mobile>
                 <jobs>
                     <adrsync>21:05-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>21:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -126,9 +123,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpi</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>20:10-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -194,11 +188,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgs</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgs</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgs</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -247,10 +236,6 @@ API DOCUMENTATION
                         <public ref="1ts">10234</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhinfo</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfo</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:40-SaSo-weekly</adrsync>
                     <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -299,9 +284,6 @@ API DOCUMENTATION
                         <public ref="5ps">10084</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirev</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>20:40-SaSo-weekly</adrsync>
                     <fulltextoptimize>00:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -365,11 +347,7 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmef</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmef</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhmef</dossierbrowser>
-                </mobile>
+                
                 <jobs>
                     <adrsync>21:00-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>00:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -433,10 +411,6 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnf</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnf</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>23:00-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>00:45-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -501,10 +475,6 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhphf</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphf</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>21:10-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>02:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -568,11 +538,6 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhprof</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhprof</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhprof</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>21:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>02:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -627,9 +592,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrecht</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>22:00-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>04:45-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -693,11 +655,6 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhrwf</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrwf</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrwf</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>23:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -761,10 +718,6 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhthf</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthf</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -809,9 +762,6 @@ API DOCUMENTATION
                         <public ref="13ps">10064</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhvert</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:40-SaSo-weekly</adrsync>
                     <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -874,10 +824,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgsw</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgsw</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>21:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>03:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -991,10 +937,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnw</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnw</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>21:40-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>03:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1058,10 +1000,6 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhvsf</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsf</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>23:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1124,10 +1062,6 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhwwf</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwf</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>22:50-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>01:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1176,11 +1110,6 @@ API DOCUMENTATION
                         <public ref="19ps">10274</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhzzm</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhzzm</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhzzm</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:55-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>01:05-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1256,10 +1185,6 @@ API DOCUMENTATION
                         <public ref="30ps">10024</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbenu</zusammenarbeitdritte>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenu</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>23:00-SaSo-weekly</adrsync>
                     <fulltextoptimize>21:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1318,9 +1243,6 @@ API DOCUMENTATION
                         <public ref="1ts">10119</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbmitest</zusammenarbeitdritte>
-                </mobile>
                 <jobs>
                     <adrsync>21:05-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>21:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1374,9 +1296,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhfpitest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>20:10-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1436,11 +1355,6 @@ API DOCUMENTATION
                         <public ref="1ts">10249</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgstest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgstest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhgstest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1489,10 +1403,6 @@ API DOCUMENTATION
                         <public ref="4ts">10239</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhinfotest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhinfotest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:40-SaSo-weekly</adrsync>
                     <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1541,9 +1451,6 @@ API DOCUMENTATION
                         <public ref="5ts">10089</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhirevtest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>20:40-SaSo-weekly</adrsync>
                     <fulltextoptimize>00:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1605,11 +1512,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmeftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmeftest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhmeftest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>21:00-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>00:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1671,10 +1573,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhmnftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhmnftest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>23:00-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>00:45-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1736,10 +1634,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhphftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhphftest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>21:10-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>02:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1801,11 +1695,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhproftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhproftest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhproftest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>21:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>02:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1860,11 +1749,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhrechttest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrechttest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrechttest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:00-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>04:45-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1926,11 +1810,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhrwftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhrwftest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhrwftest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>23:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -1992,10 +1871,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhthftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhthftest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -2057,10 +1932,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhgswtest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhgswtest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>21:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>03:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -2122,10 +1993,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhvsftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhvsftest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>23:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:15-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -2186,10 +2053,6 @@ API DOCUMENTATION
                 <muegi>
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhwwftest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhwwftest</sitzungsvorbereitung>
-                </mobile>
                 <jobs>
                     <adrsync>22:50-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>01:00-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -2238,11 +2101,6 @@ API DOCUMENTATION
                         <public ref="19ts">10279</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhzzmtest</zusammenarbeitdritte>
-                    <sitzungsvorbereitung>https://mobile.cmiaxioma.ch/sitzungsvorbereitung/uzhzzmtest</sitzungsvorbereitung>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhzzmtest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>22:55-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>01:05-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -2318,10 +2176,6 @@ API DOCUMENTATION
                         <public ref="30ts">10029</public>
                     </port>
                 </owinserver>
-                <mobile>
-                    <zusammenarbeitdritte>https://mobile.cmiaxioma.ch/zusammenarbeitdritte/uzhbenutest</zusammenarbeitdritte>
-                    <dossierbrowser>https://mobile.cmiaxioma.ch/dossierbrowser/uzhbenutest</dossierbrowser>
-                </mobile>
                 <jobs>
                     <adrsync>23:00-SaSo-weekly</adrsync>
                     <fulltextoptimize>21:30-MoDiMiDoFr-weekly</fulltextoptimize>
@@ -2366,7 +2220,7 @@ API DOCUMENTATION
                     <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signing-oidc</ea>
+                    <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signin-oidc</ea>
                     <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaz</desktopclient>
                 </sts>
             </mandant>
@@ -2403,7 +2257,7 @@ API DOCUMENTATION
                     <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signing-oidc</ea>
+                    <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signin-oidc</ea>
                     <desktopclient>https://sts3.prod.cmicloud.ch/uzhafm</desktopclient>
                 </sts>
             </mandant>
@@ -2442,7 +2296,7 @@ API DOCUMENTATION
                     <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhuaztest/identity/signing-oidc</ea>
+                    <ea>https://sts3.prod.cmicloud.ch/uzhuaztest/identity/signin-oidc</ea>
                     <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaztest</desktopclient>
                 </sts>
             </mandant>
@@ -2479,7 +2333,7 @@ API DOCUMENTATION
                     <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
                 </jobs>
                 <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhafmtest/identity/signing-oidc</ea>
+                    <ea>https://sts3.prod.cmicloud.ch/uzhafmtest/identity/signin-oidc</ea>
                     <desktopclient>https://sts3.prod.cmicloud.ch/uzhafmtest</desktopclient>
                 </sts>
             </mandant>
