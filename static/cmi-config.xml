@@ -34,6 +34,7 @@ API DOCUMENTATION
                     <releaseversion>21.0.10</releaseversion>
                     <host id="1ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_BM_RelayOPCService_uzhbmi</installpathrelay>
                     <servicename>CMI BM 21.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_bm</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
@@ -87,6 +88,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="2ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Direktion DFPDIB 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Direktion_DFPDIB_RelayOPCService_uzhfpi</installpathrelay>
                     <servicename>CMI Direktion DFPDIB 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_dfpdib</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhfpi</servicenamerelay>
@@ -141,6 +143,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="3ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Generalsekretariat_RelayOPCService_uzhgs</installpathrelay>
                     <servicename>CMI Generalsekretariat 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_gs</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgs</servicenamerelay>
@@ -206,6 +209,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="4ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Informatik 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Informatik_RelayOPCService_uzhinfo</installpathrelay>
                     <servicename>CMI Informatik 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_info</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhinfo</servicenamerelay>
@@ -254,6 +258,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="5ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Interne Revision 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Interne_Revision_RelayOPCService_uzhirev</installpathrelay>
                     <servicename>CMI Interne Revision 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_irev</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
@@ -302,6 +307,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="6ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Medizinische_Fakultaet_RelayOPCService_uzhmef</installpathrelay>
                     <servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_mef</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
@@ -366,6 +372,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="7ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\MNF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_MNF_RelayOPCService_uzhmnf</installpathrelay>
                     <servicename>CMI MNF 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_mnf</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmnf</servicenamerelay>
@@ -429,6 +436,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="8ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Philosophische Fakultaet 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Philosophische_Fakultaet_RelayOPCService_uzhphf</installpathrelay>
                     <servicename>CMI Philosophische Fakultaet 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_phf</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhphf</servicenamerelay>
@@ -493,6 +501,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="9ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Professuren 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Professuren_RelayOPCService_uzhprof</installpathrelay>
                     <servicename>CMI Professuren 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_prof</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhprof</servicenamerelay>
@@ -556,6 +565,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="10ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Rechtsdienst_RelayOPCService_uzhrecht</installpathrelay>
                     <servicename>CMI Rechtsdienst 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_recht</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrecht</servicenamerelay>
@@ -610,6 +620,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="11ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RWF_RelayOPCService_uzhrwf</installpathrelay>
                     <servicename>CMI RWF 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_rwf</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrwf</servicenamerelay>
@@ -673,6 +684,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="12ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\TRF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_TRF_RelayOPCService_uzhthf</installpathrelay>
                     <servicename>CMI TRF 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_trf</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhthf</servicenamerelay>
@@ -736,6 +748,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="13ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Vertragsverwaltung 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Vertragsverwaltung_RelayOPCService_uzhvert</installpathrelay>
                     <servicename>CMI Vertragsverwaltung 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_vert</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
@@ -781,6 +794,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="14ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP Edu 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_Edu_RelayOPCService_uzhgsw</installpathrelay>
                     <servicename>CMI VP Edu 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_edu</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgsw</servicenamerelay>
@@ -842,6 +856,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="15ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP FSI 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_FSI_RelayOPCService_uzhrww</installpathrelay>
                     <servicename>CMI VP FSI 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_fsi</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrww</servicenamerelay>
@@ -895,6 +910,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="16ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP MedRes 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_MedRes_RelayOPCService_uzhmnw</installpathrelay>
                     <servicename>CMI VP MedRes 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_medres</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmnw</servicenamerelay>
@@ -955,6 +971,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="17ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\VSF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VSF_RelayOPCService_uzhvsf</installpathrelay>
                     <servicename>CMI VSF 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_vsf</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhvsf</servicenamerelay>
@@ -1018,6 +1035,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="18ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_WWF_RelayOPCService_uzhwwf</installpathrelay>
                     <servicename>CMI WWF 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_wwf</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhwwf</servicenamerelay>
@@ -1080,6 +1098,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="19ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\ZZM 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ZZM_RelayOPCService_uzhzzm</installpathrelay>
                     <servicename>CMI ZZM 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_zzm</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhzzm</servicenamerelay>
@@ -1127,6 +1146,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="20ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 22.0.10</installpath>
+                    <installpathrelay>none</installpathrelay>
                     <servicename>CMI Lizenzserver 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_lizenz</serviceuser>
                 </app>
@@ -1159,6 +1179,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="30ps">ziaxiomapap03</host>
                     <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Benutzungsverwaltung 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_Benutzungsverwaltung_RelayOPCService_uzhbenu</installpathrelay>
                     <servicename>AIS UAZ Benutzungsverwaltung 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_benu</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
@@ -1205,6 +1226,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="1ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\BM 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_BMTEST_RelayOPCService_uzhbmitest</installpathrelay>
                     <servicename>CMI BM 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
@@ -1261,6 +1283,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="2ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_DFPDIBTEST_RelayOPCService_uzhfpitest</installpathrelay>
                     <servicename>CMI Direktion DFPDIB TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhfpitest</servicenamerelay>
@@ -1314,6 +1337,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="3ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_GSTEST_RelayOPCService_uzhgstest</installpathrelay>
                     <servicename>CMI Generalsekretariat TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
@@ -1373,6 +1397,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="4ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Informatik 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_InformatikTEST_RelayOPCService_uzhinfotest</installpathrelay>
                     <servicename>CMI Informatik TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhinfotest</servicenamerelay>
@@ -1421,6 +1446,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="5ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Interne_RevisionTEST_RelayOPCService_uzhirevtest</installpathrelay>
                     <servicename>CMI Interne Revision TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhirevtest</servicenamerelay>
@@ -1469,6 +1495,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="6ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Medizinische_FakultaetTEST_RelayOPCService_uzhmeftest</installpathrelay>
                     <servicename>CMI Medizinische Fakultaet TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
@@ -1530,6 +1557,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="7ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\MNF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_MNFTEST_RelayOPCService_uzhmnftest</installpathrelay>
                     <servicename>CMI MNF TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
@@ -1591,6 +1619,7 @@ API DOCUMENTATION
                     <releaseversion>24.0.6</releaseversion>
                     <host id="8ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 24.0.6</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_PhFTEST_RelayOPCService_uzhphftest</installpathrelay>
                     <servicename>CMI Philosophische Fakultaet TEST 24.0.6</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
@@ -1652,6 +1681,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="9ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Professuren 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ProfessurenTEST_RelayOPCService_uzhproftest</installpathrelay>
                     <servicename>CMI Professuren TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
@@ -1713,6 +1743,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="10ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RechtTEST_RelayOPCService_uzhrechttest</installpathrelay>
                     <servicename>CMI Rechtsdienst TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
@@ -1767,6 +1798,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="11ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\RWF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RWFTEST_RelayOPCService_uzhrwftest</installpathrelay>
                     <servicename>CMI RWF TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
@@ -1828,6 +1860,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="12ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\TRF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_TRFTEST_RelayOPCService_uzhthftest</installpathrelay>
                     <servicename>CMI TRF TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
@@ -1890,6 +1923,7 @@ API DOCUMENTATION
                     <releaseversion>24.0.6</releaseversion>
                     <host id="14ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 24.0.6</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_EduTEST_RelayOPCService_uzhgswtest</installpathrelay>
                     <servicename>CMI VP Edu TEST 24.0.6</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
@@ -1950,6 +1984,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="17ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\VSF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VSFTEST_RelayOPCService_uzhvsftest</installpathrelay>
                     <servicename>CMI VSF TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
@@ -2011,6 +2046,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="18ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\WWF 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_WWFTEST_RelayOPCService_uzhwwftest</installpathrelay>
                     <servicename>CMI WWF TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
@@ -2071,6 +2107,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="19ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\ZZM 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ZZMTEST_RelayOPCService_uzhzzmtest</installpathrelay>
                     <servicename>CMI ZZM TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
@@ -2118,6 +2155,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="20ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 22.0.10</installpath>
+                    <installpathrelay>none</installpathrelay>
                     <servicename>CMI Lizenzserver TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
@@ -2150,6 +2188,7 @@ API DOCUMENTATION
                     <releaseversion>22.0.10</releaseversion>
                     <host id="30ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 22.0.10</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_BenutzungsverwaltungTEST_RelayOPCService_uzhbenutest</installpathrelay>
                     <servicename>AIS UAZ Benutzungsverwaltung TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
@@ -2198,6 +2237,7 @@ API DOCUMENTATION
                     <releaseversion>23.1.3</releaseversion>
                     <host id="40ps">ziaxiomapap04</host>
                     <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Archiv 23.1.3</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_Archiv_RelayOPCService_uzhuaz</installpathrelay>
                     <servicename>AIS UAZ Archiv 23.1.3</servicename>
                     <serviceuser>UZH\srv_ais_uaz</serviceuser>
                 </app>
@@ -2236,6 +2276,7 @@ API DOCUMENTATION
                     <releaseversion>23.1.3</releaseversion>
                     <host id="41ps">ziaxiomapap04</host>
                     <installpath>C:\Program Files\CMI AG\AIS Produktiv\AFM Archiv 23.1.3</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_AFM_Archiv_RelayOPCService_uzhafm</installpathrelay>
                     <servicename>AIS AFM Archiv 23.1.3</servicename>
                     <serviceuser>UZH\srv_ais_afm</serviceuser>
                 </app>
@@ -2275,6 +2316,7 @@ API DOCUMENTATION
                     <releaseversion>24.0.5</releaseversion>
                     <host id="40ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Archiv 24.0.5</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_ArchivTEST_RelayOPCService_uzhuaztest</installpathrelay>
                     <servicename>AIS UAZ Archiv TEST 24.0.5</servicename>
                     <serviceuser>UZH\srv_ais_test</serviceuser>
                 </app>
@@ -2312,6 +2354,7 @@ API DOCUMENTATION
                     <releaseversion>24.0.5</releaseversion>
                     <host id="41ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\AFM Archiv 24.0.5</installpath>
+                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_AFM_ArchivTEST_RelayOPCService_uzhafmtest</installpathrelay>
                     <servicename>AIS AFM Archiv TEST 24.0.5</servicename>
                     <serviceuser>UZH\srv_ais_test</serviceuser>
                 </app>
