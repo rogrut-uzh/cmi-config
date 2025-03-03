@@ -1227,7 +1227,7 @@ API DOCUMENTATION
                     <host id="1ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\BM 22.0.10</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_BMTEST_RelayOPCService_uzhbmitest</installpathrelay>
-                    <servicename>CMI BM 22.0.10</servicename>
+                    <servicename>CMI BM TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
