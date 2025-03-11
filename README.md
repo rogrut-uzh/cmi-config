@@ -2,7 +2,7 @@
 
 This repository includes information about the CMI configuration of every CMI mandant. The data is saved in the file `static\cmi-config.xml`. 
 
-For accessing the data, this repo also includes a REST API that works with Python 3 and is accessible on `http://localhost:5001/api/data` or [https://zidbacons02.uzh.ch/api/data](https://zidbacons02.uzh.ch/api/data). See "API documentation" for more details at the end of this document.
+For accessing the data, this repo also includes a REST API that works with Python 3 and is accessible on `http://localhost:5001/api/data` or [https://zidbacons02.d.uzh.ch/api/data](https://zidbacons02.d.uzh.ch/api/data). See "API documentation" for more details at the end of this document.
 
 ## Prerequisites
   - install python3 (make available to all windows users)
