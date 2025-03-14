@@ -1922,9 +1922,9 @@ API DOCUMENTATION
                 <app>
                     <releaseversion>24.0.6</releaseversion>
                     <host id="14ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 24.0.6</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 22.0.10</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_EduTEST_RelayOPCService_uzhgswtest</installpathrelay>
-                    <servicename>CMI VP Edu TEST 24.0.6</servicename>
+                    <servicename>CMI VP Edu TEST 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
