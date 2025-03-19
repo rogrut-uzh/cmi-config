@@ -21,20 +21,44 @@ api_port = 5001
 ########################################################
 
 def load_xml_data(file_path):
+#    def parse_element(element):
+#        """Recursively parse an XML element into a dictionary."""
+#        if len(element) == 0:  # No children, return text or None
+#            return element.text.strip() if element.text else None
+#        parsed_data = {}
+#        for child in element:
+#            # Handle multiple nodes with the same tag
+#            if child.tag not in parsed_data:
+#                parsed_data[child.tag] = parse_element(child)
+#            else:
+#                if not isinstance(parsed_data[child.tag], list):
+#                    parsed_data[child.tag] = [parsed_data[child.tag]]
+#                parsed_data[child.tag].append(parse_element(child))
+#        return parsed_data
     def parse_element(element):
-        """Recursively parse an XML element into a dictionary."""
-        if len(element) == 0:  # No children, return text or None
-            return element.text.strip() if element.text else None
+        """Recursively parse an XML element into a dictionary, including attributes."""
         parsed_data = {}
-        for child in element:
-            # Handle multiple nodes with the same tag
-            if child.tag not in parsed_data:
-                parsed_data[child.tag] = parse_element(child)
-            else:
-                if not isinstance(parsed_data[child.tag], list):
-                    parsed_data[child.tag] = [parsed_data[child.tag]]
-                parsed_data[child.tag].append(parse_element(child))
-        return parsed_data
+
+        # Falls das Element Attribute hat, speichere sie
+        if element.attrib:
+            parsed_data.update(element.attrib)
+
+        # Falls das Element Text hat, speichere es
+        text = element.text.strip() if element.text else None
+        if text:
+            parsed_data["_text"] = text  # Optional: Falls Text enthalten ist
+
+        # Falls das Element Kinder hat, rekursiv parsen
+        if len(element) > 0:
+            for child in element:
+                if child.tag not in parsed_data:
+                    parsed_data[child.tag] = parse_element(child)
+                else:
+                    if not isinstance(parsed_data[child.tag], list):
+                        parsed_data[child.tag] = [parsed_data[child.tag]]
+                    parsed_data[child.tag].append(parse_element(child))
+        
+        return parsed_data if parsed_data else text
 
     tree = ET.parse(file_path)
     root = tree.getroot()
