@@ -198,55 +198,6 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
             <mandant>
-                <namefull>Informatik</namefull>
-                <nameshort>Informatik</nameshort>
-                <installid>2624</installid>
-                <database>
-                    <host>ZIAXIOMAPSQL02</host>
-                    <name>axioma_informatik</name>
-                </database>
-                <app>
-                    <releaseversion>22.0.10</releaseversion>
-                    <host id="4ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Informatik 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Informatik_RelayOPCService_uzhinfo</installpathrelay>
-                    <servicename>CMI Informatik 22.0.10</servicename>
-                    <serviceuser>UZH\srv_cmi_info</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhinfo</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
-                </app>
-                <licenseserver>
-                    <port>10320</port>
-                    <server>ziaxiomapap03</server>
-                </licenseserver>
-                <mobilefirst>https://uzhinfo.cmicloud.ch</mobilefirst>
-                <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhinfo/identity/signin-oidc</ea>
-                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfo</desktopclient>
-                </sts>
-                <objektloader>
-                    <port id="4ps">10230</port>
-                </objektloader>
-                <webconsole>
-                    <port ref="4ps">10231</port>
-                </webconsole>
-                <ueberweisung>
-                    <port ref="4ps">10232</port>
-                </ueberweisung>
-                <owinserver>
-                    <mand>uzhinfo</mand>
-                    <port>
-                        <private ref="1ts">10233</private>
-                        <public ref="1ts">10234</public>
-                    </port>
-                </owinserver>
-                <jobs>
-                    <adrsync>22:40-SaSo-weekly</adrsync>
-                    <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:00-So-weekly</fulltextrebuild>
-                </jobs>
-            </mandant>
-            <mandant>
                 <namefull>Interne Revision</namefull>
                 <nameshort>Intrev</nameshort>
                 <installid>2624</installid>
@@ -734,51 +685,6 @@ API DOCUMENTATION
                     <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
                     <fulltextrebuild>04:30-Sa-weekly</fulltextrebuild>
-                </jobs>
-            </mandant>
-            <mandant>
-                <namefull>Vertragsverwaltung</namefull>
-                <nameshort>VW</nameshort>
-                <installid>2624</installid>
-                <database>
-                    <host>ZIAXIOMAPSQL02</host>
-                    <name>axioma_vertragsvw</name>
-                </database>
-                <app>
-                    <releaseversion>22.0.10</releaseversion>
-                    <host id="13ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Vertragsverwaltung 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Vertragsverwaltung_RelayOPCService_uzhvert</installpathrelay>
-                    <servicename>CMI Vertragsverwaltung 22.0.10</servicename>
-                    <serviceuser>UZH\srv_cmi_vert</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhvert</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
-                </app>
-                <mobilefirst>https://uzhvert.cmicloud.ch</mobilefirst>
-                <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhvert/identity/signin-oidc</ea>
-                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhvert</desktopclient>
-                </sts>
-                <objektloader>
-                    <port ref="13ps">10060</port>
-                </objektloader>
-                <webconsole>
-                    <port ref="13ps">10061</port>
-                </webconsole>
-                <ueberweisung>
-                    <port ref="13ps">10062</port>
-                </ueberweisung>
-                <owinserver>
-                    <mand>uzhvert</mand>
-                    <port>
-                        <private ref="13ps">10063</private>
-                        <public ref="13ps">10064</public>
-                    </port>
-                </owinserver>
-                <jobs>
-                    <adrsync>22:40-SaSo-weekly</adrsync>
-                    <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
@@ -1383,55 +1289,6 @@ API DOCUMENTATION
                     <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
                     <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
                     <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
-                </jobs>
-            </mandant>
-            <mandant>
-                <namefull>Informatik</namefull>
-                <nameshort>Informatik</nameshort>
-                <installid>2624</installid>
-                <database>
-                    <host>ZIAXIOMAPSQL02</host>
-                    <name>axioma_informatik_TEST</name>
-                </database>
-                <app>
-                    <releaseversion>22.0.10</releaseversion>
-                    <host id="4ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Informatik 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_InformatikTEST_RelayOPCService_uzhinfotest</installpathrelay>
-                    <servicename>CMI Informatik TEST 22.0.10</servicename>
-                    <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhinfotest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
-                </app>
-                <licenseserver>
-                    <port>10325</port>
-                    <server>ziaxiomatap02</server>
-                </licenseserver>
-                <mobilefirst>https://uzhinfotest.cmicloud.ch</mobilefirst>
-                <sts>
-                    <ea>https://sts3.prod.cmicloud.ch/uzhinfotest/identity/signin-oidc</ea>
-                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhinfotest</desktopclient>
-                </sts>
-                <objektloader>
-                    <port id="4ts">10235</port>
-                </objektloader>
-                <webconsole>
-                    <port ref="4ts">10236</port>
-                </webconsole>
-                <ueberweisung>
-                    <port ref="4ts">10237</port>
-                </ueberweisung>
-                <owinserver>
-                    <mand>uzhinfotest</mand>
-                    <port>
-                        <private ref="4ts">10238</private>
-                        <public ref="4ts">10239</public>
-                    </port>
-                </owinserver>
-                <jobs>
-                    <adrsync>22:40-SaSo-weekly</adrsync>
-                    <fulltextoptimize>05:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
             <mandant>
