@@ -2100,7 +2100,7 @@ API DOCUMENTATION
                     <servicenamerelay>CMIRelayOPCServiceuzhuaz</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
-                <mobilefirst>https://mobile.cmistar.ch/webclients-r22/uzh/#/</mobilefirst>
+                <mobilefirst>https://mobile.cmistar.ch/webclients/uzh</mobilefirst>
                 <objektloader>
                     <port ref="40ps">10010</port>
                 </objektloader>
