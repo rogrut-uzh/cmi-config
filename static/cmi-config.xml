@@ -1125,7 +1125,7 @@ API DOCUMENTATION
                 <nameshort>BM</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_bm_TEST</name>
                 </database>
                 <app>
@@ -1182,7 +1182,7 @@ API DOCUMENTATION
                 <nameshort>DFPDIB</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_dfpdib_TEST</name>
                 </database>
                 <app>
@@ -1236,7 +1236,7 @@ API DOCUMENTATION
                 <nameshort>GS</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_generalsek_TEST</name>
                 </database>
                 <app>
@@ -1296,7 +1296,7 @@ API DOCUMENTATION
                 <nameshort>Intrev</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_intrev_TEST</name>
                 </database>
                 <app>
@@ -1345,7 +1345,7 @@ API DOCUMENTATION
                 <nameshort>MF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_medizinfak_TEST</name>
                 </database>
                 <app>
@@ -1407,7 +1407,7 @@ API DOCUMENTATION
                 <nameshort>MNF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_mnf_TEST</name>
                 </database>
                 <app>
@@ -1469,7 +1469,7 @@ API DOCUMENTATION
                 <nameshort>PhF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_philosophfak_TEST</name>
                 </database>
                 <app>
@@ -1531,7 +1531,7 @@ API DOCUMENTATION
                 <nameshort>Prof</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_professuren_TEST</name>
                 </database>
                 <app>
@@ -1593,7 +1593,7 @@ API DOCUMENTATION
                 <nameshort>Rechtsdienst</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_rechtsdienst_TEST</name>
                 </database>
                 <app>
@@ -1648,7 +1648,7 @@ API DOCUMENTATION
                 <nameshort>RWF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_rwf_TEST</name>
                 </database>
                 <app>
@@ -1710,7 +1710,7 @@ API DOCUMENTATION
                 <nameshort>TRF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_trf_TEST</name>
                 </database>
                 <app>
@@ -1773,7 +1773,7 @@ API DOCUMENTATION
                 <namealternative>Prorektorat Lehre und Studium</namealternative>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_vpedu_TEST</name>
                 </database>
                 <app>
@@ -1834,7 +1834,7 @@ API DOCUMENTATION
                 <nameshort>VSF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_vsf_TEST</name>
                 </database>
                 <app>
@@ -1896,7 +1896,7 @@ API DOCUMENTATION
                 <nameshort>WWF</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_wwf_TEST</name>
                 </database>
                 <app>
@@ -1957,7 +1957,7 @@ API DOCUMENTATION
                 <nameshort>ZZM</nameshort>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_zzm_TEST</name>
                 </database>
                 <app>
@@ -2005,7 +2005,7 @@ API DOCUMENTATION
                 <namefull>Lizenzserver</namefull>
                 <nameshort>Lizenzserver</nameshort>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>axioma_lizenzserver_TEST</name>
                 </database>
                 <app>
@@ -2038,7 +2038,7 @@ API DOCUMENTATION
                 <nameshort>AISBenutzung</nameshort>
                 <installid>2644</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>star_uaz_benutzung_TEST</name>
                 </database>
                 <app>
@@ -2170,7 +2170,7 @@ API DOCUMENTATION
                 <nameshort>AISUAZ</nameshort>
                 <installid>1784</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>star_uaz_TEST</name>
                 </database>
                 <app>
@@ -2210,7 +2210,7 @@ API DOCUMENTATION
                 <nameshort>AISAFM</nameshort>
                 <installid>4787</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ZIAXIOMATSQL02</host>
                     <name>star_afm_TEST</name>
                 </database>
                 <app>
