@@ -1119,6 +1119,16 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
         </prod>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         <test>
             <mandant>
                 <namefull>Bedarfmanagement</namefull>
@@ -1129,11 +1139,11 @@ API DOCUMENTATION
                     <name>axioma_bm_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="1ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\BM 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\BM 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_BMTEST_RelayOPCService_uzhbmitest</installpathrelay>
-                    <servicename>CMI BM TEST 22.0.10</servicename>
+                    <servicename>CMI BM TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -2009,11 +2019,11 @@ API DOCUMENTATION
                     <name>axioma_lizenzserver_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="20ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 24.0.12</installpath>
                     <installpathrelay>none</installpathrelay>
-                    <servicename>CMI Lizenzserver TEST 22.0.10</servicename>
+                    <servicename>CMI Lizenzserver TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <objektloader>
