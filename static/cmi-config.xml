@@ -1187,6 +1187,7 @@ API DOCUMENTATION
                     <fulltextrebuild>05:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Direktion DFP-DIP</namefull>
                 <nameshort>DFPDIB</nameshort>
@@ -1196,11 +1197,11 @@ API DOCUMENTATION
                     <name>axioma_dfpdib_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="2ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_DFPDIBTEST_RelayOPCService_uzhfpitest</installpathrelay>
-                    <servicename>CMI Direktion DFPDIB TEST 22.0.10</servicename>
+                    <servicename>CMI Direktion DFPDIB TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhfpitest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1241,6 +1242,7 @@ API DOCUMENTATION
                     <fulltextrebuild>05:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Generalsekretariat</namefull>
                 <nameshort>GS</nameshort>
@@ -1250,11 +1252,11 @@ API DOCUMENTATION
                     <name>axioma_generalsek_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="3ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_GSTEST_RelayOPCService_uzhgstest</installpathrelay>
-                    <servicename>CMI Generalsekretariat TEST 22.0.10</servicename>
+                    <servicename>CMI Generalsekretariat TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1301,6 +1303,7 @@ API DOCUMENTATION
                     <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Interne Revision</namefull>
                 <nameshort>Intrev</nameshort>
@@ -1310,11 +1313,11 @@ API DOCUMENTATION
                     <name>axioma_intrev_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="5ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Interne_RevisionTEST_RelayOPCService_uzhirevtest</installpathrelay>
-                    <servicename>CMI Interne Revision TEST 22.0.10</servicename>
+                    <servicename>CMI Interne Revision TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhirevtest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1350,6 +1353,7 @@ API DOCUMENTATION
                     <fulltextrebuild>18:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Medizinische Fakultät</namefull>
                 <nameshort>MF</nameshort>
@@ -1359,11 +1363,11 @@ API DOCUMENTATION
                     <name>axioma_medizinfak_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="6ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Medizinische_FakultaetTEST_RelayOPCService_uzhmeftest</installpathrelay>
-                    <servicename>CMI Medizinische Fakultaet TEST 22.0.10</servicename>
+                    <servicename>CMI Medizinische Fakultaet TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1412,6 +1416,7 @@ API DOCUMENTATION
                     <fulltextrebuild>19:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
                 <nameshort>MNF</nameshort>
@@ -1421,11 +1426,11 @@ API DOCUMENTATION
                     <name>axioma_mnf_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="7ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\MNF 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\MNF 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_MNFTEST_RelayOPCService_uzhmnftest</installpathrelay>
-                    <servicename>CMI MNF TEST 22.0.10</servicename>
+                    <servicename>CMI MNF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1474,6 +1479,7 @@ API DOCUMENTATION
                     <fulltextrebuild>19:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Philosophische Fakultät</namefull>
                 <nameshort>PhF</nameshort>
@@ -1483,11 +1489,11 @@ API DOCUMENTATION
                     <name>axioma_philosophfak_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.6</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="8ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 24.0.6</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_PhFTEST_RelayOPCService_uzhphftest</installpathrelay>
-                    <servicename>CMI Philosophische Fakultaet TEST 24.0.6</servicename>
+                    <servicename>CMI Philosophische Fakultaet TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1536,6 +1542,7 @@ API DOCUMENTATION
                     <fulltextrebuild>20:00-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Professuren</namefull>
                 <nameshort>Prof</nameshort>
@@ -1545,11 +1552,11 @@ API DOCUMENTATION
                     <name>axioma_professuren_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="9ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Professuren 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Professuren 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ProfessurenTEST_RelayOPCService_uzhproftest</installpathrelay>
-                    <servicename>CMI Professuren TEST 22.0.10</servicename>
+                    <servicename>CMI Professuren TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1598,6 +1605,7 @@ API DOCUMENTATION
                     <fulltextrebuild>20:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Rechtsdienst</namefull>
                 <nameshort>Rechtsdienst</nameshort>
@@ -1607,11 +1615,11 @@ API DOCUMENTATION
                     <name>axioma_rechtsdienst_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="10ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RechtTEST_RelayOPCService_uzhrechttest</installpathrelay>
-                    <servicename>CMI Rechtsdienst TEST 22.0.10</servicename>
+                    <servicename>CMI Rechtsdienst TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1653,6 +1661,7 @@ API DOCUMENTATION
                     <fulltextrebuild>06:00-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Rechtswissenschaftliche Fakultät</namefull>
                 <nameshort>RWF</nameshort>
@@ -1662,11 +1671,11 @@ API DOCUMENTATION
                     <name>axioma_rwf_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="11ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\RWF 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\RWF 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RWFTEST_RelayOPCService_uzhrwftest</installpathrelay>
-                    <servicename>CMI RWF TEST 22.0.10</servicename>
+                    <servicename>CMI RWF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1715,6 +1724,7 @@ API DOCUMENTATION
                     <fulltextrebuild>21:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
                 <nameshort>TRF</nameshort>
@@ -1724,11 +1734,11 @@ API DOCUMENTATION
                     <name>axioma_trf_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="12ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\TRF 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\TRF 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_TRFTEST_RelayOPCService_uzhthftest</installpathrelay>
-                    <servicename>CMI TRF TEST 22.0.10</servicename>
+                    <servicename>CMI TRF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1777,6 +1787,7 @@ API DOCUMENTATION
                     <fulltextrebuild>04:30-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>VP EDU</namefull>
                 <nameshort>EDU</nameshort>
@@ -1787,11 +1798,11 @@ API DOCUMENTATION
                     <name>axioma_vpedu_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.6</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="14ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_EduTEST_RelayOPCService_uzhgswtest</installpathrelay>
-                    <servicename>CMI VP Edu TEST 22.0.10</servicename>
+                    <servicename>CMI VP Edu TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1839,6 +1850,7 @@ API DOCUMENTATION
                     <fulltextrebuild>04:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Vetsuisse-Fakultät</namefull>
                 <nameshort>VSF</nameshort>
@@ -1848,11 +1860,11 @@ API DOCUMENTATION
                     <name>axioma_vsf_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="17ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\VSF 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\VSF 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VSFTEST_RelayOPCService_uzhvsftest</installpathrelay>
-                    <servicename>CMI VSF TEST 22.0.10</servicename>
+                    <servicename>CMI VSF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1901,6 +1913,7 @@ API DOCUMENTATION
                     <fulltextrebuild>04:45-Sa-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
                 <nameshort>WWF</nameshort>
@@ -1910,11 +1923,11 @@ API DOCUMENTATION
                     <name>axioma_wwf_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="18ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\WWF 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\WWF 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_WWFTEST_RelayOPCService_uzhwwftest</installpathrelay>
-                    <servicename>CMI WWF TEST 22.0.10</servicename>
+                    <servicename>CMI WWF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -1962,6 +1975,7 @@ API DOCUMENTATION
                     <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Zentrum für Zahnmedizin</namefull>
                 <nameshort>ZZM</nameshort>
@@ -1971,11 +1985,11 @@ API DOCUMENTATION
                     <name>axioma_zzm_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="19ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\ZZM 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\ZZM 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ZZMTEST_RelayOPCService_uzhzzmtest</installpathrelay>
-                    <servicename>CMI ZZM TEST 22.0.10</servicename>
+                    <servicename>CMI ZZM TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
@@ -2011,6 +2025,7 @@ API DOCUMENTATION
                     <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
                 </jobs>
             </mandant>
+            
             <mandant>
                 <namefull>Lizenzserver</namefull>
                 <nameshort>Lizenzserver</nameshort>
@@ -2043,6 +2058,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
             </mandant>
+            
             <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
                 <nameshort>AISBenutzung</nameshort>
@@ -2052,11 +2068,11 @@ API DOCUMENTATION
                     <name>star_uaz_benutzung_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="30ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 22.0.10</installpath>
+                    <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 24.0.12</installpath>
                     <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_BenutzungsverwaltungTEST_RelayOPCService_uzhbenutest</installpathrelay>
-                    <servicename>AIS UAZ Benutzungsverwaltung TEST 22.0.10</servicename>
+                    <servicename>AIS UAZ Benutzungsverwaltung TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                     <servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
                     <serviceuserrelay>Network Service</serviceuserrelay>
