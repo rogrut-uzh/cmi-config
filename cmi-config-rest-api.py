@@ -16,25 +16,11 @@ import xml.etree.ElementTree as ET
 app = Flask(__name__)
 
 ################### change if nescessary ###############
-xml_data_path = 'D:\gitlab\cmi-config\static\cmi-config.xml'
+xml_data_path = r'D:\gitlab\cmi-config\static\cmi-config.xml'
 api_port = 5001
 ########################################################
 
 def load_xml_data(file_path):
-#    def parse_element(element):
-#        """Recursively parse an XML element into a dictionary."""
-#        if len(element) == 0:  # No children, return text or None
-#            return element.text.strip() if element.text else None
-#        parsed_data = {}
-#        for child in element:
-#            # Handle multiple nodes with the same tag
-#            if child.tag not in parsed_data:
-#                parsed_data[child.tag] = parse_element(child)
-#            else:
-#                if not isinstance(parsed_data[child.tag], list):
-#                    parsed_data[child.tag] = [parsed_data[child.tag]]
-#                parsed_data[child.tag].append(parse_element(child))
-#        return parsed_data
     def parse_element(element):
         """Recursively parse an XML element into a dictionary, including attributes."""
         parsed_data = {}
@@ -57,7 +43,7 @@ def load_xml_data(file_path):
                     if not isinstance(parsed_data[child.tag], list):
                         parsed_data[child.tag] = [parsed_data[child.tag]]
                     parsed_data[child.tag].append(parse_element(child))
-        
+        # Gib Dictionary zurück, oder wenn leer, nur Text
         return parsed_data if parsed_data else text
 
     tree = ET.parse(file_path)
@@ -81,13 +67,15 @@ def load_xml_data(file_path):
         data[section] = section_data
     return data
 
-def filter_data(data, filters):
+
+def filter_data(data, filters, exact=False):
+    """Filtert eine Liste von Mandanten-Dicts basierend auf Filters.
+    Bei exact=True wird auf exakte Übereinstimmung geprüft, sonst Teilstring-Suche."""
     filtered = []
     for mandant in data:
         match = True
         for key, value in filters.items():
-            # Flatten keys for filtering (e.g., 'app/releaseversion')
-            keys = key.split('/')
+            keys = key.split('/')  # Flatten nested keys
             target = mandant
             for k in keys:
                 if isinstance(target, dict) and k in target:
@@ -95,8 +83,22 @@ def filter_data(data, filters):
                 else:
                     match = False
                     break
-            if match and value.lower() not in str(target).lower():
-                match = False
+            if not match:
+                break
+
+            # Unwrap dict mit nur _text
+            if isinstance(target, dict) and '_text' in target:
+                target = target['_text']
+            target_str = str(target)
+
+            if exact:
+                if target_str.lower() != value.lower():
+                    match = False
+                    break
+            else:
+                if value.lower() not in target_str.lower():
+                    match = False
+                    break
         if match:
             filtered.append(mandant)
     return filtered
@@ -104,10 +106,11 @@ def filter_data(data, filters):
 @app.route('/api/data', methods=['GET'])
 def get_all_data():
     data = load_xml_data(xml_data_path)
-    filters = request.args.to_dict()
+    args = request.args.to_dict()
+    exact = args.pop('exactmatch', 'false').lower() in ('1', 'true', 'yes')
     response = data['cmi'] + data['ais']
-    if filters:
-        response = filter_data(response, filters)
+    if args:
+        response = filter_data(response, args, exact=exact)
     return jsonify(response), 200
 
 @app.route('/api/data/<section>', methods=['GET'])
@@ -115,10 +118,11 @@ def get_section_data(section):
     data = load_xml_data(xml_data_path)
     if section not in data:
         return jsonify({'error': f'Section "{section}" not found.'}), 404
-    filters = request.args.to_dict()
+    args = request.args.to_dict()
+    exact = args.pop('exactmatch', 'false').lower() in ('1', 'true', 'yes')
     response = data[section]
-    if filters:
-        response = filter_data(response, filters)
+    if args:
+        response = filter_data(response, args, exact=exact)
     return jsonify(response), 200
 
 @app.route('/api/data/<section>/<environment>', methods=['GET'])
@@ -126,16 +130,12 @@ def get_section_environment_data(section, environment):
     data = load_xml_data(xml_data_path)
     if section not in data:
         return jsonify({'error': f'Section "{section}" not found.'}), 404
-    environment_data = [mandant for mandant in data[section] if mandant.get('environment') == environment]
-    filters = request.args.to_dict()
-    response = environment_data
-    if filters:
-        response = filter_data(environment_data, filters)
-    return jsonify(response), 200
+    environment_data = [m for m in data[section] if m.get('environment') == environment]
+    args = request.args.to_dict()
+    exact = args.pop('exactmatch', 'false').lower() in ('1', 'true', 'yes')
+    if args:
+        environment_data = filter_data(environment_data, args, exact=exact)
+    return jsonify(environment_data), 200
 
 if __name__ == '__main__':
     app.run(port=api_port)
-
-
-
-
