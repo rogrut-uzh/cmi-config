@@ -1142,11 +1142,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="1ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\BM 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_BMTEST_RelayOPCService_uzhbmitest</installpathrelay>
                     <servicename>CMI BM TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhbmitest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1200,11 +1197,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="2ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_DFPDIBTEST_RelayOPCService_uzhfpitest</installpathrelay>
                     <servicename>CMI Direktion DFPDIB TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhfpitest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1255,11 +1249,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="3ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_GSTEST_RelayOPCService_uzhgstest</installpathrelay>
                     <servicename>CMI Generalsekretariat TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhgstest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1316,11 +1307,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="5ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Interne_RevisionTEST_RelayOPCService_uzhirevtest</installpathrelay>
                     <servicename>CMI Interne Revision TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhirevtest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1366,11 +1354,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="6ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Medizinische_FakultaetTEST_RelayOPCService_uzhmeftest</installpathrelay>
                     <servicename>CMI Medizinische Fakultaet TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhmeftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1429,11 +1414,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="7ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\MNF 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_MNFTEST_RelayOPCService_uzhmnftest</installpathrelay>
                     <servicename>CMI MNF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhmnftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1492,11 +1474,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="8ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_PhFTEST_RelayOPCService_uzhphftest</installpathrelay>
                     <servicename>CMI Philosophische Fakultaet TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhphftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1555,11 +1534,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="9ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Professuren 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ProfessurenTEST_RelayOPCService_uzhproftest</installpathrelay>
                     <servicename>CMI Professuren TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhproftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1618,11 +1594,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="10ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RechtTEST_RelayOPCService_uzhrechttest</installpathrelay>
                     <servicename>CMI Rechtsdienst TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhrechttest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1674,11 +1647,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="11ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\RWF 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RWFTEST_RelayOPCService_uzhrwftest</installpathrelay>
                     <servicename>CMI RWF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhrwftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1737,11 +1707,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="12ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\TRF 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_TRFTEST_RelayOPCService_uzhthftest</installpathrelay>
                     <servicename>CMI TRF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhthftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1801,11 +1768,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="14ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_EduTEST_RelayOPCService_uzhgswtest</installpathrelay>
                     <servicename>CMI VP Edu TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhgswtest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1863,11 +1827,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="17ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\VSF 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VSFTEST_RelayOPCService_uzhvsftest</installpathrelay>
                     <servicename>CMI VSF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhvsftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1926,11 +1887,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="18ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\WWF 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_WWFTEST_RelayOPCService_uzhwwftest</installpathrelay>
                     <servicename>CMI WWF TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhwwftest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -1988,11 +1946,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="19ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\ZZM 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ZZMTEST_RelayOPCService_uzhzzmtest</installpathrelay>
                     <servicename>CMI ZZM TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhzzmtest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10325</port>
@@ -2037,7 +1992,6 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="20ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 24.0.12</installpath>
-                    <installpathrelay>none</installpathrelay>
                     <servicename>CMI Lizenzserver TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
@@ -2071,11 +2025,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.12</releaseversion>
                     <host id="30ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 24.0.12</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_BenutzungsverwaltungTEST_RelayOPCService_uzhbenutest</installpathrelay>
                     <servicename>AIS UAZ Benutzungsverwaltung TEST 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhbenutest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
                 <sts>
@@ -2203,11 +2154,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.5</releaseversion>
                     <host id="40ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Archiv 24.0.5</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_ArchivTEST_RelayOPCService_uzhuaztest</installpathrelay>
                     <servicename>AIS UAZ Archiv TEST 24.0.5</servicename>
                     <serviceuser>UZH\srv_ais_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhuaztest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <objektloader>
                     <port ref="40ts">10015</port>
@@ -2243,11 +2191,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.5</releaseversion>
                     <host id="41ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\AFM Archiv 24.0.5</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_AFM_ArchivTEST_RelayOPCService_uzhafmtest</installpathrelay>
                     <servicename>AIS AFM Archiv TEST 24.0.5</servicename>
                     <serviceuser>UZH\srv_ais_test</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhafmtest</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <objektloader>
                     <port ref="41ts">10255</port>
