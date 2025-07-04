@@ -37,7 +37,7 @@ Created with nssm ([The Non-Sucking Service Manager](https://nssm.cc/)).
         <namefull>Medizinische Fakultät</namefull>
 
         ***** Short name of the mandant. 
-        <nameshort>MF</nameshort>
+        <mand>uzhmef</mand>
 
         ***** InstallId
         <installid>2624</installid>
@@ -162,7 +162,6 @@ Created with nssm ([The Non-Sucking Service Manager](https://nssm.cc/)).
         ***** *****
         ***** Relay server is always https://relay.cmiaxioma.ch/
         <owinserver>
-            <mandant>uzhmef</mandant>
             <port>
                 <private ref="6ps">10073</private>
                 <public ref="6ps">10074</public>
@@ -236,7 +235,7 @@ http://localhost:5001/api/data/ais/test
 `?` followed by the keys and value. Examples:
 
 ```
-http://localhost:5001/api/data/cmi?app/releaseversion=24.0.6
+http://localhost:5001/api/data/cmi?app/releaseversion=24.0.12
 http://localhost:5001/api/data/cmi/prod?app/releaseversion=22.0.10
 http://localhost:5001/api/data?namefull=philo
 http://localhost:5001/api/data/cmi/prod?ueberweisung/port=10112
