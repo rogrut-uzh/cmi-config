@@ -23,24 +23,21 @@ API DOCUMENTATION
     <cmi>
         <prod>
             <mandant>
-                <namefull>Bedarfmanagement</namefull>
-                <nameshort>BM</nameshort>
+                <namefull>Portfolio- und Assetmanagement (ehem. Bedarfsmanagement)</namefull>
+                <mand>uzhbmi</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_bm</name>
                 </database>
                 <app>
-                    <releaseversion>21.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="1ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\BM 21.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_BM_RelayOPCService_uzhbmi</installpathrelay>
-                    <servicename>CMI BM 21.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\BM 24.0.12</installpath>
+                    <servicename>CMI BM 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_bm</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhbmi</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
-                <!-- Release 21 has no web client -->
+                <mobilefirst>https://uzhbmi.cmicloud.ch</mobilefirst>
                 <sts>
                     <ea>currently STS2! STS3 will be: https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
                     <desktopclient>currently STS2! https://sts.cmicloud.ch/uzhbmi. STS3 will be: https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
@@ -64,7 +61,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhbmi</mand>
                     <port>
                         <private ref="1ps">10113</private>
                         <public ref="1ps">10114</public>
@@ -77,22 +73,19 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
             <mandant>
-                <namefull>Direktion DFP-DIP</namefull>
-                <nameshort>DFPDIB</nameshort>
+                <namefull>Direktion Finanzen und Direktion Immobilien und Betrieb</namefull>
+                <mand>uzhfpi</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_dfpdib</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="2ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Direktion DFPDIB 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Direktion_DFPDIB_RelayOPCService_uzhfpi</installpathrelay>
-                    <servicename>CMI Direktion DFPDIB 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Direktion DFPDIB 24.0.12</installpath>
+                    <servicename>CMI Direktion DFPDIB 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_dfpdib</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhfpi</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -116,7 +109,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhfpi</mand>
                     <port>
                         <private ref="2ps">10143</private>
                         <public ref="2ps">10144</public>
@@ -133,21 +125,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Generalsekretariat</namefull>
-                <nameshort>GS</nameshort>
+                <mand>uzhgs</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_generalsek</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="3ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Generalsekretariat_RelayOPCService_uzhgs</installpathrelay>
-                    <servicename>CMI Generalsekretariat 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 24.0.12</installpath>
+                    <servicename>CMI Generalsekretariat 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_gs</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhgs</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -182,7 +171,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhgs</mand>
                     <port>
                         <private ref="3ps">10243</private>
                         <public ref="3ps">10244</public>
@@ -199,21 +187,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Interne Revision</namefull>
-                <nameshort>Intrev</nameshort>
+                <mand>uzhirev</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_intrev</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="5ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Interne Revision 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Interne_Revision_RelayOPCService_uzhirev</installpathrelay>
-                    <servicename>CMI Interne Revision 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Interne Revision 24.0.12</installpath>
+                    <servicename>CMI Interne Revision 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_irev</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhirev</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -234,7 +219,6 @@ API DOCUMENTATION
                     <port ref="5ps">10082</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhirev</mand>
                     <port>
                         <private ref="5ps">10083</private>
                         <public ref="5ps">10084</public>
@@ -248,21 +232,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Medizinische Fakultät</namefull>
-                <nameshort>MeF</nameshort>
+                <mand>uzhmef</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_medizinfak</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="6ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Medizinische_Fakultaet_RelayOPCService_uzhmef</installpathrelay>
-                    <servicename>CMI Medizinische Fakultaet 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 24.0.12</installpath>
+                    <servicename>CMI Medizinische Fakultaet 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_mef</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhmef</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -294,7 +275,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhmef</mand>
                     <port>
                         <private ref="6ps">10073</private>
                         <public ref="6ps">10074</public>
@@ -313,21 +293,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
-                <nameshort>MNF</nameshort>
+                <mand>uzhmnf</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_mnf</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="7ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\MNF 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_MNF_RelayOPCService_uzhmnf</installpathrelay>
-                    <servicename>CMI MNF 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\MNF 24.0.12</installpath>
+                    <servicename>CMI MNF 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_mnf</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhmnf</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -359,7 +336,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhmnf</mand>
                     <port>
                         <private ref="7ps">10053</private>
                         <public ref="7ps">10054</public>
@@ -377,21 +353,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Philosophische Fakultät</namefull>
-                <nameshort>PhF</nameshort>
+                <mand>uzhphf</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_philosophfak</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="8ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Philosophische Fakultaet 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Philosophische_Fakultaet_RelayOPCService_uzhphf</installpathrelay>
-                    <servicename>CMI Philosophische Fakultaet 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Philosophische Fakultaet 24.0.12</installpath>
+                    <servicename>CMI Philosophische Fakultaet 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_phf</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhphf</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -424,7 +397,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhphf</mand>
                     <port>
                         <private ref="8ps">10093</private>
                         <public ref="8ps">10094</public>
@@ -442,21 +414,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Professuren</namefull>
-                <nameshort>Prof</nameshort>
+                <mand>uzhprof</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_professuren</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="9ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Professuren 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Professuren_RelayOPCService_uzhprof</installpathrelay>
-                    <servicename>CMI Professuren 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Professuren 24.0.12</installpath>
+                    <servicename>CMI Professuren 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_prof</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhprof</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -488,7 +457,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhprof</mand>
                     <port>
                         <private ref="9ps">10153</private>
                         <public ref="9ps">10154</public>
@@ -505,22 +473,19 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
             <mandant>
-                <namefull>Rechtsdienst (Recht und Datenschutz)</namefull>
-                <nameshort>RuD</nameshort>
+                <namefull>Recht und Datenschutz</namefull>
+                <mand>uzhrecht</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_rechtsdienst</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="10ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_Rechtsdienst_RelayOPCService_uzhrecht</installpathrelay>
-                    <servicename>CMI Rechtsdienst 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 24.0.12</installpath>
+                    <servicename>CMI Rechtsdienst 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_recht</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhrecht</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -544,7 +509,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhrecht</mand>
                     <port>
                         <private ref="10ps">10223</private>
                         <public ref="10ps">10224</public>
@@ -561,21 +525,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Rechtswissenschaftliche Fakultät</namefull>
-                <nameshort>RWF</nameshort>
+                <mand>uzhrwf</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_rwf</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="11ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_RWF_RelayOPCService_uzhrwf</installpathrelay>
-                    <servicename>CMI RWF 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 24.0.12</installpath>
+                    <servicename>CMI RWF 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_rwf</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhrwf</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -607,7 +568,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhrwf</mand>
                     <port>
                         <private ref="11ps">10003</private>
                         <public ref="11ps">10004</public>
@@ -625,21 +585,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
-                <nameshort>TRF</nameshort>
+                <mand>uzhthf</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_trf</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="12ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\TRF 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_TRF_RelayOPCService_uzhthf</installpathrelay>
-                    <servicename>CMI TRF 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\TRF 24.0.12</installpath>
+                    <servicename>CMI TRF 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_trf</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhthf</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -671,7 +628,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhthf</mand>
                     <port>
                         <private ref="12ps">10213</private>
                         <public ref="12ps">10214</public>
@@ -688,23 +644,19 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
             <mandant>
-                <namefull>VP EDU</namefull>
-                <nameshort>EDU</nameshort>
-                <namealternative>Prorektorat Lehre und Studium</namealternative>
+                <namefull>Prorektorat Lehre und Studium</namefull>
+                <mand>uzhgsw</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_vpedu</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="14ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP Edu 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_Edu_RelayOPCService_uzhgsw</installpathrelay>
-                    <servicename>CMI VP Edu 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP Edu 24.0.12</installpath>
+                    <servicename>CMI VP Edu 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_edu</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhgsw</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -735,7 +687,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhgsw</mand>
                     <port>
                         <private ref="14ps">10103</private>
                         <public ref="14ps">10104</public>
@@ -752,21 +703,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>VP FSI</namefull>
-                <nameshort>VPFSI</nameshort>
+                <mand>uzhrww</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_vpfsi</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="15ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP FSI 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_FSI_RelayOPCService_uzhrww</installpathrelay>
-                    <servicename>CMI VP FSI 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP FSI 24.0.12</installpath>
+                    <servicename>CMI VP FSI 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_fsi</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhrww</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -789,7 +737,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhrww</mand>
                     <port>
                         <private ref="15ps">10113</private>
                         <public ref="15ps">10114</public>
@@ -806,21 +753,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Direktion Universitäre Medizin / Prorektorat Forschung</namefull>
-                <nameshort>VPMedRes</nameshort>
+                <mand>uzhmnw</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_vpmedres</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="16ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP MedRes 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VP_MedRes_RelayOPCService_uzhmnw</installpathrelay>
-                    <servicename>CMI VP MedRes 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP MedRes 24.0.12</installpath>
+                    <servicename>CMI VP MedRes 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_medres</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhmnw</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -850,7 +794,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhmnw</mand>
                     <port>
                         <private ref="16ps">10043</private>
                         <public ref="16ps">10044</public>
@@ -867,21 +810,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Vetsuisse-Fakultät</namefull>
-                <nameshort>VSF</nameshort>
+                <mand>uzhvsf</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_vsf</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="17ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VSF 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_VSF_RelayOPCService_uzhvsf</installpathrelay>
-                    <servicename>CMI VSF 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VSF 24.0.12</installpath>
+                    <servicename>CMI VSF 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_vsf</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhvsf</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -913,7 +853,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhvsf</mand>
                     <port>
                         <private ref="17ps">10193</private>
                         <public ref="17ps">10194</public>
@@ -931,21 +870,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
-                <nameshort>WWF</nameshort>
+                <mand>uzhwwf</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_wwf</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="18ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_WWF_RelayOPCService_uzhwwf</installpathrelay>
-                    <servicename>CMI WWF 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 24.0.12</installpath>
+                    <servicename>CMI WWF 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_wwf</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhwwf</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -976,7 +912,6 @@ API DOCUMENTATION
                     <url ref="" name="AFI-UR">http://10.74.145.110:28412/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhwwf</mand>
                     <port>
                         <private ref="18ps">10263</private>
                         <public ref="18ps">10264</public>
@@ -994,21 +929,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>Zentrum für Zahnmedizin</namefull>
-                <nameshort>ZZM</nameshort>
+                <mand>uzhzzm</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_zzm</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="19ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\ZZM 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\CMI_ZZM_RelayOPCService_uzhzzm</installpathrelay>
-                    <servicename>CMI ZZM 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\ZZM 24.0.12</installpath>
+                    <servicename>CMI ZZM 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_zzm</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhzzm</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <licenseserver>
                     <port>10320</port>
@@ -1029,7 +961,6 @@ API DOCUMENTATION
                     <port ref="19ps">10272</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhzzm</mand>
                     <port>
                         <private ref="19ps">10273</private>
                         <public ref="19ps">10274</public>
@@ -1049,11 +980,10 @@ API DOCUMENTATION
                     <name>axioma_lizenzserver</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="20ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 22.0.10</installpath>
-                    <installpathrelay>none</installpathrelay>
-                    <servicename>CMI Lizenzserver 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 24.0.12</installpath>
+                    <servicename>CMI Lizenzserver 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_lizenz</serviceuser>
                 </app>
                 <objektloader>
@@ -1066,7 +996,6 @@ API DOCUMENTATION
                     <port ref="20ps">10322</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>local</mand>
                     <port>
                         <private ref="20ps">10323</private>
                         <public ref="20ps">10324</public>
@@ -1075,21 +1004,18 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
-                <nameshort>AISBenutzung</nameshort>
+                <mand>uzhbenu</mand>
                 <installid>2644</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>star_uaz_benutzung</name>
                 </database>
                 <app>
-                    <releaseversion>22.0.10</releaseversion>
+                    <releaseversion>24.0.12</releaseversion>
                     <host id="30ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Benutzungsverwaltung 22.0.10</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_Benutzungsverwaltung_RelayOPCService_uzhbenu</installpathrelay>
-                    <servicename>AIS UAZ Benutzungsverwaltung 22.0.10</servicename>
+                    <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Benutzungsverwaltung 24.0.12</installpath>
+                    <servicename>AIS UAZ Benutzungsverwaltung 24.0.12</servicename>
                     <serviceuser>UZH\srv_cmi_benu</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhbenu</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <mobilefirst>https://uzhbenu.cmicloud.ch</mobilefirst>
                 <sts>
@@ -1106,7 +1032,6 @@ API DOCUMENTATION
                     <port ref="30ps">10022</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhbenu</mand>
                     <port>
                         <private ref="30ps">10023</private>
                         <public ref="30ps">10024</public>
@@ -1126,13 +1051,10 @@ API DOCUMENTATION
         
         
         
-        
-        
-        
         <test>
             <mandant>
-                <namefull>Bedarfmanagement</namefull>
-                <nameshort>BM</nameshort>
+                <namefull>Portfolio- und Assetmanagement (ehem. Bedarfsmanagement)</namefull>
+                <mand>uzhbmitest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1172,7 +1094,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhbmitest</mand>
                     <port>
                         <private ref="1ts">10118</private>
                         <public ref="1ts">10119</public>
@@ -1186,8 +1107,8 @@ API DOCUMENTATION
             </mandant>
             
             <mandant>
-                <namefull>Direktion DFP-DIP</namefull>
-                <nameshort>DFPDIB</nameshort>
+                <namefull>Direktion Finanzen und Direktion Immobilien und Betrieb</namefull>
+                <mand>uzhfpitest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1221,7 +1142,6 @@ API DOCUMENTATION
                     <url ref="9" name="UZH-Prof_TEST">http://ziaxiomatap02:10157/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhfpitest</mand>
                     <port>
                         <private ref="2ts">10148</private>
                         <public ref="2ts">10149</public>
@@ -1239,7 +1159,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Generalsekretariat</namefull>
-                <nameshort>GS</nameshort>
+                <mand>uzhgstest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1282,7 +1202,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhgstest</mand>
                     <port>
                         <private ref="1ts">10248</private>
                         <public ref="1ts">10249</public>
@@ -1297,7 +1216,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Interne Revision</namefull>
-                <nameshort>Intrev</nameshort>
+                <mand>uzhirevtest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1329,7 +1248,6 @@ API DOCUMENTATION
                     <port ref="5ts">10087</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhirevtest</mand>
                     <port>
                         <private ref="5ts">10088</private>
                         <public ref="5ts">10089</public>
@@ -1344,7 +1262,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Medizinische Fakultät</namefull>
-                <nameshort>MF</nameshort>
+                <mand>uzhmeftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1386,7 +1304,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhmeftest</mand>
                     <port>
                         <private ref="6ts">10078</private>
                         <public ref="6ts">10079</public>
@@ -1404,7 +1321,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Mathematisch-Naturwissenschaftliche Fakultät</namefull>
-                <nameshort>MNF</nameshort>
+                <mand>uzhmnftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1446,7 +1363,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhmnftest</mand>
                     <port>
                         <private ref="7ts">10058</private>
                         <public ref="7ts">10059</public>
@@ -1464,7 +1380,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Philosophische Fakultät</namefull>
-                <nameshort>PhF</nameshort>
+                <mand>uzhphftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1506,7 +1422,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhphftest</mand>
                     <port>
                         <private ref="8ts">10098</private>
                         <public ref="8ts">10099</public>
@@ -1524,7 +1439,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Professuren</namefull>
-                <nameshort>Prof</nameshort>
+                <mand>uzhproftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1566,7 +1481,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhproftest</mand>
                     <port>
                         <private ref="9ts">10158</private>
                         <public ref="9ts">10159</public>
@@ -1583,8 +1497,8 @@ API DOCUMENTATION
             </mandant>
             
             <mandant>
-                <namefull>Rechtsdienst</namefull>
-                <nameshort>Rechtsdienst</nameshort>
+                <namefull>Recht und Datenschutz</namefull>
+                <mand>uzhrechttest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1619,7 +1533,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhrechttest</mand>
                     <port>
                         <private ref="10ts">10228</private>
                         <public ref="10ts">10229</public>
@@ -1637,7 +1550,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Rechtswissenschaftliche Fakultät</namefull>
-                <nameshort>RWF</nameshort>
+                <mand>uzhrwftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1679,7 +1592,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhrwftest</mand>
                     <port>
                         <private ref="11ts">10008</private>
                         <public ref="11ts">10009</public>
@@ -1697,7 +1609,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Theologische und Religionswissenschaftliche Fakultät</namefull>
-                <nameshort>TRF</nameshort>
+                    <mand>uzhthftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1739,7 +1651,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhthftest</mand>
                     <port>
                         <private ref="12ts">10218</private>
                         <public ref="12ts">10219</public>
@@ -1756,9 +1667,8 @@ API DOCUMENTATION
             </mandant>
             
             <mandant>
-                <namefull>VP EDU</namefull>
-                <nameshort>EDU</nameshort>
-                <namealternative>Prorektorat Lehre und Studium</namealternative>
+                <namefull>Prorektorat Lehre und Studium</namefull>
+                <mand>uzhgswtest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1799,7 +1709,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhgswtest</mand>
                     <port>
                         <private ref="14ts">10108</private>
                         <public ref="14ts">10109</public>
@@ -1817,7 +1726,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Vetsuisse-Fakultät</namefull>
-                <nameshort>VSF</nameshort>
+                <mand>uzhvsftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1859,7 +1768,6 @@ API DOCUMENTATION
                     <url ref="18" name="UZH-WWF_TEST">http://ziaxiomatap02:10267/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhvsftest</mand>
                     <port>
                         <private ref="17ts">10198</private>
                         <public ref="17ts">10199</public>
@@ -1877,7 +1785,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Wirtschaftswissenschaftliche Fakultät</namefull>
-                <nameshort>WWF</nameshort>
+                <mand>uzhwwftest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1918,7 +1826,6 @@ API DOCUMENTATION
                     <url ref="17" name="UZH-VSF_TEST">http://ziaxiomatap02:10197/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhwwftest</mand>
                     <port>
                         <private ref="18ts">10268</private>
                         <public ref="18ts">10269</public>
@@ -1936,7 +1843,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Zentrum für Zahnmedizin</namefull>
-                <nameshort>ZZM</nameshort>
+                <mand>uzhzzmtest</mand>
                 <installid>2624</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -1968,7 +1875,6 @@ API DOCUMENTATION
                     <port ref="19ts">10277</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhzzmtest</mand>
                     <port>
                         <private ref="19ts">10278</private>
                         <public ref="19ts">10279</public>
@@ -2005,7 +1911,6 @@ API DOCUMENTATION
                     <port ref="20ts">10327</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>local</mand>
                     <port>
                         <private ref="20ts">10328</private>
                         <public ref="20ts">10329</public>
@@ -2015,7 +1920,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
-                <nameshort>AISBenutzung</nameshort>
+                <mand>uzhbenutest</mand>
                 <installid>2644</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -2043,7 +1948,6 @@ API DOCUMENTATION
                     <port ref="30ts">10027</port>
                 </ueberweisung>
                 <owinserver>
-                    <mand>uzhbenutest</mand>
                     <port>
                         <private ref="30ts">10028</private>
                         <public ref="30ts">10029</public>
@@ -2061,7 +1965,7 @@ API DOCUMENTATION
         <prod>
             <mandant>
                 <namefull>AIS UAZ</namefull>
-                <nameshort>AISUAZ</nameshort>
+                <mand>uzhuaz</mand>
                 <installid>1784</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2071,11 +1975,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.5</releaseversion>
                     <host id="40ps">ziaxiomapap04</host>
                     <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Archiv 24.0.5</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_UAZ_Archiv_RelayOPCService_uzhuaz</installpathrelay>
                     <servicename>AIS UAZ Archiv 24.0.5</servicename>
                     <serviceuser>UZH\srv_ais_uaz</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhuaz</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <mobilefirst>https://mobile.cmistar.ch/webclients/uzh</mobilefirst>
                 <objektloader>
@@ -2085,7 +1986,6 @@ API DOCUMENTATION
                     <port ref="40ps">10011</port>
                 </webconsole>
                 <owinserver>
-                    <mand>uzhuaz</mand>
                     <port>
                         <private ref="40ps">10013</private>
                         <public ref="40ps">10014</public>
@@ -2102,7 +2002,7 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>AIS AFM</namefull>
-                <nameshort>AISAFM</nameshort>
+                <mand>uzhafm</mand>
                 <installid>4787</installid>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
@@ -2112,11 +2012,8 @@ API DOCUMENTATION
                     <releaseversion>24.0.5</releaseversion>
                     <host id="41ps">ziaxiomapap04</host>
                     <installpath>C:\Program Files\CMI AG\AIS Produktiv\AFM Archiv 24.0.5</installpath>
-                    <installpathrelay>C:\Program Files\CMI AG\RelayServer\AIS_AFM_Archiv_RelayOPCService_uzhafm</installpathrelay>
                     <servicename>AIS AFM Archiv 24.0.5</servicename>
                     <serviceuser>UZH\srv_ais_afm</serviceuser>
-                    <servicenamerelay>CMIRelayOPCServiceuzhafm</servicenamerelay>
-                    <serviceuserrelay>Network Service</serviceuserrelay>
                 </app>
                 <objektloader>
                     <port ref="41ps">10250</port>
@@ -2125,7 +2022,6 @@ API DOCUMENTATION
                     <port ref="41ps">10251</port>
                 </webconsole>
                 <owinserver>
-                    <mand>uzhafm</mand>
                     <port>
                         <private ref="41ps">10253</private>
                         <public ref="41ps">10254</public>
@@ -2144,7 +2040,7 @@ API DOCUMENTATION
         <test>
             <mandant>
                 <namefull>AIS UAZ</namefull>
-                <nameshort>AISUAZ</nameshort>
+                <mand>uzhuaztest</mand>
                 <installid>1784</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -2164,7 +2060,6 @@ API DOCUMENTATION
                     <port ref="40ts">10016</port>
                 </webconsole>
                 <owinserver>
-                    <mand>uzhuaztest</mand>
                     <port>
                         <private ref="40ts">10018</private>
                         <public ref="40ts">10019</public>
@@ -2181,7 +2076,7 @@ API DOCUMENTATION
             </mandant>
             <mandant>
                 <namefull>AIS AFM</namefull>
-                <nameshort>AISAFM</nameshort>
+                <mand>uzhafmtest</mand>
                 <installid>4787</installid>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
@@ -2201,7 +2096,6 @@ API DOCUMENTATION
                     <port ref="41ts">10256</port>
                 </webconsole>
                 <owinserver>
-                    <mand>uzhafmtest</mand>
                     <port>
                         <private ref="41ts">10258</private>
                         <public ref="41ts">10259</public>
