@@ -134,10 +134,10 @@ API DOCUMENTATION
                     <name>axioma_generalsek</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>22.0.10</releaseversion>
                     <host id="3ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 24.0.12</installpath>
-                    <servicename>CMI Generalsekretariat 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 22.0.10</installpath>
+                    <servicename>CMI Generalsekretariat 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_gs</serviceuser>
                 </app>
                 <licenseserver>
@@ -892,10 +892,10 @@ API DOCUMENTATION
                     <name>axioma_wwf</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>22.0.10</releaseversion>
                     <host id="18ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 24.0.12</installpath>
-                    <servicename>CMI WWF 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 22.0.10</installpath>
+                    <servicename>CMI WWF 22.0.10</servicename>
                     <serviceuser>UZH\srv_cmi_wwf</serviceuser>
                 </app>
                 <licenseserver>
