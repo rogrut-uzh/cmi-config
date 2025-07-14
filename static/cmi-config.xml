@@ -991,7 +991,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Lizenzserver</namefull>
-                <nameshort>Lizenzserver</nameshort>
+                <mand/>
                 <database>
                     <host>ZIAXIOMAPSQL02</host>
                     <name>axioma_lizenzserver</name>
@@ -1062,6 +1062,15 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
         </prod>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -1903,7 +1912,7 @@ API DOCUMENTATION
             
             <mandant>
                 <namefull>Lizenzserver</namefull>
-                <nameshort>Lizenzserver</nameshort>
+                <mand/>
                 <database>
                     <host>ZIAXIOMATSQL02</host>
                     <name>axioma_lizenzserver_TEST</name>
