@@ -27,7 +27,7 @@ API DOCUMENTATION
                 <mand>uzhbmi</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_bm</name>
                 </database>
                 <app>
@@ -78,7 +78,7 @@ API DOCUMENTATION
                 <mand>uzhfpi</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_dfpdib</name>
                 </database>
                 <app>
@@ -130,7 +130,7 @@ API DOCUMENTATION
                 <mand>uzhgs</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_generalsek</name>
                 </database>
                 <app>
@@ -193,7 +193,7 @@ API DOCUMENTATION
                 <mand>uzhirev</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_intrev</name>
                 </database>
                 <app>
@@ -239,7 +239,7 @@ API DOCUMENTATION
                 <mand>uzhmef</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_medizinfak</name>
                 </database>
                 <app>
@@ -301,7 +301,7 @@ API DOCUMENTATION
                 <mand>uzhmnf</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_mnf</name>
                 </database>
                 <app>
@@ -362,7 +362,7 @@ API DOCUMENTATION
                 <mand>uzhphf</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_philosophfak</name>
                 </database>
                 <app>
@@ -424,7 +424,7 @@ API DOCUMENTATION
                 <mand>uzhprof</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_professuren</name>
                 </database>
                 <app>
@@ -485,7 +485,7 @@ API DOCUMENTATION
                 <mand>uzhrecht</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_rechtsdienst</name>
                 </database>
                 <app>
@@ -537,7 +537,7 @@ API DOCUMENTATION
                 <mand>uzhrwf</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_rwf</name>
                 </database>
                 <app>
@@ -598,7 +598,7 @@ API DOCUMENTATION
                 <mand>uzhthf</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_trf</name>
                 </database>
                 <app>
@@ -659,7 +659,7 @@ API DOCUMENTATION
                 <mand>uzhgsw</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_vpedu</name>
                 </database>
                 <app>
@@ -718,7 +718,7 @@ API DOCUMENTATION
                 <mand>uzhrww</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_vpfsi</name>
                 </database>
                 <app>
@@ -769,7 +769,7 @@ API DOCUMENTATION
                 <mand>uzhmnw</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_vpmedres</name>
                 </database>
                 <app>
@@ -827,7 +827,7 @@ API DOCUMENTATION
                 <mand>uzhvsf</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_vsf</name>
                 </database>
                 <app>
@@ -888,7 +888,7 @@ API DOCUMENTATION
                 <mand>uzhwwf</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_wwf</name>
                 </database>
                 <app>
@@ -948,7 +948,7 @@ API DOCUMENTATION
                 <mand>uzhzzm</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_zzm</name>
                 </database>
                 <app>
@@ -993,7 +993,7 @@ API DOCUMENTATION
                 <namefull>Lizenzserver</namefull>
                 <mand/>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>axioma_lizenzserver</name>
                 </database>
                 <app>
@@ -1025,7 +1025,7 @@ API DOCUMENTATION
                 <mand>uzhbenu</mand>
                 <installid>2644</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>star_uaz_benutzung</name>
                 </database>
                 <app>
@@ -1080,7 +1080,7 @@ API DOCUMENTATION
                 <mand>uzhbmitest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_bm_TEST</name>
                 </database>
                 <app>
@@ -1134,7 +1134,7 @@ API DOCUMENTATION
                 <mand>uzhfpitest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_dfpdib_TEST</name>
                 </database>
                 <app>
@@ -1185,7 +1185,7 @@ API DOCUMENTATION
                 <mand>uzhgstest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_generalsek_TEST</name>
                 </database>
                 <app>
@@ -1242,7 +1242,7 @@ API DOCUMENTATION
                 <mand>uzhirevtest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_intrev_TEST</name>
                 </database>
                 <app>
@@ -1288,7 +1288,7 @@ API DOCUMENTATION
                 <mand>uzhmeftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_medizinfak_TEST</name>
                 </database>
                 <app>
@@ -1347,7 +1347,7 @@ API DOCUMENTATION
                 <mand>uzhmnftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_mnf_TEST</name>
                 </database>
                 <app>
@@ -1406,7 +1406,7 @@ API DOCUMENTATION
                 <mand>uzhphftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_philosophfak_TEST</name>
                 </database>
                 <app>
@@ -1465,7 +1465,7 @@ API DOCUMENTATION
                 <mand>uzhproftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_professuren_TEST</name>
                 </database>
                 <app>
@@ -1524,7 +1524,7 @@ API DOCUMENTATION
                 <mand>uzhrechttest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_rechtsdienst_TEST</name>
                 </database>
                 <app>
@@ -1576,7 +1576,7 @@ API DOCUMENTATION
                 <mand>uzhrwftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_rwf_TEST</name>
                 </database>
                 <app>
@@ -1635,7 +1635,7 @@ API DOCUMENTATION
                     <mand>uzhthftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_trf_TEST</name>
                 </database>
                 <app>
@@ -1694,7 +1694,7 @@ API DOCUMENTATION
                 <mand>uzhgswtest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_vpedu_TEST</name>
                 </database>
                 <app>
@@ -1752,7 +1752,7 @@ API DOCUMENTATION
                 <mand>uzhvsftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_vsf_TEST</name>
                 </database>
                 <app>
@@ -1811,7 +1811,7 @@ API DOCUMENTATION
                 <mand>uzhwwftest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_wwf_TEST</name>
                 </database>
                 <app>
@@ -1869,7 +1869,7 @@ API DOCUMENTATION
                 <mand>uzhzzmtest</mand>
                 <installid>2624</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_zzm_TEST</name>
                 </database>
                 <app>
@@ -1914,7 +1914,7 @@ API DOCUMENTATION
                 <namefull>Lizenzserver</namefull>
                 <mand/>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>axioma_lizenzserver_TEST</name>
                 </database>
                 <app>
@@ -1946,7 +1946,7 @@ API DOCUMENTATION
                 <mand>uzhbenutest</mand>
                 <installid>2644</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>star_uaz_benutzung_TEST</name>
                 </database>
                 <app>
@@ -1996,7 +1996,7 @@ API DOCUMENTATION
                 <mand>uzhuaz</mand>
                 <installid>1784</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>star_uaz</name>
                 </database>
                 <app>
@@ -2034,7 +2034,7 @@ API DOCUMENTATION
                 <mand>uzhafm</mand>
                 <installid>4787</installid>
                 <database>
-                    <host>ZIAXIOMAPSQL02</host>
+                    <host>ziaxiomapsql02</host>
                     <name>star_afm</name>
                 </database>
                 <app>
@@ -2075,7 +2075,7 @@ API DOCUMENTATION
                 <mand>uzhuaztest</mand>
                 <installid>1784</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>star_uaz_TEST</name>
                 </database>
                 <app>
@@ -2112,7 +2112,7 @@ API DOCUMENTATION
                 <mand>uzhafmtest</mand>
                 <installid>4787</installid>
                 <database>
-                    <host>ZIAXIOMATSQL02</host>
+                    <host>ziaxiomatsql02</host>
                     <name>star_afm_TEST</name>
                 </database>
                 <app>
