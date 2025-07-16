@@ -1954,7 +1954,7 @@ API DOCUMENTATION
                     <host id="30ts">ziaxiomatap02</host>
                     <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 24.0.12</installpath>
                     <servicename>AIS UAZ Benutzungsverwaltung TEST 24.0.12</servicename>
-                    <serviceuser>UZH\srv_cmi_test</serviceuser>
+                    <serviceuser>UZH\srv_ais_test</serviceuser>
                 </app>
                 <mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
                 <sts>
