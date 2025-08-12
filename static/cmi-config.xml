@@ -489,10 +489,10 @@ API DOCUMENTATION
                     <name>axioma_rechtsdienst</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>24.0.14</releaseversion>
                     <host id="10ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 24.0.12</installpath>
-                    <servicename>CMI Rechtsdienst 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 24.0.14</installpath>
+                    <servicename>CMI Rechtsdienst 24.0.14</servicename>
                     <serviceuser>UZH\srv_cmi_recht</serviceuser>
                 </app>
                 <licenseserver>
@@ -541,10 +541,10 @@ API DOCUMENTATION
                     <name>axioma_rwf</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>24.0.14</releaseversion>
                     <host id="11ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 24.0.12</installpath>
-                    <servicename>CMI RWF 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 24.0.14</installpath>
+                    <servicename>CMI RWF 24.0.14</servicename>
                     <serviceuser>UZH\srv_cmi_rwf</serviceuser>
                 </app>
                 <licenseserver>
@@ -892,10 +892,10 @@ API DOCUMENTATION
                     <name>axioma_wwf</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>24.0.14</releaseversion>
                     <host id="18ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 24.0.12</installpath>
-                    <servicename>CMI WWF 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 24.0.14</installpath>
+                    <servicename>CMI WWF 24.0.14</servicename>
                     <serviceuser>UZH\srv_cmi_wwf</serviceuser>
                 </app>
                 <licenseserver>
