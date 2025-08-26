@@ -1528,10 +1528,10 @@ API DOCUMENTATION
                     <name>axioma_rechtsdienst_TEST</name>
                 </database>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.4</releaseversion>
                     <host id="10ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 24.0.12</installpath>
-                    <servicename>CMI Rechtsdienst TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 25.0.4</installpath>
+                    <servicename>CMI Rechtsdienst TEST 25.0.4</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
