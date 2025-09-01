@@ -60,6 +60,7 @@ def load_xml_data(file_path):
                     for mandant in env_data.findall('mandant'):
                         mandant_data = {
                             'environment': env,  # Add environment info
+                            'apptype': section,  # Add section info
                         }
                         # Dynamically parse all children of <mandant>
                         mandant_data.update({child.tag: parse_element(child) for child in mandant})
