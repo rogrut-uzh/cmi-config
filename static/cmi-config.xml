@@ -6,7 +6,7 @@
 
 AUTHOR
 
-    Roger Rutishauser - ADB-DBA, September-December 2024
+    Roger Rutishauser - ADB-DBA, September-December 2024, September 2025
 
 
 XML STRUCTURE
@@ -40,7 +40,7 @@ API DOCUMENTATION
                 <mobilefirst>https://uzhbmi.cmicloud.ch</mobilefirst>
                 <sts>
                     <ea>https://sts3.prod.cmicloud.ch/uzhbmi/identity/signin-oidc</ea>
-                    <desktopclient>https://sts.cmicloud.ch/uzhbmi. STS3 will be: https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
+                    <desktopclient>https://sts3.prod.cmicloud.ch/uzhbmi</desktopclient>
                 </sts>
                 <objektloader>
                     <port ref="1ps">10110</port>
@@ -67,9 +67,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>21:05-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>21:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>05:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:05</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -119,9 +128,24 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>20:10-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>22:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>05:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>20:10</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -182,9 +206,24 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>20:30</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -228,9 +267,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>20:40-SaSo-weekly</adrsync>
-                    <fulltextoptimize>00:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>18:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>20:40</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -288,11 +336,19 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
-                
                 <jobs>
-                    <adrsync>21:00-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>00:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:05</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -351,9 +407,24 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>23:00-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>00:45-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>23:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:02</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -413,9 +484,30 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:10-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>02:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:10</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:03</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Offene Aktivitäten</name>
+                        <days>Workdays</days>
+                        <time>12:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -474,9 +566,54 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:20-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>02:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:20</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Verarbeitung Zukunftsfelder</name>
+                        <days>daily</days>
+                        <time>05:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Traktandenliste UL</name>
+                        <days>Thursday</days>
+                        <time>08:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Aktivitäten in Bearbeitung durch Christian Schwarzenegger</name>
+                        <days>Friday</days>
+                        <time>17:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Aktivitäten 6,11,11a,11b in Bearbeitung</name>
+                        <days>Monday</days>
+                        <time>07:01</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Aktivitäten 6,11,11a,11b letzte 7 Tage (oder heute) abgeschlossen</name>
+                        <days>Monday</days>
+                        <time>07:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Aktivität 26 in Bearbeitung durch Jörg Kehl</name>
+                        <days>Wednesday</days>
+                        <time>08:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -526,9 +663,42 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>22:00-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>04:45-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>06:00-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>22:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Workdays</days>
+                        <time>09:02</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Aufgaben Frist Gesuchsantwort</name>
+                        <days>Workdays</days>
+                        <time>07:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Geschäfte mit hoher Priorität</name>
+                        <days>Monday</days>
+                        <time>12:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Projektliste</name>
+                        <days>25th of month</days>
+                        <time>12:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -587,9 +757,18 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>22:20-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>23:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>21:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>22:20</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -648,9 +827,24 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>04:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>23:20</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -707,9 +901,24 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:30-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>03:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>04:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:30</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -758,9 +967,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:50-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>04:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>05:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:55</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -816,9 +1034,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:40-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>03:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>05:00-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:40</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -877,9 +1104,24 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>23:30-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>22:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>04:45-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>23:30</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -937,9 +1179,24 @@ API DOCUMENTATION
                     <url fromId="unirat">http://10.74.145.110:28412/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>22:50-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>01:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>22:50</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivdossiers von Sitzungen generieren</name>
+                        <days>Monday</days>
+                        <time>09:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -983,9 +1240,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>22:55-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>01:05-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Vertragsstatus aktualisieren</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1056,9 +1322,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>23:00-SaSo-weekly</adrsync>
-                    <fulltextoptimize>21:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>Monday</days>
+                        <time>03:00</time>
+                    </job>
                 </jobs>
             </mandant>
         </prod>
@@ -1123,9 +1398,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>21:05-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>21:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>05:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:05</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1174,9 +1458,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>20:10-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>22:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>05:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>20:10</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1231,9 +1524,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>20:30-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>21:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>00:05-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>20:30</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1277,9 +1579,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>20:40-SaSo-weekly</adrsync>
-                    <fulltextoptimize>00:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>18:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>20:40</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1336,9 +1647,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:00-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>00:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:05</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1395,9 +1715,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>23:00-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>00:45-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>23:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1454,9 +1783,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:10-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>02:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:00-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:10</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1513,9 +1851,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:20-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>02:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:20</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1565,9 +1912,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>22:00-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>04:45-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>06:00-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>22:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1624,9 +1980,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>22:20-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>23:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>21:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>22:20</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1683,9 +2048,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>23:20-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>04:30-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>23:20</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1741,9 +2115,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>21:30-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>03:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>04:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:30</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1800,9 +2183,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>23:30-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>22:15-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>04:45-Sa-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>21:55</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1858,9 +2250,18 @@ API DOCUMENTATION
                     <url fromId="3">http://ziaxiomatap02:10247/MuegiService</url>
                 </muegi>
                 <jobs>
-                    <adrsync>22:50-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>01:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>22:50</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1904,9 +2305,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>22:55-MoDiMiDoFrSaSo-weekly</adrsync>
-                    <fulltextoptimize>01:05-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>00:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Vertragsstatus aktualisieren</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
                 </jobs>
             </mandant>
             
@@ -1977,9 +2387,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <adrsync>23:00-SaSo-weekly</adrsync>
-                    <fulltextoptimize>21:30-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>19:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
+                        <days>daily</days>
+                        <time>23:00</time>
+                    </job>
                 </jobs>
             </mandant>
         </test>
@@ -2020,8 +2439,30 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltextoptimize>21:45-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Webclient PROD, Freigabe von Objekten</name>
+                        <days>Friday</days>
+                        <time>20:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Archivportal PROD, Freigabe von Objekten</name>
+                        <days>Friday</days>
+                        <time>21:30</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Benutzbarkeit aktualisieren</name>
+                        <days>Workdays</days>
+                        <time>21:00</time>
+                    </job>
                 </jobs>
                 <sts>
                     <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signin-oidc</ea>
@@ -2057,8 +2498,24 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>04:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Verwertungsrecht aktualisieren</name>
+                        <days>Workdays</days>
+                        <time>21:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Benutzbarkeit aktualisieren</name>
+                        <days>Workdays</days>
+                        <time>21:30</time>
+                    </job>
                 </jobs>
                 <sts>
                     <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signin-oidc</ea>
@@ -2098,8 +2555,18 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltextoptimize>21:45-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:00-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Benutzbarkeit aktualisieren</name>
+                        <days>Workdays</days>
+                        <time>21:55</time>
+                    </job>
                 </jobs>
                 <sts>
                     <ea>https://sts3.prod.cmicloud.ch/uzhuaztest/identity/signin-oidc</ea>
@@ -2135,8 +2602,24 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <jobs>
-                    <fulltextoptimize>22:00-MoDiMiDoFr-weekly</fulltextoptimize>
-                    <fulltextrebuild>20:30-So-weekly</fulltextrebuild>
+                    <job>
+                        <type>Win Scheduled Task</type>
+                        <name>Service Restart</name>
+                        <days>daily</days>
+                        <time>03:15</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Verwertungsrecht aktualisieren</name>
+                        <days>Workdays</days>
+                        <time>21:00</time>
+                    </job>
+                    <job>
+                        <type>CMI Geplanter Task</type>
+                        <name>Benutzbarkeit aktualisieren</name>
+                        <days>Workdays</days>
+                        <time>21:30</time>
+                    </job>
                 </jobs>
                 <sts>
                     <ea>https://sts3.prod.cmicloud.ch/uzhafmtest/identity/signin-oidc</ea>
