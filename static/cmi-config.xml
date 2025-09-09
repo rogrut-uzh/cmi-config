@@ -678,8 +678,8 @@ API DOCUMENTATION
                     <job>
                         <type>CMI Geplanter Task</type>
                         <name>Archivdossiers von Sitzungen generieren</name>
-                        <days>Workdays</days>
-                        <time>09:02</time>
+                        <days>Monday</days>
+                        <time>09:05</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
