@@ -68,7 +68,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -129,7 +129,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -207,7 +207,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -268,7 +268,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -338,7 +338,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -408,7 +408,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -485,7 +485,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -567,7 +567,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -664,7 +664,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -758,7 +758,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -828,7 +828,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -902,7 +902,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -968,7 +968,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -1035,7 +1035,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -1105,7 +1105,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -1180,7 +1180,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -1241,7 +1241,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -1323,7 +1323,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -1399,7 +1399,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1459,7 +1459,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1525,7 +1525,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1580,7 +1580,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1648,7 +1648,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1716,7 +1716,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1784,7 +1784,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1852,7 +1852,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1913,7 +1913,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -1981,7 +1981,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2049,7 +2049,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2116,7 +2116,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2184,7 +2184,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2251,7 +2251,7 @@ API DOCUMENTATION
                 </muegi>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2306,7 +2306,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2388,7 +2388,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2440,7 +2440,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -2499,7 +2499,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>04:00</time>
@@ -2556,7 +2556,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
@@ -2603,7 +2603,7 @@ API DOCUMENTATION
                 </owinserver>
                 <jobs>
                     <job>
-                        <type>Win Scheduled Task</type>
+                        <type>Windows Scheduled Task</type>
                         <name>Service Restart</name>
                         <days>daily</days>
                         <time>03:15</time>
