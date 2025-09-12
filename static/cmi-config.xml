@@ -1357,6 +1357,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_bm_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1420,6 +1421,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_dfpdib_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1480,6 +1482,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_generalsek_TEST</name>
+                    <uebernahme_prod>12.09.2025</uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1546,6 +1549,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_intrev_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1601,6 +1605,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_medizinfak_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1669,6 +1674,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_mnf_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1737,6 +1743,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_philosophfak_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1805,6 +1812,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_professuren_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1873,6 +1881,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_rechtsdienst_TEST</name>
+                    <uebernahme_prod>12.08.2025</uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>25.0.4</releaseversion>
@@ -1934,6 +1943,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_rwf_TEST</name>
+                    <uebernahme_prod>12.08.2025</uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2002,6 +2012,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_trf_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2070,6 +2081,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_vpedu_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2137,6 +2149,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_vsf_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2205,6 +2218,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_wwf_TEST</name>
+                    <uebernahme_prod>12.08.2025</uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2272,6 +2286,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_zzm_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2358,6 +2373,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>star_uaz_benutzung_TEST</name>
+                    <uebernahme_prod>16.07.2025</uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2534,6 +2550,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>star_uaz_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
@@ -2581,6 +2598,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>star_afm_TEST</name>
+                    <uebernahme_prod></uebernahme_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
