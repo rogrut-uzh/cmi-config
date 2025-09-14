@@ -1357,7 +1357,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_bm_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1421,7 +1421,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_dfpdib_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1549,7 +1549,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_intrev_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1605,7 +1605,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_medizinfak_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
