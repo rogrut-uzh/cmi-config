@@ -1674,7 +1674,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_mnf_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1743,7 +1743,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_philosophfak_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1812,7 +1812,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_professuren_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>14.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
