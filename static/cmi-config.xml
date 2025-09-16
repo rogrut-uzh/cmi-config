@@ -2012,7 +2012,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_trf_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>15.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2081,7 +2081,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_vpedu_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>15.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2149,7 +2149,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_vsf_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>15.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2286,7 +2286,7 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_zzm_TEST</name>
-                    <db_from_prod></db_from_prod>
+                    <db_from_prod>15.09.2025</db_from_prod>
                 </database>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
