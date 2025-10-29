@@ -30,6 +30,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_bm</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="1ps">ziaxiomapap03</host>
@@ -90,6 +93,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_dfpdib</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="2ps">ziaxiomapap03</host>
@@ -138,7 +144,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>20:10</time>
+                        <time>12:15</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -157,6 +163,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_generalsek</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="3ps">ziaxiomapap03</host>
@@ -235,6 +244,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_intrev</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="5ps">ziaxiomapap03</host>
@@ -290,6 +302,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_medizinfak</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="6ps">ziaxiomapap03</host>
@@ -360,6 +375,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_mnf</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="7ps">ziaxiomapap03</host>
@@ -436,6 +454,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_philosophfak</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="8ps">ziaxiomapap03</host>
@@ -519,6 +540,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_professuren</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="9ps">ziaxiomapap03</host>
@@ -625,6 +649,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_rechtsdienst</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.14</releaseversion>
                     <host id="10ps">ziaxiomapap03</host>
@@ -710,6 +737,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_rwf</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.14</releaseversion>
                     <host id="11ps">ziaxiomapap03</host>
@@ -780,6 +810,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_trf</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="12ps">ziaxiomapap03</host>
@@ -856,6 +889,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_vpedu</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="14ps">ziaxiomapap03</host>
@@ -930,6 +966,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_vpfsi</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="15ps">ziaxiomapap03</host>
@@ -990,6 +1029,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_vpmedres</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="16ps">ziaxiomapap03</host>
@@ -1057,6 +1099,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_vsf</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="17ps">ziaxiomapap03</host>
@@ -1133,6 +1178,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_wwf</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.14</releaseversion>
                     <host id="18ps">ziaxiomapap03</host>
@@ -1208,6 +1256,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_zzm</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="19ps">ziaxiomapap03</host>
@@ -1262,6 +1313,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>axioma_lizenzserver</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="20ps">ziaxiomapap03</host>
@@ -1294,6 +1348,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>star_uaz_benutzung</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="30ps">ziaxiomapap03</host>
@@ -1359,6 +1416,9 @@ API DOCUMENTATION
                     <name>axioma_bm_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhbmitest</path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="1ts">ziaxiomatap02</host>
@@ -1423,11 +1483,14 @@ API DOCUMENTATION
                     <name>axioma_dfpdib_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhfpitest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="2ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 24.0.12</installpath>
-                    <servicename>CMI Direktion DFPDIB TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Direktion DFPDIB 25.0.7</installpath>
+                    <servicename>CMI Direktion DFPDIB TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -1482,8 +1545,11 @@ API DOCUMENTATION
                 <database>
                     <host>ziaxiomatsql02</host>
                     <name>axioma_generalsek_TEST</name>
-                    <db_from_prod>12.09.2025</db_from_prod>
+                    <db_from_prod>13.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhgstest</path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="3ts">ziaxiomatap02</host>
@@ -1551,11 +1617,14 @@ API DOCUMENTATION
                     <name>axioma_intrev_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhirevtest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="5ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 24.0.12</installpath>
-                    <servicename>CMI Interne Revision TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Interne Revision 25.0.7</installpath>
+                    <servicename>CMI Interne Revision TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -1607,11 +1676,14 @@ API DOCUMENTATION
                     <name>axioma_medizinfak_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhmeftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="6ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 24.0.12</installpath>
-                    <servicename>CMI Medizinische Fakultaet TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Medizinische Fakultaet 25.0.7</installpath>
+                    <servicename>CMI Medizinische Fakultaet TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -1676,11 +1748,14 @@ API DOCUMENTATION
                     <name>axioma_mnf_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhmnftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="7ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\MNF 24.0.12</installpath>
-                    <servicename>CMI MNF TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\MNF 25.0.7</installpath>
+                    <servicename>CMI MNF TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -1745,11 +1820,14 @@ API DOCUMENTATION
                     <name>axioma_philosophfak_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhphftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="8ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 24.0.12</installpath>
-                    <servicename>CMI Philosophische Fakultaet TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Philosophische Fakultaet 25.0.7</installpath>
+                    <servicename>CMI Philosophische Fakultaet TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -1814,6 +1892,9 @@ API DOCUMENTATION
                     <name>axioma_professuren_TEST</name>
                     <db_from_prod>14.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhproftest</path>
+                </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
                     <host id="9ts">ziaxiomatap02</host>
@@ -1883,11 +1964,14 @@ API DOCUMENTATION
                     <name>axioma_rechtsdienst_TEST</name>
                     <db_from_prod>12.08.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhrechttest</path>
+                </documents>
                 <app>
-                    <releaseversion>25.0.4</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="10ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 25.0.4</installpath>
-                    <servicename>CMI Rechtsdienst TEST 25.0.4</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Rechtsdienst 25.0.7</installpath>
+                    <servicename>CMI Rechtsdienst TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -1945,11 +2029,14 @@ API DOCUMENTATION
                     <name>axioma_rwf_TEST</name>
                     <db_from_prod>12.08.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhrwftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="11ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\RWF 24.0.12</installpath>
-                    <servicename>CMI RWF TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\RWF 25.0.7</installpath>
+                    <servicename>CMI RWF TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2014,11 +2101,14 @@ API DOCUMENTATION
                     <name>axioma_trf_TEST</name>
                     <db_from_prod>15.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhthftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="12ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\TRF 24.0.12</installpath>
-                    <servicename>CMI TRF TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\TRF 25.0.7</installpath>
+                    <servicename>CMI TRF TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2083,11 +2173,14 @@ API DOCUMENTATION
                     <name>axioma_vpedu_TEST</name>
                     <db_from_prod>15.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhgswtest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="14ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 24.0.12</installpath>
-                    <servicename>CMI VP Edu TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\VP Edu 25.0.7</installpath>
+                    <servicename>CMI VP Edu TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2151,11 +2244,14 @@ API DOCUMENTATION
                     <name>axioma_vsf_TEST</name>
                     <db_from_prod>15.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhvsftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="17ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\VSF 24.0.12</installpath>
-                    <servicename>CMI VSF TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\VSF 25.0.7</installpath>
+                    <servicename>CMI VSF TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2220,11 +2316,14 @@ API DOCUMENTATION
                     <name>axioma_wwf_TEST</name>
                     <db_from_prod>12.08.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhwwftest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="18ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\WWF 24.0.12</installpath>
-                    <servicename>CMI WWF TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\WWF 25.0.7</installpath>
+                    <servicename>CMI WWF TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2288,11 +2387,14 @@ API DOCUMENTATION
                     <name>axioma_zzm_TEST</name>
                     <db_from_prod>15.09.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhzzmtest</path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="19ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\ZZM 24.0.12</installpath>
-                    <servicename>CMI ZZM TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\ZZM 25.0.7</installpath>
+                    <servicename>CMI ZZM TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2342,11 +2444,14 @@ API DOCUMENTATION
                     <host>ziaxiomatsql02</host>
                     <name>axioma_lizenzserver_TEST</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="20ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 24.0.12</installpath>
-                    <servicename>CMI Lizenzserver TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 25.0.7</installpath>
+                    <servicename>CMI Lizenzserver TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <objektloader>
@@ -2375,11 +2480,14 @@ API DOCUMENTATION
                     <name>star_uaz_benutzung_TEST</name>
                     <db_from_prod>16.07.2025</db_from_prod>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="30ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 24.0.12</installpath>
-                    <servicename>AIS UAZ Benutzungsverwaltung TEST 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\AIS Test\UAZ Benutzungsverwaltung 25.0.7</installpath>
+                    <servicename>AIS UAZ Benutzungsverwaltung TEST 25.0.7</servicename>
                     <serviceuser>UZH\srv_ais_test</serviceuser>
                 </app>
                 <mobilefirst>https://uzhbenutest.cmicloud.ch</mobilefirst>
@@ -2434,6 +2542,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>star_uaz</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
                     <host id="40ps">ziaxiomapap04</host>
@@ -2494,6 +2605,9 @@ API DOCUMENTATION
                     <host>ziaxiomapsql02</host>
                     <name>star_afm</name>
                 </database>
+                <documents>
+                    <path></path>
+                </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
                     <host id="41ps">ziaxiomapap04</host>
@@ -2552,6 +2666,9 @@ API DOCUMENTATION
                     <name>star_uaz_TEST</name>
                     <db_from_prod></db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhuaztest</path>
+                </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
                     <host id="40ts">ziaxiomatap02</host>
@@ -2600,6 +2717,9 @@ API DOCUMENTATION
                     <name>star_afm_TEST</name>
                     <db_from_prod></db_from_prod>
                 </database>
+                <documents>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhafmtest</path>
+                </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
                     <host id="41ts">ziaxiomatap02</host>
