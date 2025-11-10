@@ -20,7 +20,7 @@ API DOCUMENTATION
 
 -->
 <root>
-    <cmi>
+    <gever>
         <prod>
             <mandant>
                 <namefull>Portfolio- und Assetmanagement (ehem. Bedarfsmanagement)</namefull>
@@ -2526,7 +2526,7 @@ API DOCUMENTATION
                 </jobs>
             </mandant>
         </test>
-    </cmi>
+    </gever>
     
     
     

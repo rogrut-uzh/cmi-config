@@ -50,7 +50,7 @@ def load_xml_data(file_path):
     root = tree.getroot()
     data = {}
 
-    for section in ['cmi', 'ais']:
+    for section in ['gever', 'ais']:
         section_data = []
         section_root = root.find(section)
         if section_root is not None:
@@ -109,7 +109,7 @@ def get_all_data():
     data = load_xml_data(xml_data_path)
     args = request.args.to_dict()
     exact = args.pop('exactmatch', 'false').lower() in ('1', 'true', 'yes')
-    response = data['cmi'] + data['ais']
+    response = data['gever'] + data['ais']
     if args:
         response = filter_data(response, args, exact=exact)
     return jsonify(response), 200
