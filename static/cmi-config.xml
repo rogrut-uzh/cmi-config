@@ -937,10 +937,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="14ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP Edu 24.0.12</installpath>
-                    <servicename>CMI VP Edu 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP Edu 25.0.7</installpath>
+                    <servicename>CMI VP Edu 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_edu</serviceuser>
                 </app>
                 <licenseserver>
