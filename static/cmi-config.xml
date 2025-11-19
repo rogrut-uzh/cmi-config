@@ -80,7 +80,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>21:05</time>
+                        <time>05:03</time>
                     </job>
                 </jobs>
                 <ad_group>
@@ -101,10 +101,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="2ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Direktion DFPDIB 24.0.12</installpath>
-                    <servicename>CMI Direktion DFPDIB 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Direktion DFPDIB 25.0.7</installpath>
+                    <servicename>CMI Direktion DFPDIB 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_dfpdib</serviceuser>
                 </app>
                 <licenseserver>
@@ -148,7 +148,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>12:15</time>
+                        <time>05:06</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -233,7 +233,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>20:30</time>
+                        <time>05:10</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -260,10 +260,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="5ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Interne Revision 24.0.12</installpath>
-                    <servicename>CMI Interne Revision 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Interne Revision 25.0.7</installpath>
+                    <servicename>CMI Interne Revision 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_irev</serviceuser>
                 </app>
                 <licenseserver>
@@ -301,7 +301,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>20:40</time>
+                        <time>05:13</time>
                     </job>
                 </jobs>
                 <ad_group>
@@ -378,7 +378,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>20:50</time>
+                        <time>05:17</time>
                     </job>
                 </jobs>
                 <ad_group>
@@ -399,10 +399,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="7ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\MNF 24.0.12</installpath>
-                    <servicename>CMI MNF 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\MNF 25.0.7</installpath>
+                    <servicename>CMI MNF 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_mnf</serviceuser>
                 </app>
                 <licenseserver>
@@ -455,7 +455,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>23:00</time>
+                        <time>05:20</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -833,7 +833,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>22:20</time>
+                        <time>05:34</time>
                     </job>
                 </jobs>
                 <ad_group>
@@ -991,7 +991,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>21:30</time>
+                        <time>05:41</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -1018,10 +1018,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="15ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP FSI 24.0.12</installpath>
-                    <servicename>CMI VP FSI 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP FSI 25.0.7</installpath>
+                    <servicename>CMI VP FSI 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_fsi</serviceuser>
                 </app>
                 <licenseserver>
@@ -1064,7 +1064,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>21:55</time>
+                        <time>05:45</time>
                     </job>
                 </jobs>
                 <ad_group>
@@ -1085,10 +1085,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="16ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP MedRes 24.0.12</installpath>
-                    <servicename>CMI VP MedRes 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VP MedRes 25.0.7</installpath>
+                    <servicename>CMI VP MedRes 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_medres</serviceuser>
                 </app>
                 <licenseserver>
@@ -1138,7 +1138,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>21:40</time>
+                        <time>05:48</time>
                     </job>
                 </jobs>
                 <ad_group>
@@ -1385,10 +1385,10 @@ API DOCUMENTATION
                     <path></path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="20ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 24.0.12</installpath>
-                    <servicename>CMI Lizenzserver 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 25.0.7</installpath>
+                    <servicename>CMI Lizenzserver 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_lizenz</serviceuser>
                 </app>
                 <objektloader>
@@ -1456,8 +1456,8 @@ API DOCUMENTATION
                     <job>
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
-                        <days>Monday</days>
-                        <time>03:00</time>
+                        <days>daily</days>
+                        <time>05:00</time>
                     </job>
                 </jobs>
                 <ad_group>
