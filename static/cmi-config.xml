@@ -83,6 +83,10 @@ API DOCUMENTATION
                         <time>21:05</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_BM</o>
+                    <i>.L.ZI.CMI-BM</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -153,6 +157,10 @@ API DOCUMENTATION
                         <time>09:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_DirektionDFPDIB</o>
+                    <i>.L.ZI.CMI-DFPDIB</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -234,6 +242,10 @@ API DOCUMENTATION
                         <time>09:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_Generalsekretariat</o>
+                    <i>.L.ZI.CMI-GS</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -292,6 +304,10 @@ API DOCUMENTATION
                         <time>20:40</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_InterneRevision</o>
+                    <i>.L.ZI.CMI-IREV</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -365,6 +381,10 @@ API DOCUMENTATION
                         <time>20:50</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_MedizinischeFakultaet</o>
+                    <i>.L.ZI.CMI-MeF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -444,6 +464,10 @@ API DOCUMENTATION
                         <time>09:02</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_MNF</o>
+                    <i>.L.ZI.CMI-MNF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -530,6 +554,10 @@ API DOCUMENTATION
                         <time>12:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_PhilosophischeFakultaet</o>
+                    <i>.L.ZI.CMI-PhF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -639,6 +667,10 @@ API DOCUMENTATION
                         <time>08:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_Professuren</o>
+                    <i>.L.ZI.CMI-Prof</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -727,6 +759,10 @@ API DOCUMENTATION
                         <time>12:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_Rechtsdienst</o>
+                    <i>.L.ZI.CMI-RuD</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -800,6 +836,10 @@ API DOCUMENTATION
                         <time>22:20</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_RWF</o>
+                    <i>.L.ZI.CMI-RWF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -879,6 +919,10 @@ API DOCUMENTATION
                         <time>09:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_TRF</o>
+                    <i>.L.ZI.CMI-TRF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -956,6 +1000,10 @@ API DOCUMENTATION
                         <time>09:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_VPEdu</o>
+                    <i>.L.ZI.CMI-VPEdu</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -1019,6 +1067,10 @@ API DOCUMENTATION
                         <time>21:55</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_VPFSI</o>
+                    <i>.L.ZI.CMI-VPFSI</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -1089,6 +1141,10 @@ API DOCUMENTATION
                         <time>21:40</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_VPMedRes</o>
+                    <i>.L.ZI.CMI-VPMedRes</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -1168,6 +1224,10 @@ API DOCUMENTATION
                         <time>09:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_VSF</o>
+                    <i>.L.ZI.CMI-VSF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -1246,6 +1306,10 @@ API DOCUMENTATION
                         <time>09:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_WWF</o>
+                    <i>.L.ZI.CMI-WWF</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -1304,6 +1368,10 @@ API DOCUMENTATION
                         <time>04:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_CMI_ZZM</o>
+                    <i>.L.ZI.CMI-ZZM</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -1392,6 +1460,10 @@ API DOCUMENTATION
                         <time>03:00</time>
                     </job>
                 </jobs>
+                <ad_group>
+                    <o>ID__O_UZH_APP_AIS_UAZBenutzungsverwaltung</o>
+                    <i>.L.ZI.CMI-UAZBenu</i>
+                </ad_group>
             </mandant>
         </prod>
         
@@ -2595,6 +2667,10 @@ API DOCUMENTATION
                     <ea>https://sts3.prod.cmicloud.ch/uzhuaz/identity/signin-oidc</ea>
                     <desktopclient>https://sts3.prod.cmicloud.ch/uzhuaz</desktopclient>
                 </sts>
+                <ad_group>
+                    <o>ID__O_UZH_APP_AIS_UAZArchiv</o>
+                    <i>.L.ZI.CMI-AIS-UAZ</i>
+                </ad_group>
             </mandant>
             
             <mandant>
@@ -2651,6 +2727,10 @@ API DOCUMENTATION
                     <ea>https://sts3.prod.cmicloud.ch/uzhafm/identity/signin-oidc</ea>
                     <desktopclient>https://sts3.prod.cmicloud.ch/uzhafm</desktopclient>
                 </sts>
+                <ad_group>
+                    <o>ID__O_UZH_APP_AIS_AFMArchiv</o>
+                    <i>.L.ZI.CMI-AIS-AFM</i>
+                </ad_group>
             </mandant>
         </prod>
         
