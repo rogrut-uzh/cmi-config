@@ -31,7 +31,7 @@ API DOCUMENTATION
                     <name>axioma_bm</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -98,7 +98,7 @@ API DOCUMENTATION
                     <name>axioma_dfpdib</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhfpi</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -172,7 +172,7 @@ API DOCUMENTATION
                     <name>axioma_generalsek</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -257,7 +257,7 @@ API DOCUMENTATION
                     <name>axioma_intrev</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhirev</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -319,7 +319,7 @@ API DOCUMENTATION
                     <name>axioma_medizinfak</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhmef</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -396,7 +396,7 @@ API DOCUMENTATION
                     <name>axioma_mnf</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhmnf</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -479,7 +479,7 @@ API DOCUMENTATION
                     <name>axioma_philosophfak</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -569,7 +569,7 @@ API DOCUMENTATION
                     <name>axioma_professuren</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -682,7 +682,7 @@ API DOCUMENTATION
                     <name>axioma_rechtsdienst</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhrecht</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.14</releaseversion>
@@ -774,7 +774,7 @@ API DOCUMENTATION
                     <name>axioma_rwf</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.14</releaseversion>
@@ -851,7 +851,7 @@ API DOCUMENTATION
                     <name>axioma_trf</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhthf</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -934,7 +934,7 @@ API DOCUMENTATION
                     <name>axioma_vpedu</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhgsw</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -1015,7 +1015,7 @@ API DOCUMENTATION
                     <name>axioma_vpfsi</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhrww</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -1082,7 +1082,7 @@ API DOCUMENTATION
                     <name>axioma_vpmedres</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhmnw</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -1156,7 +1156,7 @@ API DOCUMENTATION
                     <name>axioma_vsf</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhvsf</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1239,7 +1239,7 @@ API DOCUMENTATION
                     <name>axioma_wwf</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhwwf</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.14</releaseversion>
@@ -1321,7 +1321,7 @@ API DOCUMENTATION
                     <name>axioma_zzm</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhzzm</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -1417,7 +1417,7 @@ API DOCUMENTATION
                     <name>star_uaz_benutzung</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhbenu</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -2553,7 +2553,7 @@ API DOCUMENTATION
                     <db_from_prod>16.07.2025</db_from_prod>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhbenutest</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -2615,7 +2615,7 @@ API DOCUMENTATION
                     <name>star_uaz</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
@@ -2682,7 +2682,7 @@ API DOCUMENTATION
                     <name>star_afm</name>
                 </database>
                 <documents>
-                    <path></path>
+                    <path>ToDo</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
