@@ -322,10 +322,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhmef</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="6ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 24.0.12</installpath>
-                    <servicename>CMI Medizinische Fakultaet 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Medizinische Fakultaet 25.0.7</installpath>
+                    <servicename>CMI Medizinische Fakultaet 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_mef</serviceuser>
                 </app>
                 <licenseserver>
@@ -685,10 +685,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhrecht</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.14</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="10ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 24.0.14</installpath>
-                    <servicename>CMI Rechtsdienst 24.0.14</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Rechtsdienst 25.0.7</installpath>
+                    <servicename>CMI Rechtsdienst 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_recht</serviceuser>
                 </app>
                 <licenseserver>
@@ -732,7 +732,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>22:00</time>
+                        <time>05:50</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -854,10 +854,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhthf</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="12ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\TRF 24.0.12</installpath>
-                    <servicename>CMI TRF 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\TRF 25.0.7</installpath>
+                    <servicename>CMI TRF 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_trf</serviceuser>
                 </app>
                 <licenseserver>
@@ -910,7 +910,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>23:20</time>
+                        <time>05:53</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -1242,10 +1242,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhwwf</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.14</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="18ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 24.0.14</installpath>
-                    <servicename>CMI WWF 24.0.14</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\WWF 25.0.7</installpath>
+                    <servicename>CMI WWF 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_wwf</serviceuser>
                 </app>
                 <licenseserver>
@@ -1297,7 +1297,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>22:50</time>
+                        <time>05:56</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
@@ -1324,10 +1324,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhzzm</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="19ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\ZZM 24.0.12</installpath>
-                    <servicename>CMI ZZM 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\ZZM 25.0.7</installpath>
+                    <servicename>CMI ZZM 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_zzm</serviceuser>
                 </app>
                 <licenseserver>
@@ -1375,40 +1375,6 @@ API DOCUMENTATION
             </mandant>
             
             <mandant>
-                <namefull>Lizenzserver</namefull>
-                <mand/>
-                <database>
-                    <host>ziaxiomapsql02</host>
-                    <name>axioma_lizenzserver</name>
-                </database>
-                <documents>
-                    <path></path>
-                </documents>
-                <app>
-                    <releaseversion>25.0.7</releaseversion>
-                    <host id="20ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 25.0.7</installpath>
-                    <servicename>CMI Lizenzserver 25.0.7</servicename>
-                    <serviceuser>UZH\srv_cmi_lizenz</serviceuser>
-                </app>
-                <objektloader>
-                    <port ref="20ps">10320</port>
-                </objektloader>
-                <webconsole>
-                    <port ref="20ps">10321</port>
-                </webconsole>
-                <ueberweisung>
-                    <port ref="20ps">10322</port>
-                </ueberweisung>
-                <owinserver>
-                    <port>
-                        <private ref="20ps">10323</private>
-                        <public ref="20ps">10324</public>
-                    </port>
-                </owinserver>
-            </mandant>
-            
-            <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
                 <mand>uzhbenu</mand>
                 <installid>2644</installid>
@@ -1420,10 +1386,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhbenu</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="30ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Benutzungsverwaltung 24.0.12</installpath>
-                    <servicename>AIS UAZ Benutzungsverwaltung 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\AIS Produktiv\UAZ Benutzungsverwaltung 25.0.7</installpath>
+                    <servicename>AIS UAZ Benutzungsverwaltung 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_benu</serviceuser>
                 </app>
                 <mobilefirst>https://uzhbenu.cmicloud.ch</mobilefirst>
@@ -1465,6 +1431,41 @@ API DOCUMENTATION
                     <l>.L.ZI.CMI-UAZBenu</l>
                 </ad_group>
             </mandant>
+            
+            <mandant>
+                <namefull>Lizenzserver</namefull>
+                <mand/>
+                <database>
+                    <host>ziaxiomapsql02</host>
+                    <name>axioma_lizenzserver</name>
+                </database>
+                <documents>
+                    <path></path>
+                </documents>
+                <app>
+                    <releaseversion>25.0.7</releaseversion>
+                    <host id="20ps">ziaxiomapap03</host>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Lizenzserver PRODUKTION 25.0.7</installpath>
+                    <servicename>CMI Lizenzserver 25.0.7</servicename>
+                    <serviceuser>UZH\srv_cmi_lizenz</serviceuser>
+                </app>
+                <objektloader>
+                    <port ref="20ps">10320</port>
+                </objektloader>
+                <webconsole>
+                    <port ref="20ps">10321</port>
+                </webconsole>
+                <ueberweisung>
+                    <port ref="20ps">10322</port>
+                </ueberweisung>
+                <owinserver>
+                    <port>
+                        <private ref="20ps">10323</private>
+                        <public ref="20ps">10324</public>
+                    </port>
+                </owinserver>
+            </mandant>
+            
         </prod>
         
         
@@ -2510,40 +2511,6 @@ API DOCUMENTATION
             </mandant>
             
             <mandant>
-                <namefull>Lizenzserver</namefull>
-                <mand/>
-                <database>
-                    <host>ziaxiomatsql02</host>
-                    <name>axioma_lizenzserver_TEST</name>
-                </database>
-                <documents>
-                    <path></path>
-                </documents>
-                <app>
-                    <releaseversion>25.0.7</releaseversion>
-                    <host id="20ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 25.0.7</installpath>
-                    <servicename>CMI Lizenzserver TEST 25.0.7</servicename>
-                    <serviceuser>UZH\srv_cmi_test</serviceuser>
-                </app>
-                <objektloader>
-                    <port ref="20ts">10325</port>
-                </objektloader>
-                <webconsole>
-                    <port ref="20ts">10326</port>
-                </webconsole>
-                <ueberweisung>
-                    <port ref="20ts">10327</port>
-                </ueberweisung>
-                <owinserver>
-                    <port>
-                        <private ref="20ts">10328</private>
-                        <public ref="20ts">10329</public>
-                    </port>
-                </owinserver>
-            </mandant>
-            
-            <mandant>
                 <namefull>AIS Benutzungsverwaltung</namefull>
                 <mand>uzhbenutest</mand>
                 <installid>2644</installid>
@@ -2597,7 +2564,43 @@ API DOCUMENTATION
                     </job>
                 </jobs>
             </mandant>
+            
+            <mandant>
+                <namefull>Lizenzserver</namefull>
+                <mand/>
+                <database>
+                    <host>ziaxiomatsql02</host>
+                    <name>axioma_lizenzserver_TEST</name>
+                </database>
+                <documents>
+                    <path></path>
+                </documents>
+                <app>
+                    <releaseversion>25.0.7</releaseversion>
+                    <host id="20ts">ziaxiomatap02</host>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Lizenzserver TEST 25.0.7</installpath>
+                    <servicename>CMI Lizenzserver TEST 25.0.7</servicename>
+                    <serviceuser>UZH\srv_cmi_test</serviceuser>
+                </app>
+                <objektloader>
+                    <port ref="20ts">10325</port>
+                </objektloader>
+                <webconsole>
+                    <port ref="20ts">10326</port>
+                </webconsole>
+                <ueberweisung>
+                    <port ref="20ts">10327</port>
+                </ueberweisung>
+                <owinserver>
+                    <port>
+                        <private ref="20ts">10328</private>
+                        <public ref="20ts">10329</public>
+                    </port>
+                </owinserver>
+            </mandant>
+            
         </test>
+        
     </gever>
     
     
