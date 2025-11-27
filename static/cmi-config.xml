@@ -1215,7 +1215,7 @@ API DOCUMENTATION
                         <type>CMI Geplanter Task</type>
                         <name>Adresssynchronisation Benutzer/OEs aus Fremdmandanten</name>
                         <days>daily</days>
-                        <time>06:07</time>
+                        <time>05:25</time>
                     </job>
                     <job>
                         <type>CMI Geplanter Task</type>
