@@ -61,7 +61,7 @@ API DOCUMENTATION
                     <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -126,7 +126,7 @@ API DOCUMENTATION
                     <port ref="2ps">10142</port>
                     <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
                     <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -211,7 +211,7 @@ API DOCUMENTATION
                     <url ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -220,7 +220,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -355,7 +355,7 @@ API DOCUMENTATION
                     <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -365,7 +365,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -432,7 +432,7 @@ API DOCUMENTATION
                     <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -442,7 +442,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -516,7 +516,7 @@ API DOCUMENTATION
                     <url ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -525,7 +525,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -605,7 +605,7 @@ API DOCUMENTATION
                     <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -615,7 +615,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -810,7 +810,7 @@ API DOCUMENTATION
                     <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -820,7 +820,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -887,7 +887,7 @@ API DOCUMENTATION
                     <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -897,7 +897,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -969,7 +969,7 @@ API DOCUMENTATION
                     <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -1042,7 +1042,7 @@ API DOCUMENTATION
                 <ueberweisung>
                     <port ref="15ps">10122</port>
                     <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -1116,7 +1116,7 @@ API DOCUMENTATION
                     <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -1192,7 +1192,7 @@ API DOCUMENTATION
                     <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
                     <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
                     <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -1202,7 +1202,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -1274,7 +1274,7 @@ API DOCUMENTATION
                     <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
                     <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
                     <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="" name="AFI-UR">http://10.96.112.24:25851/UeberweisungsService</url>
+                    <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -1284,7 +1284,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
-                    <url fromId="unirat">http://10.96.112.24:25851/MuegiService</url>
+                    <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
