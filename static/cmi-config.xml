@@ -31,7 +31,7 @@ API DOCUMENTATION
                     <name>axioma_bm</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhbmi</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -178,7 +178,7 @@ API DOCUMENTATION
                     <name>axioma_generalsek</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhgs</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -497,7 +497,7 @@ API DOCUMENTATION
                     <name>axioma_philosophfak</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhphf</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -590,7 +590,7 @@ API DOCUMENTATION
                     <name>axioma_professuren</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhprof</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.12</releaseversion>
@@ -801,7 +801,7 @@ API DOCUMENTATION
                     <name>axioma_rwf</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhrwf</path>
                 </documents>
                 <app>
                     <releaseversion>25.0.7</releaseversion>
@@ -2786,7 +2786,7 @@ API DOCUMENTATION
                     <name>star_uaz</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhuaz</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
@@ -2853,7 +2853,7 @@ API DOCUMENTATION
                     <name>star_afm</name>
                 </database>
                 <documents>
-                    <path>ToDo</path>
+                    <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhafm</path>
                 </documents>
                 <app>
                     <releaseversion>24.0.5</releaseversion>
