@@ -53,14 +53,14 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="1ps">10112</port>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -127,8 +127,8 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="2ps">10142</port>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -138,7 +138,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -204,19 +204,19 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="3ps">10242</port>
-                    <url ref="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="15" name="UZH-FSI">http://ziaxiomapap03:10122/UeberweisungsService</url>
-                    <url ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="2" name="UZH-DFPDIB">https://ziaxiomapap03.uzh.ch:10142/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="10" name="UZH-Recht">https://ziaxiomapap03.uzh.ch:10222/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="15" name="UZH-FSI">https://ziaxiomapap03.uzh.ch:10122/UeberweisungsService</url>
+                    <url ref="16" name="UZH-MedRes">https://ziaxiomapap03.uzh.ch:10042/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -357,16 +357,16 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="1ts">10072</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -376,7 +376,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -437,16 +437,16 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="7ps">10052</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -456,7 +456,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -500,10 +500,10 @@ API DOCUMENTATION
                     <path>ToDo</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="8ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Philosophische Fakultaet 24.0.12</installpath>
-                    <servicename>CMI Philosophische Fakultaet 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Philosophische Fakultaet 25.0.7</installpath>
+                    <servicename>CMI Philosophische Fakultaet 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_phf</serviceuser>
                 </app>
                 <licenseserver>
@@ -523,17 +523,17 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="8ps">10092</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="16" name="UZH-MedRes">http://ziaxiomapap03:10042/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="16" name="UZH-MedRes">https://ziaxiomapap03.uzh.ch:10042/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -544,7 +544,7 @@ API DOCUMENTATION
                 </owinserver>
                 <muegi>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -616,16 +616,16 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="9ps">10152</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="2" name="UZH-DFPDIB">http://ziaxiomapap03:10142/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="2" name="UZH-DFPDIB">https://ziaxiomapap03.uzh.ch:10142/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -635,7 +635,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -732,9 +732,9 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="10ps">10222</port>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
                     <port>
@@ -743,7 +743,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -804,10 +804,10 @@ API DOCUMENTATION
                     <path>ToDo</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.14</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="11ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 24.0.14</installpath>
-                    <servicename>CMI RWF 24.0.14</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\RWF 25.0.7</installpath>
+                    <servicename>CMI RWF 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_rwf</serviceuser>
                 </app>
                 <licenseserver>
@@ -827,16 +827,16 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="11ps">10002</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -846,7 +846,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -907,16 +907,16 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="12ps">10212</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -926,7 +926,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -993,15 +993,15 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="14ps">10102</port>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="10" name="UZH-Recht">http://ziaxiomapap03:10222/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="10" name="UZH-Recht">https://ziaxiomapap03.uzh.ch:10222/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -1011,7 +1011,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -1077,7 +1077,7 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="15ps">10122</port>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -1087,7 +1087,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -1147,14 +1147,14 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="16ps">10042</port>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -1164,7 +1164,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                 </muegi>
                 <jobs>
                     <job>
@@ -1201,10 +1201,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhvsf</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.7</releaseversion>
                     <host id="17ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VSF 24.0.12</installpath>
-                    <servicename>CMI VSF 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\VSF 25.0.7</installpath>
+                    <servicename>CMI VSF 25.0.7</servicename>
                     <serviceuser>UZH\srv_cmi_vsf</serviceuser>
                 </app>
                 <licenseserver>
@@ -1224,16 +1224,16 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="17ps">10192</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="9" name="UZH-Prof">http://ziaxiomapap03:10152/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="18" name="UZH-WWF">http://ziaxiomapap03:10262/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="9" name="UZH-Prof">https://ziaxiomapap03.uzh.ch:10152/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="18" name="UZH-WWF">https://ziaxiomapap03.uzh.ch:10262/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -1243,7 +1243,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
@@ -1310,15 +1310,15 @@ API DOCUMENTATION
                 </webconsole>
                 <ueberweisung>
                     <port ref="18ps">10262</port>
-                    <url ref="1" name="UZH-BM">http://ziaxiomapap03:10112/UeberweisungsService</url>
-                    <url ref="3" name="UZH-GS">http://ziaxiomapap03:10242/UeberweisungsService</url>
-                    <url ref="6" name="UZH-MeF">http://ziaxiomapap03:10072/UeberweisungsService</url>
-                    <url ref="7" name="UZH-MNF">http://ziaxiomapap03:10052/UeberweisungsService</url>
-                    <url ref="8" name="UZH-PhF">http://ziaxiomapap03:10092/UeberweisungsService</url>
-                    <url ref="11" name="UZH-RWF">http://ziaxiomapap03:10002/UeberweisungsService</url>
-                    <url ref="12" name="UZH-TRF">http://ziaxiomapap03:10212/UeberweisungsService</url>
-                    <url ref="14" name="UZH-EDU">http://ziaxiomapap03:10102/UeberweisungsService</url>
-                    <url ref="17" name="UZH-VSF">http://ziaxiomapap03:10192/UeberweisungsService</url>
+                    <url ref="1" name="UZH-BM">https://ziaxiomapap03.uzh.ch:10112/UeberweisungsService</url>
+                    <url ref="3" name="UZH-GS">https://ziaxiomapap03.uzh.ch:10242/UeberweisungsService</url>
+                    <url ref="6" name="UZH-MeF">https://ziaxiomapap03.uzh.ch:10072/UeberweisungsService</url>
+                    <url ref="7" name="UZH-MNF">https://ziaxiomapap03.uzh.ch:10052/UeberweisungsService</url>
+                    <url ref="8" name="UZH-PhF">https://ziaxiomapap03.uzh.ch:10092/UeberweisungsService</url>
+                    <url ref="11" name="UZH-RWF">https://ziaxiomapap03.uzh.ch:10002/UeberweisungsService</url>
+                    <url ref="12" name="UZH-TRF">https://ziaxiomapap03.uzh.ch:10212/UeberweisungsService</url>
+                    <url ref="14" name="UZH-EDU">https://ziaxiomapap03.uzh.ch:10102/UeberweisungsService</url>
+                    <url ref="17" name="UZH-VSF">https://ziaxiomapap03.uzh.ch:10192/UeberweisungsService</url>
                     <url ref="" name="AFI-UR">http://sv001589:25851/UeberweisungsService</url>
                 </ueberweisung>
                 <owinserver>
@@ -1328,7 +1328,7 @@ API DOCUMENTATION
                     </port>
                 </owinserver>
                 <muegi>
-                    <url fromId="3">http://ziaxiomapap03:10242/MuegiService</url>
+                    <url fromId="3">https://ziaxiomapap03.uzh.ch:10242/MuegiService</url>
                     <url fromId="unirat">http://sv001589:25851/MuegiService</url>
                 </muegi>
                 <jobs>
