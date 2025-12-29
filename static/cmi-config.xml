@@ -1082,8 +1082,8 @@ API DOCUMENTATION
                 </ueberweisung>
                 <owinserver>
                     <port>
-                        <private ref="15ps">10113</private>
-                        <public ref="15ps">10114</public>
+                        <private ref="15ps">10123</private>
+                        <public ref="15ps">10124</public>
                     </port>
                 </owinserver>
                 <muegi>
@@ -1358,6 +1358,7 @@ API DOCUMENTATION
                 <m365>
                     <frontendRedirectionUrl>https://relay.prod.cmicloud.ch/uzhwwf/relay/webapiprivate/api/core/CustomAuth/Callback</frontendRedirectionUrl>
                 </m365>
+                <ansprechperson><techn>Stephan Gmür</techn></ansprechperson>
             </mandant>
             
             <mandant>
@@ -2601,6 +2602,7 @@ API DOCUMENTATION
                 <m365>
                     <frontendRedirectionUrl>https://relay.stage.cmicloud.ch/uzhwwftest/relay/webapiprivate/api/core/CustomAuth/Callback</frontendRedirectionUrl>
                 </m365>
+                <ansprechperson><techn>Stephan Gmür</techn></ansprechperson>
             </mandant>
             
             <mandant>
