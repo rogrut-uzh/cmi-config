@@ -181,10 +181,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_PROD$\uzhgs</path>
                 </documents>
                 <app>
-                    <releaseversion>24.0.12</releaseversion>
+                    <releaseversion>25.0.8</releaseversion>
                     <host id="3ps">ziaxiomapap03</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 24.0.12</installpath>
-                    <servicename>CMI Generalsekretariat 24.0.12</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Produktiv\Generalsekretariat 25.0.8</installpath>
+                    <servicename>CMI Generalsekretariat 25.0.8</servicename>
                     <serviceuser>UZH\srv_cmi_gs</serviceuser>
                 </app>
                 <licenseserver>
