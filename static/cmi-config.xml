@@ -1693,10 +1693,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhgstest</path>
                 </documents>
                 <app>
-                    <releaseversion>25.0.8</releaseversion>
+                    <releaseversion>25.0.9</releaseversion>
                     <host id="3ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 25.0.8</installpath>
-                    <servicename>CMI Generalsekretariat TEST 25.0.8</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\Generalsekretariat 25.0.9</installpath>
+                    <servicename>CMI Generalsekretariat TEST 25.0.9</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
@@ -2224,10 +2224,10 @@ API DOCUMENTATION
                     <path>\\IDNAS37zb.uzh.ch\G_ZI_ADB_CMI_TEST$\uzhrwftest</path>
                 </documents>
                 <app>
-                    <releaseversion>25.0.7</releaseversion>
+                    <releaseversion>25.0.9</releaseversion>
                     <host id="11ts">ziaxiomatap02</host>
-                    <installpath>C:\Program Files\CMI AG\CMI Test\RWF 25.0.7</installpath>
-                    <servicename>CMI RWF TEST 25.0.7</servicename>
+                    <installpath>C:\Program Files\CMI AG\CMI Test\RWF 25.0.9</installpath>
+                    <servicename>CMI RWF TEST 25.0.9</servicename>
                     <serviceuser>UZH\srv_cmi_test</serviceuser>
                 </app>
                 <licenseserver>
